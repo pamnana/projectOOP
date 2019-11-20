@@ -1,2 +1,7 @@
 [{"chapter": "1", "set": "A", "word": "illiterate", "meaning": "อ่านไม่ออกเขียนไม่ได้"},
-{"chapter": "1", "set": "A", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"}]
+{"chapter": "1", "set": "A", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"},
+{"chapter": "1", "set": "A", "word": "wrestler", "meaning": "นักมวยปล้ำ"},
+{"chapter": "1", "set": "A", "word": "tribesman", "meaning": "ชาวเขา"},
+{"chapter": "1", "set": "A", "word": "grass roofed mud hut", "meaning": "กระท่อมโคลนหลังคาหญ้า"},
+{"chapter": "1", "set": "A", "word": "wander", "meaning": "เร่ร่อน"},
+{"chapter": "1", "set": "A", "word": "refugee camp", "meaning": "ศูนย์อพยพ"}]
