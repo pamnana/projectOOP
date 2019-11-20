@@ -1,1 +1,1 @@
-{"chapter":"1","set":"A","meaning":"อ่านไม่ออกเขียนไม่ได้","word":"iliterate"}
+[{"chapter":"1","set":"A","meaning":"คนต้อนฝูงวัว","word":"cattle keeper"},{"chapter":"1","set":"A","meaning":"คนต้อนฝูงวัว","word":"cattle keeper"}]

@@ -61,7 +61,8 @@ class Vocab {
 }
 public class WriterTest {
     public static void main(String[] args) {
-        Vocab vcb1 = new Vocab("1", "A", "iliterate", "อ่านไม่ออกเขียนไม่ได้");
+        Vocab vcb1 = new Vocab("1", "A", "cattle keeper", "คนต้อนฝูงวัว");
+        Vocab vcb2 = new Vocab("1", "A", "iliterate", "อ่านไม่ออกเขียนไม่ได้");
         JSONObject obj = new JSONObject();
         JSONArray array = new JSONArray();
         obj.put("chapter", vcb1.getChapter());
@@ -69,11 +70,16 @@ public class WriterTest {
         obj.put("word", vcb1.getWord());
         obj.put("meaning", vcb1.getMeaning());
         array.add(obj);
-        System.out.println(array);
         
+
+        obj.put("chapter", vcb1.getChapter());
+        obj.put("set", vcb1.getSet());
+        obj.put("word", vcb1.getWord());
+        obj.put("meaning", vcb1.getMeaning());
+        array.add(obj);
         try {
             FileWriter file = new FileWriter("src\\file2.txt");
-            file.write(obj.toJSONString());
+            file.write(array.toJSONString());
             file.flush();
             file.close();
             System.out.println("Success!");
