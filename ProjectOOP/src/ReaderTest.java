@@ -20,7 +20,6 @@ public class ReaderTest {
                 obj2 = (JSONObject) array.get(i);
                 System.out.println("- คำที่ " + (i+1) + " -");
                 System.out.println("Chapter : "+ obj2.get("chapter"));
-                System.out.println("Set : " + obj2.get("set"));
                 System.out.println("Word : " + obj2.get("word"));
                 System.out.println("Meaning : " + obj2.get("meaning"));
             }
