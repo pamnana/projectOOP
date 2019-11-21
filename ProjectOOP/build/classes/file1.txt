@@ -1,0 +1,2 @@
+[{"chapter": "1", "set": "A", "word": "illiterate", "meaning": "อ่านไม่ออกเขียนไม่ได้"},
+{{"chapter": "1", "set": "A", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"}}]
