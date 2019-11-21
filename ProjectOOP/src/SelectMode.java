@@ -51,10 +51,10 @@ public class SelectMode extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton1.setText("Multi Player");
         jPanel1.add(jButton1);
-        jButton1.setBounds(300, 440, 420, 60);
+        jButton1.setBounds(300, 470, 420, 60);
 
         jButton3.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
-        jButton3.setText("Single Player");
+        jButton3.setText("Single Mode");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -63,7 +63,7 @@ public class SelectMode extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(300, 360, 420, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\projectOOP\\ProjectOOP\\bg\\select.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1024, 768);
 
