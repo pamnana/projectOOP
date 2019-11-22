@@ -14,8 +14,7 @@ public class SingleMode extends javax.swing.JFrame {
      * Creates new form SingleMode
      */
     public SingleMode() {
-        jPanel1.setOpaque(false);
-        jPanel1.setLayout(null);
+        
         initComponents();
 
     }
