@@ -32,35 +32,43 @@ public class Answer extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1064, 768));
         setMinimumSize(new java.awt.Dimension(1064, 768));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1024, 768));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CAT");
         jLabel1.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(470, 220, 99, 105);
 
         jLabel2.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("(n.)");
         jLabel2.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, -1, -1));
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(580, 240, 55, 70);
 
         jLabel3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("แปลว่า แมว เป็นเจ้านายมนุษย์");
         jLabel3.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(350, 300, 362, 53);
 
-        jLabel4.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Congratulations!");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, -1, -1));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(330, 50, 430, 105);
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
@@ -69,11 +77,17 @@ public class Answer extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 540, -1, -1));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(690, 570, 101, 61);
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 540, -1, -1));
+        getContentPane().add(jButton2);
+        jButton2.setBounds(250, 570, 85, 61);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/end.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 1024, 768);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -124,5 +138,6 @@ public class Answer extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
