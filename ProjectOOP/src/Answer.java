@@ -1,9 +1,15 @@
+
+import java.io.FileReader;
+import javax.swing.JLabel;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author DELL
@@ -27,16 +33,16 @@ public class Answer extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1064, 768));
-        setMinimumSize(new java.awt.Dimension(1064, 768));
+        setMaximumSize(new java.awt.Dimension(1024, 768));
+        setMinimumSize(new java.awt.Dimension(1024, 768));
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
@@ -44,24 +50,22 @@ public class Answer extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("CAT");
         jLabel1.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(470, 220, 99, 105);
-
-        jLabel2.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("(n.)");
-        jLabel2.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(580, 240, 56, 70);
+        jLabel1.setBounds(480, 220, 0, 0);
 
         jLabel3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("แปลว่า แมว เป็นเจ้านายมนุษย์");
+        jLabel3.setText("แปลว่า ");
         jLabel3.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(350, 300, 362, 53);
+        jLabel3.setBounds(350, 300, 90, 53);
+
+        jLabel6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setMaximumSize(new java.awt.Dimension(1064, 728));
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(440, 300, 0, 0);
 
         jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,7 +91,7 @@ public class Answer extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/end.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 1024, 768);
+        jLabel5.setBounds(0, 0, 1030, 770);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -95,6 +99,47 @@ public class Answer extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    public static JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public static void setjLabel1(JLabel jLabel1) {
+        Answer.jLabel1 = jLabel1;
+    }
+
+    
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public static JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public static void setjLabel6(JLabel jLabel6) {
+        Answer.jLabel6 = jLabel6;
+    }
 
     /**
      * @param args the command line arguments
@@ -127,6 +172,21 @@ public class Answer extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Answer().setVisible(true);
+                new SingleMode().setVisible(true);
+
+                JSONParser parser = new JSONParser();
+                try {
+                    Object obj = parser.parse(new FileReader("src\\file2.txt"));
+                    JSONArray array = (JSONArray) obj;
+                    JSONObject obj2;
+                    obj2 = (JSONObject) array.get(0);
+
+                    Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+                    getjLabel6().setText(vcb1.getMeaning());
+                    getjLabel1().setText(vcb1.getWord());
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
         });
     }
@@ -134,10 +194,10 @@ public class Answer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private static javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private static javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

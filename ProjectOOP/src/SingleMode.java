@@ -1,5 +1,11 @@
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Random;
 import javax.swing.*;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,6 +21,7 @@ public class SingleMode extends javax.swing.JFrame {
     Answer a = new Answer();
     public String button = "";
     public int score = 7;
+    public Vocab vcb1;
 
     /**
      * Creates new form SingleMode
@@ -25,8 +32,61 @@ public class SingleMode extends javax.swing.JFrame {
 
     }
 
-    public class Random {
+    public static JLabel getjLabel1() {
+        return jLabel1;
+    }
 
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new SingleMode().setVisible(true);
+                new ReadWriteJSON();
+                JSONParser parser = new JSONParser();
+                try {
+                    
+                    Object obj = parser.parse(new FileReader("src\\file2.txt"));
+                    JSONArray array = (JSONArray) obj;
+                    JSONObject obj2;
+                    obj2 = (JSONObject) array.get(0);
+
+                    Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+                    getjLabel1().setText(vcb1.getWord());
+
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+
+            }
+        }
+        );
     }
 
     /**
@@ -66,6 +126,7 @@ public class SingleMode extends javax.swing.JFrame {
         getW = new javax.swing.JButton();
         getX = new javax.swing.JButton();
         getU = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -433,6 +494,16 @@ public class SingleMode extends javax.swing.JFrame {
         jPanel2.add(getU);
         getU.setBounds(950, 560, 60, 61);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jLabel1ComponentShown(evt);
+            }
+        });
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(640, 90, 170, 40);
+
         jPanel1.setToolTipText("");
         jPanel1.setDoubleBuffered(false);
         jPanel1.setOpaque(false);
@@ -577,7 +648,7 @@ public class SingleMode extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     private void getBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_getBActionPerformed
@@ -835,6 +906,7 @@ public class SingleMode extends javax.swing.JFrame {
     private void jLabel9ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel9ComponentShown
         // TODO add your handling code here:
 
+
     }//GEN-LAST:event_jLabel9ComponentShown
 
     private void jPanel1VetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_jPanel1VetoableChange
@@ -846,40 +918,16 @@ public class SingleMode extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel4VetoableChange
 
+    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
+        // TODO add your handling code here:
+
+        jLabel1.setText(vcb1.getMeaning());
+        jLabel1.setVisible(true);
+    }//GEN-LAST:event_jLabel1ComponentShown
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SingleMode().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton getA;
@@ -908,6 +956,7 @@ public class SingleMode extends javax.swing.JFrame {
     private javax.swing.JButton getX;
     private javax.swing.JButton getY;
     private javax.swing.JButton getZ;
+    private static javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;

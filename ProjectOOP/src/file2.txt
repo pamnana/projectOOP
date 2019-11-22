@@ -1,1 +1,1 @@
-[{"chapter":"1","set":null,"meaning":"ยืดเวลา","word":"prolong"}]
+[{"chapter":"1","set":null,"meaning":"เนื้อหา, หนังสือเรียน","word":"text"}]
