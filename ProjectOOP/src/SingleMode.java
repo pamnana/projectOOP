@@ -26,22 +26,272 @@ public class SingleMode extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 768, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("ลองเดาคำศัพท์ดูสิ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(380, 50, 371, 70);
+
+        jLabel1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("_");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(740, 170, 14, 53);
+
+        jLabel3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("_");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(770, 170, 14, 53);
+
+        jLabel4.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("_");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(790, 170, 14, 53);
+
+        jLabel5.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("_");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(820, 170, 14, 53);
+
+        jLabel6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("_");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(840, 170, 14, 53);
+
+        jLabel7.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("_");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(860, 170, 14, 53);
+
+        jLabel8.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("_");
+        jPanel2.add(jLabel8);
+        jLabel8.setBounds(890, 170, 14, 53);
+
+        jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("B");
+        jButton1.setToolTipText("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(760, 240, 49, 61);
+
+        jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("C");
+        jButton2.setToolTipText("");
+        jPanel2.add(jButton2);
+        jButton2.setBounds(830, 240, 49, 61);
+
+        jButton3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("D");
+        jButton3.setToolTipText("");
+        jPanel2.add(jButton3);
+        jButton3.setBounds(890, 240, 51, 61);
+
+        jButton4.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("A");
+        jButton4.setToolTipText("");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4);
+        jButton4.setBounds(690, 330, 49, 61);
+
+        jButton5.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("A");
+        jButton5.setToolTipText("");
+        jPanel2.add(jButton5);
+        jButton5.setBounds(760, 330, 49, 61);
+
+        jButton6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("A");
+        jButton6.setToolTipText("");
+        jPanel2.add(jButton6);
+        jButton6.setBounds(690, 240, 49, 61);
+
+        jButton7.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("A");
+        jButton7.setToolTipText("");
+        jPanel2.add(jButton7);
+        jButton7.setBounds(890, 330, 49, 61);
+
+        jButton8.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("A");
+        jButton8.setToolTipText("");
+        jPanel2.add(jButton8);
+        jButton8.setBounds(830, 330, 49, 61);
+
+        jButton9.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("A");
+        jButton9.setToolTipText("");
+        jPanel2.add(jButton9);
+        jButton9.setBounds(690, 420, 49, 61);
+
+        jButton10.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
+        jButton10.setText("A");
+        jButton10.setToolTipText("");
+        jPanel2.add(jButton10);
+        jButton10.setBounds(830, 420, 49, 61);
+
+        jButton11.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setText("A");
+        jButton11.setToolTipText("");
+        jPanel2.add(jButton11);
+        jButton11.setBounds(890, 420, 49, 61);
+
+        jButton12.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(255, 255, 255));
+        jButton12.setText("A");
+        jButton12.setToolTipText("");
+        jPanel2.add(jButton12);
+        jButton12.setBounds(690, 510, 49, 61);
+
+        jButton13.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("A");
+        jButton13.setToolTipText("");
+        jPanel2.add(jButton13);
+        jButton13.setBounds(890, 510, 49, 61);
+
+        jButton14.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(255, 255, 255));
+        jButton14.setText("A");
+        jButton14.setToolTipText("");
+        jPanel2.add(jButton14);
+        jButton14.setBounds(760, 420, 49, 61);
+
+        jButton15.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
+        jButton15.setText("A");
+        jButton15.setToolTipText("");
+        jPanel2.add(jButton15);
+        jButton15.setBounds(830, 510, 49, 61);
+
+        jButton16.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(255, 255, 255));
+        jButton16.setText("A");
+        jButton16.setToolTipText("");
+        jPanel2.add(jButton16);
+        jButton16.setBounds(690, 610, 49, 61);
+
+        jButton17.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton17.setForeground(new java.awt.Color(255, 255, 255));
+        jButton17.setText("A");
+        jButton17.setToolTipText("");
+        jPanel2.add(jButton17);
+        jButton17.setBounds(890, 610, 49, 61);
+
+        jButton18.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(255, 255, 255));
+        jButton18.setText("A");
+        jButton18.setToolTipText("");
+        jPanel2.add(jButton18);
+        jButton18.setBounds(760, 510, 49, 61);
+
+        jButton19.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(255, 255, 255));
+        jButton19.setText("A");
+        jButton19.setToolTipText("");
+        jPanel2.add(jButton19);
+        jButton19.setBounds(830, 610, 49, 61);
+
+        jButton20.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton20.setForeground(new java.awt.Color(255, 255, 255));
+        jButton20.setText("A");
+        jButton20.setToolTipText("");
+        jPanel2.add(jButton20);
+        jButton20.setBounds(760, 610, 49, 61);
+
+        jButton21.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(255, 255, 255));
+        jButton21.setText("A");
+        jButton21.setToolTipText("");
+        jPanel2.add(jButton21);
+        jButton21.setBounds(760, 670, 49, 61);
+
+        jButton22.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jButton22.setForeground(new java.awt.Color(255, 255, 255));
+        jButton22.setText("A");
+        jButton22.setToolTipText("");
+        jPanel2.add(jButton22);
+        jButton22.setBounds(690, 670, 49, 61);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p1.jpg"))); // NOI18N
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(40, 10, 1200, 750);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +329,37 @@ public class SingleMode extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

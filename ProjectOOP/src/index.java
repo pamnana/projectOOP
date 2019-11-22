@@ -8,8 +8,11 @@
  *
  * @author DELL
  */
-public class index extends javax.swing.JFrame {
-
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class index extends javax.swing.JFrame{
+    SelectMode u = new SelectMode();
     /**
      * Creates new form index
      */
@@ -31,6 +34,12 @@ public class index extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 778));
+        setResizable(false);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bglogo.jpg"))); // NOI18N
 
@@ -62,6 +71,14 @@ public class index extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+        new SelectMode().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_formMouseClicked
 
     /**
      * @param args the command line arguments
@@ -102,4 +119,5 @@ public class index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
 }
