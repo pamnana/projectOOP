@@ -6,21 +6,26 @@ import javax.swing.*;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author dell
  */
 public class SingleMode extends javax.swing.JFrame {
+
     Answer a = new Answer();
     public String button = "";
     public int score = 7;
+
     /**
      * Creates new form SingleMode
      */
     public SingleMode() {
-        
+
         initComponents();
+
+    }
+
+    public class Random {
 
     }
 
@@ -572,6 +577,7 @@ public class SingleMode extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void getBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_getBActionPerformed
@@ -588,175 +594,225 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         button = "A";
         score--;
-        if (score > 0){getA.setVisible(false);}
+        if (score > 0) {
+            getA.setVisible(false);
+        }
     }//GEN-LAST:event_getAMouseClicked
 
     private void getBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getBMouseClicked
         // TODO add your handling code here:
         button = "B";
         score--;
-        if (score > 0){getB.setVisible(false);}
+        if (score > 0) {
+            getB.setVisible(false);
+        }
     }//GEN-LAST:event_getBMouseClicked
 
     private void getCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getCMouseClicked
         // TODO add your handling code here:
         button = "C";
         score--;
-        if (score > 0){getC.setVisible(false);}
+        if (score > 0) {
+            getC.setVisible(false);
+        }
     }//GEN-LAST:event_getCMouseClicked
 
     private void getDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getDMouseClicked
         // TODO add your handling code here:
         button = "D";
         score--;
-        if (score > 0){getD.setVisible(false);}
+        if (score > 0) {
+            getD.setVisible(false);
+        }
     }//GEN-LAST:event_getDMouseClicked
 
     private void getEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getEMouseClicked
         // TODO add your handling code here:
         button = "E";
         score--;
-        if (score > 0){getE.setVisible(false);}
+        if (score > 0) {
+            getE.setVisible(false);
+        }
     }//GEN-LAST:event_getEMouseClicked
 
     private void getFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getFMouseClicked
         // TODO add your handling code here:
         button = "F";
         score--;
-        if (score > 0){getF.setVisible(false);}
+        if (score > 0) {
+            getF.setVisible(false);
+        }
     }//GEN-LAST:event_getFMouseClicked
 
     private void getGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getGMouseClicked
         // TODO add your handling code here:
         button = "G";
         score--;
-        if (score > 0){getG.setVisible(false);}
+        if (score > 0) {
+            getG.setVisible(false);
+        }
     }//GEN-LAST:event_getGMouseClicked
 
     private void getHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getHMouseClicked
         // TODO add your handling code here:
         button = "H";
         score--;
-        if (score > 0){getH.setVisible(false);}
+        if (score > 0) {
+            getH.setVisible(false);
+        }
     }//GEN-LAST:event_getHMouseClicked
 
     private void getIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getIMouseClicked
         // TODO add your handling code here:
         button = "I";
         score--;
-        if (score > 0){getI.setVisible(false);}
+        if (score > 0) {
+            getI.setVisible(false);
+        }
     }//GEN-LAST:event_getIMouseClicked
 
     private void getJMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getJMouseClicked
         // TODO add your handling code here:
         button = "J";
         score--;
-        if (score > 0){getJ.setVisible(false);}
+        if (score > 0) {
+            getJ.setVisible(false);
+        }
     }//GEN-LAST:event_getJMouseClicked
 
     private void getKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getKMouseClicked
         // TODO add your handling code here:
         button = "K";
         score--;
-        if (score > 0){getK.setVisible(false);}
+        if (score > 0) {
+            getK.setVisible(false);
+        }
     }//GEN-LAST:event_getKMouseClicked
 
     private void getLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getLMouseClicked
         // TODO add your handling code here:
         button = "L";
         score--;
-        if (score > 0){getL.setVisible(false);}
+        if (score > 0) {
+            getL.setVisible(false);
+        }
     }//GEN-LAST:event_getLMouseClicked
 
     private void getMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getMMouseClicked
         // TODO add your handling code here:
         button = "M";
         score--;
-        if (score > 0){getM.setVisible(false);}
+        if (score > 0) {
+            getM.setVisible(false);
+        }
     }//GEN-LAST:event_getMMouseClicked
 
     private void getNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getNMouseClicked
         // TODO add your handling code here:
         button = "N";
         score--;
-        if (score > 0){getN.setVisible(false);}
+        if (score > 0) {
+            getN.setVisible(false);
+        }
     }//GEN-LAST:event_getNMouseClicked
 
     private void getOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getOMouseClicked
         // TODO add your handling code here:
         button = "O";
         score--;
-        if (score > 0){getO.setVisible(false);}
+        if (score > 0) {
+            getO.setVisible(false);
+        }
     }//GEN-LAST:event_getOMouseClicked
 
     private void getPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getPMouseClicked
         // TODO add your handling code here:
         button = "P";
         score--;
-        if (score > 0){getP.setVisible(false);}
+        if (score > 0) {
+            getP.setVisible(false);
+        }
     }//GEN-LAST:event_getPMouseClicked
 
     private void getQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getQMouseClicked
         // TODO add your handling code here:
         button = "Q";
         score--;
-        if (score > 0){getQ.setVisible(false);}
+        if (score > 0) {
+            getQ.setVisible(false);
+        }
     }//GEN-LAST:event_getQMouseClicked
 
     private void getRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getRMouseClicked
         // TODO add your handling code here:
         button = "R";
         score--;
-        if (score > 0){getR.setVisible(false);}
+        if (score > 0) {
+            getR.setVisible(false);
+        }
     }//GEN-LAST:event_getRMouseClicked
 
     private void getSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getSMouseClicked
         // TODO add your handling code here:
         button = "S";
         score--;
-        if (score > 0){getS.setVisible(false);}
+        if (score > 0) {
+            getS.setVisible(false);
+        }
     }//GEN-LAST:event_getSMouseClicked
 
     private void getTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getTMouseClicked
         // TODO add your handling code here:
         button = "T";
         score--;
-        if (score > 0){getT.setVisible(false);}
+        if (score > 0) {
+            getT.setVisible(false);
+        }
     }//GEN-LAST:event_getTMouseClicked
 
     private void getUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getUMouseClicked
         // TODO add your handling code here:
         button = "U";
         score--;
-        if (score > 0){getU.setVisible(false);}
+        if (score > 0) {
+            getU.setVisible(false);
+        }
     }//GEN-LAST:event_getUMouseClicked
 
     private void getVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getVMouseClicked
         // TODO add your handling code here:
         button = "V";
         score--;
-        if (score > 0){getV.setVisible(false);}
+        if (score > 0) {
+            getV.setVisible(false);
+        }
     }//GEN-LAST:event_getVMouseClicked
 
     private void getWMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getWMouseClicked
         // TODO add your handling code here:
         button = "W";
         score--;
-        if (score > 0){getW.setVisible(false);}
+        if (score > 0) {
+            getW.setVisible(false);
+        }
     }//GEN-LAST:event_getWMouseClicked
 
     private void getXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getXMouseClicked
         // TODO add your handling code here:
         button = "X";
         score--;
-        if (score > 0){getX.setVisible(false);}
+        if (score > 0) {
+            getX.setVisible(false);
+        }
     }//GEN-LAST:event_getXMouseClicked
 
     private void getYMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getYMouseClicked
         // TODO add your handling code here:
         button = "Y";
         score--;
-        if (score > 0){getY.setVisible(false);}
+        if (score > 0) {
+            getY.setVisible(false);
+        }
     }//GEN-LAST:event_getYMouseClicked
 
     private void getZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getZActionPerformed
@@ -767,7 +823,9 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         button = "Z";
         score--;
-        if (score > 0){getZ.setVisible(false);}
+        if (score > 0) {
+            getZ.setVisible(false);
+        }
     }//GEN-LAST:event_getZMouseClicked
 
     private void getPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getPActionPerformed
@@ -776,7 +834,7 @@ public class SingleMode extends javax.swing.JFrame {
 
     private void jLabel9ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel9ComponentShown
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jLabel9ComponentShown
 
     private void jPanel1VetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_jPanel1VetoableChange
@@ -785,7 +843,7 @@ public class SingleMode extends javax.swing.JFrame {
 
     private void jLabel4VetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_jLabel4VetoableChange
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jLabel4VetoableChange
 
     /**
@@ -816,7 +874,6 @@ public class SingleMode extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SingleMode().setVisible(true);

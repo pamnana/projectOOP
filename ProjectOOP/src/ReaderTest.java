@@ -1,4 +1,4 @@
-/*
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import org.json.simple.*;
 import org.json.simple.parser.*;
 
 import java.io.FileWriter;
+import java.util.Random;
 import org.json.simple.JSONObject;
-
 
 public class ReaderTest {
 
@@ -17,17 +17,23 @@ public class ReaderTest {
             Object obj = parser.parse(new FileReader("src\\file1.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
-            for (int i = 0; i < array.size(); i++) {
+            /*for (int i = 0; i < array.size(); i++) {
                 obj2 = (JSONObject) array.get(i);
-                System.out.println("- คำที่ " + (i+1) + " -");
-                System.out.println("Chapter : "+ obj2.get("chapter"));
+                System.out.println("- คำที่ " + (i + 1) + " -");
+                System.out.println("Chapter : " + obj2.get("chapter"));
                 System.out.println("Word : " + obj2.get("word"));
                 System.out.println("Meaning : " + obj2.get("meaning"));
-            }
+            }*/
+            Random r = new Random();
+            int r_int = r.nextInt(array.size() + 1);
+            obj2 = (JSONObject) array.get(r_int);
+            System.out.println("- คำที่ " + (r_int + 1) + " -");
+            System.out.println("Chapter : " + obj2.get("chapter"));
+            System.out.println("Word : " + obj2.get("word"));
+            System.out.println("Meaning : " + obj2.get("meaning"));
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 
 }
-*/

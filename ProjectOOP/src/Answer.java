@@ -54,7 +54,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel2.setText("(n.)");
         jLabel2.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(580, 240, 55, 70);
+        jLabel2.setBounds(580, 240, 56, 70);
 
         jLabel3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

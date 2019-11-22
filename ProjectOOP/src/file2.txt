@@ -1,1 +1,1 @@
-[{"chapter":"1","set":"A","meaning":"คนต้อนฝูงวัว","word":"cattle keeper"},{"chapter":"1","set":"A","meaning":"คนต้อนฝูงวัว","word":"cattle keeper"}]
+[{"chapter":"1","set":null,"meaning":"ยืดเวลา","word":"prolong"}]
