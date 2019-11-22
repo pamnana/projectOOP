@@ -41,6 +41,7 @@ public class SelectMode extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("RSU", 0, 60)); // NOI18N
