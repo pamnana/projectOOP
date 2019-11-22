@@ -46,32 +46,44 @@ public class SingleMode extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SingleMode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
         
+        //</editor-fold>
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SingleMode().setVisible(true);
-                new ReadWriteJSON();
+
                 JSONParser parser = new JSONParser();
                 try {
-                    
+                    Object obj = parser.parse(new FileReader("src\\file1.txt"));
+                    JSONArray array = (JSONArray) obj;
+                    JSONObject obj2;
+
+                    Random r = new Random();
+                    int r_int = r.nextInt(array.size() + 1);
+                    obj2 = (JSONObject) array.get(r_int);
+
+                    Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+
+                    JSONObject obj_new = new JSONObject();
+                    JSONArray array_new = new JSONArray();
+                    obj_new.put("chapter", vcb1.getChapter());
+                    obj_new.put("set", vcb1.getSet());
+                    obj_new.put("word", vcb1.getWord());
+                    obj_new.put("meaning", vcb1.getMeaning());
+                    array_new.add(obj_new);
+
+                    FileWriter file = new FileWriter("src\\file2.txt");
+                    file.write(array_new.toJSONString());
+                    file.flush();
+                    file.close();
+                    new SingleMode().setVisible(true);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+
+                try {
+
                     Object obj = parser.parse(new FileReader("src\\file2.txt"));
                     JSONArray array = (JSONArray) obj;
                     JSONObject obj2;
@@ -79,7 +91,7 @@ public class SingleMode extends javax.swing.JFrame {
 
                     Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
                     getjLabel1().setText(vcb1.getWord());
-
+                    
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -467,6 +479,11 @@ public class SingleMode extends javax.swing.JFrame {
                 getWMouseClicked(evt);
             }
         });
+        getW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getWActionPerformed(evt);
+            }
+        });
         jPanel2.add(getW);
         getW.setBounds(500, 640, 60, 61);
 
@@ -494,15 +511,20 @@ public class SingleMode extends javax.swing.JFrame {
         jPanel2.add(getU);
         getU.setBounds(950, 560, 60, 61);
 
+        jLabel1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setToolTipText("");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jLabel1ComponentShown(evt);
             }
         });
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(640, 90, 170, 40);
+        jLabel1.setBounds(530, 80, 390, 70);
 
         jPanel1.setToolTipText("");
         jPanel1.setDoubleBuffered(false);
@@ -924,6 +946,10 @@ public class SingleMode extends javax.swing.JFrame {
         jLabel1.setText(vcb1.getMeaning());
         jLabel1.setVisible(true);
     }//GEN-LAST:event_jLabel1ComponentShown
+
+    private void getWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getWActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_getWActionPerformed
 
     /**
      * @param args the command line arguments
