@@ -33,7 +33,6 @@ public class Answer extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -50,22 +49,21 @@ public class Answer extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("CAT");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(480, 220, 0, 0);
-
-        jLabel3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("แปลว่า ");
-        jLabel3.setMaximumSize(new java.awt.Dimension(1064, 728));
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(350, 300, 90, 53);
+        jLabel1.setBounds(330, 220, 420, 70);
 
         jLabel6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("แปลว่า แมว");
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel6.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(440, 300, 0, 0);
+        jLabel6.setBounds(220, 300, 640, 50);
 
         jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,13 +107,7 @@ public class Answer extends javax.swing.JFrame {
     }
 
     
-    public JLabel getjLabel3() {
-        return jLabel3;
-    }
 
-    public void setjLabel3(JLabel jLabel3) {
-        this.jLabel3 = jLabel3;
-    }
 
     public JLabel getjLabel4() {
         return jLabel4;
@@ -172,7 +164,7 @@ public class Answer extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Answer().setVisible(true);
-                new SingleMode().setVisible(true);
+                //new SingleMode().setVisible(true);
 
                 JSONParser parser = new JSONParser();
                 try {
@@ -182,7 +174,7 @@ public class Answer extends javax.swing.JFrame {
                     obj2 = (JSONObject) array.get(0);
 
                     Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-                    getjLabel6().setText(vcb1.getMeaning());
+                    getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
                     getjLabel1().setText(vcb1.getWord());
                 } catch (Exception e) {
                     System.out.println(e);
@@ -195,7 +187,6 @@ public class Answer extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private static javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private static javax.swing.JLabel jLabel6;

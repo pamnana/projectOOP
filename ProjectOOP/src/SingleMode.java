@@ -943,7 +943,7 @@ public class SingleMode extends javax.swing.JFrame {
     private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
         // TODO add your handling code here:
 
-        jLabel1.setText(vcb1.getMeaning());
+        getjLabel1().setText(vcb1.getWord());
         jLabel1.setVisible(true);
     }//GEN-LAST:event_jLabel1ComponentShown
 

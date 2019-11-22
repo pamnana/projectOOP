@@ -1,1 +1,1 @@
-[{"chapter":"1","set":null,"meaning":"อ่านไม่ออกเขียนไม่ได้","word":"illiterate"}]
+[{"chapter":"1","set":null,"meaning":"ฝุ่น","word":"dust"}]
