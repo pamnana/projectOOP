@@ -1,14 +1,18 @@
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author DELL
@@ -18,8 +22,9 @@ public class Lobby extends javax.swing.JFrame {
     /**
      * Creates new form Lobby
      */
-   boolean Player1Ready = true;
-   boolean Player2Ready = true;
+    boolean Player1Ready = true;
+    boolean Player2Ready = true;
+
     public Lobby() {
         initComponents();
     }
@@ -132,25 +137,44 @@ public class Lobby extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
+        JSONParser parser = new JSONParser();
+        try {
+            // TODO add your handling code here:
+            Object obj = parser.parse(new FileReader("src\\text2.txt"));
+            JSONArray array = (JSONArray) obj;
+            JSONObject obj2;
+            obj2 = (JSONObject) array.get(0);
+            jLabel5.setText((String) obj2.get("name"));
+            
+            server1 t = new server1(5555);
+            t.start();
 
-         client1 c = new client1();
-         c.start();
+        } catch (IOException ex) {
+
+        } catch (ParseException ex) {
+
+        }
+
+        client1 c = new client1();
+        c.start();
         if (Player1Ready == true) {
             jLabel7.setText("Ready!");
 
-        } if (Player2Ready == true) {
+        }
+        if (Player2Ready == true) {
             jLabel8.setText("Ready!");
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-       try {
-           // TODO add your handling code here:
-           server1 t = new server1(5555);
-           t.start();
-       } catch (IOException ex) {
-           Logger.getLogger(Lobby.class.getName()).log(Level.SEVERE, null, ex);
-       }
+
+        try {
+            server1 t = new server1(5555);
+            t.start();
+        } catch (IOException ex) {
+
+        }
+
     }//GEN-LAST:event_jButton3MouseClicked
 
     /**

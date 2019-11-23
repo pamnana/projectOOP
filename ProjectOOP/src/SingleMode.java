@@ -22,6 +22,7 @@ public class SingleMode extends javax.swing.JFrame {
     public String button = "";
     public int score = 7;
     public Vocab vcb1;
+    public int length_word = 0;
 
     /**
      * Creates new form SingleMode
@@ -40,13 +41,19 @@ public class SingleMode extends javax.swing.JFrame {
         this.jLabel1 = jLabel1;
     }
 
+    public static JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        
+
         //</editor-fold>
 
         /* Create and display the form */
@@ -77,7 +84,7 @@ public class SingleMode extends javax.swing.JFrame {
                     file.write(array_new.toJSONString());
                     file.flush();
                     file.close();
-                    new SingleMode().setVisible(true);
+
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -90,8 +97,9 @@ public class SingleMode extends javax.swing.JFrame {
                     obj2 = (JSONObject) array.get(0);
 
                     Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+                    new SingleMode().setVisible(true);
                     getjLabel1().setText(vcb1.getWord());
-                    
+                    getjLabel4().setVisible(false);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -542,9 +550,12 @@ public class SingleMode extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("____");
         jLabel4.setToolTipText("");
-        jLabel4.addVetoableChangeListener(new java.beans.VetoableChangeListener() {
-            public void vetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {
-                jLabel4VetoableChange(evt);
+        jLabel4.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jLabel4ComponentHidden(evt);
+            }
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jLabel4ComponentShown(evt);
             }
         });
         jPanel1.add(jLabel4);
@@ -555,6 +566,11 @@ public class SingleMode extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("____");
         jLabel6.setToolTipText("");
+        jLabel6.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jLabel6ComponentShown(evt);
+            }
+        });
         jPanel1.add(jLabel6);
 
         jLabel16.setBackground(new java.awt.Color(255, 36, 168));
@@ -935,21 +951,30 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1VetoableChange
 
-    private void jLabel4VetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_jLabel4VetoableChange
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jLabel4VetoableChange
-
     private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
         // TODO add your handling code here:
 
-        getjLabel1().setText(vcb1.getWord());
-        jLabel1.setVisible(true);
+        //getjLabel1().setText(vcb1.getWord());
+        //jLabel1.setVisible(true);
     }//GEN-LAST:event_jLabel1ComponentShown
 
     private void getWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getWActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_getWActionPerformed
+
+    private void jLabel6ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel6ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel6ComponentShown
+
+    private void jLabel4ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel4ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel4ComponentShown
+
+    private void jLabel4ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel4ComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel4ComponentHidden
 
     /**
      * @param args the command line arguments
@@ -996,7 +1021,7 @@ public class SingleMode extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel4;
+    private static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
