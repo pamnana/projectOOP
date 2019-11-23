@@ -13,6 +13,8 @@ public class Lobby extends javax.swing.JFrame {
     /**
      * Creates new form Lobby
      */
+   boolean Player1Ready = true;
+   boolean Player2Ready = true;
     public Lobby() {
         initComponents();
     }
@@ -46,6 +48,11 @@ public class Lobby extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Superspace Bold", 0, 24)); // NOI18N
         jButton1.setText("Ready!");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(430, 550, 170, 51);
 
@@ -54,7 +61,7 @@ public class Lobby extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 0));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel9.setBackground(new java.awt.Color(153, 0, 0));
         jLabel9.setFont(new java.awt.Font("Superspace Bold", 0, 72)); // NOI18N
@@ -104,6 +111,17 @@ public class Lobby extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+
+        if (Player1Ready == true) {
+            jLabel7.setText("Ready!");
+
+        } if (Player2Ready == true) {
+            jLabel8.setText("Ready!");
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
