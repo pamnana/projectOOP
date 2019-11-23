@@ -2,7 +2,6 @@
 {"chapter": "1", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"},
 {"chapter": "1", "word": "wrestler", "meaning": "นักมวยปล้ำ"},
 {"chapter": "1", "word": "tribesman", "meaning": "ชาวเขา"},
-{"chapter": "1", "word": "grass roofed mud hut", "meaning": "กระท่อมโคลนหลังคาหญ้า"},
 {"chapter": "1", "word": "wander", "meaning": "เร่ร่อน"},
 {"chapter": "1", "word": "traumatic", "meaning": "ที่เลวร้าย, น่าเศร้าโศก"},
 {"chapter": "1", "word": "riverbank", "meaning": "ริมฝั่งแม่น้ำ, ตลิ่ง"},
@@ -14,4 +13,21 @@
 {"chapter": "1", "word": "ankle", "meaning": "ข้อเท้า"},
 {"chapter": "1", "word": "text", "meaning": "เนื้อหา, หนังสือเรียน"},
 {"chapter": "1", "word": "magna cum laude", "meaning": "เกียรตินิยมอันดับสอง"},
-{"chapter": "1", "word": "traumas", "meaning": "ความบอบช้ำทางจิตใจ"}]
+{"chapter": "1", "word": "traumas", "meaning": "ความบอบช้ำทางจิตใจ"}],[
+{"chapter": "1", "word": "illiterate", "meaning": "อ่านไม่ออกเขียนไม่ได้"},
+{"chapter": "1", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"},
+{"chapter": "1", "word": "wrestler", "meaning": "นักมวยปล้ำ"},
+{"chapter": "1", "word": "tribesman", "meaning": "ชาวเขา"},
+{"chapter": "1", "word": "wander", "meaning": "เร่ร่อน"},
+{"chapter": "1", "word": "traumatic", "meaning": "ที่เลวร้าย, น่าเศร้าโศก"},
+{"chapter": "1", "word": "riverbank", "meaning": "ริมฝั่งแม่น้ำ, ตลิ่ง"},
+{"chapter": "1", "word": "dust", "meaning": "ฝุ่น"},
+{"chapter": "1", "word": "GED", "meaning": "การสอบเทียบวุฒิม.ปลาย"},
+{"chapter": "1", "word": "encourage", "meaning": "สนับสนุน"},
+{"chapter": "1", "word": "adequate", "meaning": "พอเพียง"},
+{"chapter": "1", "word": "prolong", "meaning": "ยืดเวลา"},
+{"chapter": "1", "word": "ankle", "meaning": "ข้อเท้า"},
+{"chapter": "1", "word": "text", "meaning": "เนื้อหา, หนังสือเรียน"},
+{"chapter": "1", "word": "magna cum laude", "meaning": "เกียรตินิยมอันดับสอง"},
+{"chapter": "1", "word": "traumas", "meaning": "ความบอบช้ำทางจิตใจ"}
+]

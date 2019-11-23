@@ -985,116 +985,126 @@ public class SingleMode extends javax.swing.JFrame {
             System.out.println(e);
         }
         // TODO add your handling code here:
-        if (length_word == 1) {
-            jLabel6.setVisible(false);
-            jLabel16.setVisible(false);
-            jLabel17.setVisible(false);
-            jLabel18.setVisible(false);
-            jLabel19.setVisible(false);
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 2) {
-            jLabel16.setVisible(false);
-            jLabel17.setVisible(false);
-            jLabel18.setVisible(false);
-            jLabel19.setVisible(false);
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 3) {
-            jLabel17.setVisible(false);
-            jLabel18.setVisible(false);
-            jLabel19.setVisible(false);
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 4) {
-            jLabel18.setVisible(false);
-            jLabel19.setVisible(false);
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 5) {
-            jLabel19.setVisible(false);
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 6) {
-            jLabel20.setVisible(false);
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 7) {
-            jLabel21.setVisible(false);
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 8) {
-            jLabel22.setVisible(false);
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-
-        } else if (length_word == 9) {
-            jLabel23.setVisible(false);
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 10) {
-            jLabel24.setVisible(false);
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 11) {
-            jLabel25.setVisible(false);
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 12) {
-            jLabel26.setVisible(false);
-            jLabel27.setVisible(false);
-        } else if (length_word == 13) {
-            jLabel27.setVisible(false);
+        switch (length_word) {
+            case 1:
+                jLabel6.setVisible(false);
+                jLabel16.setVisible(false);
+                jLabel17.setVisible(false);
+                jLabel18.setVisible(false);
+                jLabel19.setVisible(false);
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 2:
+                jLabel16.setVisible(false);
+                jLabel17.setVisible(false);
+                jLabel18.setVisible(false);
+                jLabel19.setVisible(false);
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 3:
+                jLabel17.setVisible(false);
+                jLabel18.setVisible(false);
+                jLabel19.setVisible(false);
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 4:
+                jLabel18.setVisible(false);
+                jLabel19.setVisible(false);
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 5:
+                jLabel19.setVisible(false);
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 6:
+                jLabel20.setVisible(false);
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 7:
+                jLabel21.setVisible(false);
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 8:
+                jLabel22.setVisible(false);
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 9:
+                jLabel23.setVisible(false);
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 10:
+                jLabel24.setVisible(false);
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 11:
+                jLabel25.setVisible(false);
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 12:
+                jLabel26.setVisible(false);
+                jLabel27.setVisible(false);
+                break;
+            case 13:
+                jLabel27.setVisible(false);
+                break;
+            default:
+                break;
         }
     }//GEN-LAST:event_formComponentShown
 
