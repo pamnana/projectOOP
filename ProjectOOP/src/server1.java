@@ -3,7 +3,7 @@ import java.net.*;
 import java.io.*; 
 
 public class server1 extends Thread{ 
- private ServerSocket serverSocket;
+ private static ServerSocket serverSocket;
    
    public server1(int port) throws IOException {
       serverSocket = new ServerSocket(port);
@@ -15,7 +15,7 @@ public class server1 extends Thread{
          try {
             System.out.println("Waiting for client on port " + 
                serverSocket.getLocalPort() + "...");
-            Socket server = serverSocket.accept();
+               Socket server = serverSocket.accept();
             
             System.out.println("Just connected to " + server.getRemoteSocketAddress());
             DataInputStream in = new DataInputStream(server.getInputStream());
@@ -36,7 +36,7 @@ public class server1 extends Thread{
       }
    }
    
-   public static void main(String [] args) {
+   /*public static void main(String [] args) {
       final int port = 5555;
       try {
          Thread t = new server1(port);
@@ -44,5 +44,5 @@ public class server1 extends Thread{
       } catch (IOException e) {
          e.printStackTrace();
       }
-   }
+   }*/
 }

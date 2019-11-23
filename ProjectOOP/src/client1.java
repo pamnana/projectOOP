@@ -2,9 +2,10 @@
 import java.net.*; 
 import java.io.*; 
 
-public class client1 { 
-   public static void main(String [] args) {
-      String serverName = "127.0.0.1";
+public class client1 extends Thread{ 
+    @Override
+    public void run(){
+              String serverName = "127.0.0.1";
       final int port = 5555;
       try {
          System.out.println("Connecting to " + serverName + " on port " + port);
@@ -23,5 +24,8 @@ public class client1 {
       } catch (IOException e) {
          e.printStackTrace();
       }
-   }
+    }
+   /*public static void main(String [] args) {
+
+   }*/
 }

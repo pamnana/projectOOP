@@ -8,6 +8,9 @@
  *
  * @author dell
  */
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 public class SelectMode extends javax.swing.JFrame {
 
@@ -103,7 +106,15 @@ public class SelectMode extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new server1(4000);
+        } catch (IOException ex) {
+            Logger.getLogger(SelectMode.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        new Lobby().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_jButton1MouseClicked
 
