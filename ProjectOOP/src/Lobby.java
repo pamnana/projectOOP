@@ -1,3 +1,8 @@
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -37,6 +42,7 @@ public class Lobby extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,7 +60,7 @@ public class Lobby extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(430, 550, 170, 51);
+        jButton1.setBounds(620, 560, 170, 51);
 
         jPanel1.setFocusTraversalPolicyProvider(true);
         jPanel1.setOpaque(false);
@@ -105,6 +111,18 @@ public class Lobby extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(180, 240, 670, 280);
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("BrowalliaUPC", 1, 36)); // NOI18N
+        jButton3.setText("Create Server");
+        jButton3.setPreferredSize(new java.awt.Dimension(109, 41));
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(250, 560, 200, 51);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vs.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1024, 768);
@@ -115,6 +133,8 @@ public class Lobby extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
 
+         client1 c = new client1();
+         c.start();
         if (Player1Ready == true) {
             jLabel7.setText("Ready!");
 
@@ -122,6 +142,16 @@ public class Lobby extends javax.swing.JFrame {
             jLabel8.setText("Ready!");
         }
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+       try {
+           // TODO add your handling code here:
+           server1 t = new server1(5555);
+           t.start();
+       } catch (IOException ex) {
+           Logger.getLogger(Lobby.class.getName()).log(Level.SEVERE, null, ex);
+       }
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -160,6 +190,7 @@ public class Lobby extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
