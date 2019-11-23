@@ -16,7 +16,7 @@ import org.json.simple.parser.JSONParser;
  *
  * @author dell
  */
-public class Chapter2 extends javax.swing.JFrame {
+public class Chapter4 extends javax.swing.JFrame {
 
     Answer a = new Answer();
     public String button = "";
@@ -27,7 +27,7 @@ public class Chapter2 extends javax.swing.JFrame {
     /**
      * Creates new form SingleMode
      */
-    public Chapter2() {
+    public Chapter4() {
 
         initComponents();
 
@@ -57,7 +57,7 @@ public class Chapter2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Chapter2().setVisible(true);
+                new Chapter4().setVisible(true);
 
             }
         }
@@ -120,7 +120,6 @@ public class Chapter2 extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -943,7 +942,7 @@ public class Chapter2 extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter2.txt"));
+            Object obj = parser.parse(new FileReader("src\\chapter4.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
