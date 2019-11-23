@@ -16,18 +16,18 @@ import org.json.simple.parser.JSONParser;
  *
  * @author dell
  */
-public class SingleMode extends javax.swing.JFrame {
+public class Chapter2 extends javax.swing.JFrame {
 
     Answer a = new Answer();
     public String button = "";
     public int score = 7;
-    public Vocab vcb1;
+    public Vocab vcb2;
     public static int length_word;
 
     /**
      * Creates new form SingleMode
      */
-    public SingleMode() {
+    public Chapter2() {
 
         initComponents();
 
@@ -57,7 +57,7 @@ public class SingleMode extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SingleMode().setVisible(true);
+                new Chapter2().setVisible(true);
 
             }
         }
@@ -120,7 +120,6 @@ public class SingleMode extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -943,7 +942,7 @@ public class SingleMode extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter1.txt"));
+            Object obj = parser.parse(new FileReader("src\\chapter2.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
@@ -951,13 +950,14 @@ public class SingleMode extends javax.swing.JFrame {
             int r_int = r.nextInt(array.size() + 1);
             obj2 = (JSONObject) array.get(r_int);
 
-            Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+            Vocab vcb2 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
 
             JSONObject obj_new = new JSONObject();
             JSONArray array_new = new JSONArray();
-            obj_new.put("chapter", vcb1.getChapter());
-            obj_new.put("word", vcb1.getWord());
-            obj_new.put("meaning", vcb1.getMeaning());
+            obj_new.put("chapter", vcb2.getChapter());
+            obj_new.put("set", vcb2.getSet());
+            obj_new.put("word", vcb2.getWord());
+            obj_new.put("meaning", vcb2.getMeaning());
             array_new.add(obj_new);
 
             FileWriter file = new FileWriter("src\\RandomJSON.txt");
@@ -976,9 +976,9 @@ public class SingleMode extends javax.swing.JFrame {
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
 
-            Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-            length_word = vcb1.getWord().length();
-
+            Vocab vcb2 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+            length_word = vcb2.getWord().length();
+            
         } catch (Exception e) {
             System.out.println(e);
         }

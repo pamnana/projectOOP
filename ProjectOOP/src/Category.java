@@ -47,6 +47,11 @@ public class Category extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton5.setText("Chapter 2");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton5);
         jButton5.setBounds(640, 260, 270, 60);
 
@@ -93,6 +98,13 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        new Chapter2().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton5MouseClicked
 
     /**
      * @param args the command line arguments

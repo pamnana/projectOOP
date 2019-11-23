@@ -155,8 +155,8 @@ public class Lobby extends javax.swing.JFrame {
 
         }
 
-        client1 c = new client1();
-        c.start();
+        //client1 c = new client1();
+        //c.start();
         if (Player1Ready == true) {
             jLabel7.setText("Ready!");
 
