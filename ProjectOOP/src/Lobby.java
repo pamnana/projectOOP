@@ -65,7 +65,7 @@ public class Lobby extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(620, 560, 170, 51);
+        jButton1.setBounds(610, 560, 170, 51);
 
         jPanel1.setFocusTraversalPolicyProvider(true);
         jPanel1.setOpaque(false);
@@ -117,7 +117,7 @@ public class Lobby extends javax.swing.JFrame {
         jPanel1.setBounds(180, 240, 670, 280);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("BrowalliaUPC", 1, 36)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Superspace Bold", 0, 24)); // NOI18N
         jButton3.setText("Create Server");
         jButton3.setPreferredSize(new java.awt.Dimension(109, 41));
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,7 +126,7 @@ public class Lobby extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(250, 560, 200, 51);
+        jButton3.setBounds(230, 560, 240, 51);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vs.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

@@ -1,1 +1,1 @@
-[{"chapter":"2","set":null,"meaning":"สัตว์ครึ่งบกครึ่งน้ำ","word":"amphibian"}]
+[{"chapter":"1","meaning":"ข้อเท้า","word":"ankle"}]
