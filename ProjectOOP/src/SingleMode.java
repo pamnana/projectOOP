@@ -22,7 +22,7 @@ public class SingleMode extends javax.swing.JFrame {
     public String button = "";
     public int score = 7;
     public Vocab vcb1;
-    public int length_word = 0;
+    public static int length_word;
 
     /**
      * Creates new form SingleMode
@@ -44,8 +44,6 @@ public class SingleMode extends javax.swing.JFrame {
     public static JLabel getjLabel4() {
         return jLabel4;
     }
-
-
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -97,9 +95,9 @@ public class SingleMode extends javax.swing.JFrame {
                     obj2 = (JSONObject) array.get(0);
 
                     Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+                    length_word = vcb1.getWord().length();
                     new SingleMode().setVisible(true);
                     getjLabel1().setText(vcb1.getWord());
-                    getjLabel4().setVisible(false);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -167,8 +165,18 @@ public class SingleMode extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new java.awt.BorderLayout(1024, 768));
 
+        jPanel2.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanel2ComponentShown(evt);
+            }
+        });
         jPanel2.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
@@ -941,22 +949,9 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_getPActionPerformed
 
-    private void jLabel9ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel9ComponentShown
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_jLabel9ComponentShown
-
     private void jPanel1VetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_jPanel1VetoableChange
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1VetoableChange
-
-    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
-        // TODO add your handling code here:
-
-        //getjLabel1().setText(vcb1.getWord());
-        //jLabel1.setVisible(true);
-    }//GEN-LAST:event_jLabel1ComponentShown
 
     private void getWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getWActionPerformed
         // TODO add your handling code here:
@@ -975,6 +970,139 @@ public class SingleMode extends javax.swing.JFrame {
     private void jLabel4ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel4ComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4ComponentHidden
+
+    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
+        // TODO add your handling code here:
+
+        //getjLabel1().setText(vcb1.getWord());
+        //jLabel1.setVisible(true);
+    }//GEN-LAST:event_jLabel1ComponentShown
+
+    private void jLabel9ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel9ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel9ComponentShown
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+
+        // TODO add your handling code here:
+        if (length_word == 1) {
+            jLabel6.setVisible(false);
+            jLabel16.setVisible(false);
+            jLabel17.setVisible(false);
+            jLabel18.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 2) {
+            jLabel16.setVisible(false);
+            jLabel17.setVisible(false);
+            jLabel18.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 3) {
+            jLabel17.setVisible(false);
+            jLabel18.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 4) {
+            jLabel18.setVisible(false);
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 5) {
+            jLabel19.setVisible(false);
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 6) {
+            jLabel20.setVisible(false);
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 7) {
+            jLabel21.setVisible(false);
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 8) {
+            jLabel22.setVisible(false);
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+
+        } else if (length_word == 9) {
+            jLabel23.setVisible(false);
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 10) {
+            jLabel24.setVisible(false);
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 11) {
+            jLabel25.setVisible(false);
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 12) {
+            jLabel26.setVisible(false);
+            jLabel27.setVisible(false);
+        } else if (length_word == 13) {
+            jLabel27.setVisible(false);
+        }
+    }//GEN-LAST:event_formComponentShown
+
+    private void jPanel2ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel2ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jPanel2ComponentShown
 
     /**
      * @param args the command line arguments

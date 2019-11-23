@@ -1,1 +1,1 @@
-[{"chapter":"1","set":null,"meaning":"ยืดเวลา","word":"prolong"}]
+[{"chapter":"1","set":null,"meaning":"ที่เลวร้าย, น่าเศร้าโศก","word":"traumatic"}]
