@@ -74,7 +74,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("a");
+        jLabel4.setText("Congratulations!");
         jLabel4.setToolTipText("");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel4);
