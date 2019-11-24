@@ -47,7 +47,6 @@ public class Lobby extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,7 +64,7 @@ public class Lobby extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(610, 560, 170, 51);
+        jButton1.setBounds(450, 560, 170, 51);
 
         jPanel1.setFocusTraversalPolicyProvider(true);
         jPanel1.setOpaque(false);
@@ -116,18 +115,6 @@ public class Lobby extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(180, 240, 670, 280);
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Superspace Bold", 0, 24)); // NOI18N
-        jButton3.setText("Create Server");
-        jButton3.setPreferredSize(new java.awt.Dimension(109, 41));
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(230, 560, 240, 51);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vs.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1024, 768);
@@ -166,17 +153,6 @@ public class Lobby extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-
-        try {
-            server1 t = new server1(5555);
-            t.start();
-        } catch (IOException ex) {
-
-        }
-
-    }//GEN-LAST:event_jButton3MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -214,7 +190,6 @@ public class Lobby extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
