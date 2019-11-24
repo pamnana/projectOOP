@@ -9,7 +9,7 @@
  * @author dell
  */
 public class Category extends javax.swing.JFrame {
-    SingleMode s = new SingleMode();
+    Chapter1 s = new Chapter1();
     /**
      * Creates new form Category
      */
@@ -94,7 +94,7 @@ public class Category extends javax.swing.JFrame {
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         // TODO add your handling code here:
-        new SingleMode().setVisible(true);
+        new Chapter1().setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton8MouseClicked

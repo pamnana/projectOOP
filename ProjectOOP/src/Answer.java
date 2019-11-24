@@ -82,6 +82,11 @@ public class Answer extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -92,6 +97,11 @@ public class Answer extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(250, 570, 110, 61);
 
@@ -124,6 +134,20 @@ public class Answer extends javax.swing.JFrame {
             System.out.println(e);
         }
     }//GEN-LAST:event_formComponentShown
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        new SelectMode().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        new Chapter1().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
 
     public static JLabel getjLabel1() {
         return jLabel1;

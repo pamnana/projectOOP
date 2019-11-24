@@ -16,7 +16,7 @@ import org.json.simple.parser.JSONParser;
  *
  * @author dell
  */
-public class SingleMode extends javax.swing.JFrame {
+public class Chapter1 extends javax.swing.JFrame {
 
     Answer a = new Answer();
     public char button;
@@ -71,7 +71,7 @@ public class SingleMode extends javax.swing.JFrame {
         this.jLabel9 = jLabel9;
     }
 
-    public SingleMode() {
+    public Chapter1() {
 
         initComponents();
 
@@ -110,7 +110,7 @@ public class SingleMode extends javax.swing.JFrame {
     }
 
     public static void setLength_word(int length_word) {
-        SingleMode.length_word = length_word;
+        Chapter1.length_word = length_word;
     }
 
     public static void main(String args[]) {
@@ -125,7 +125,7 @@ public class SingleMode extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SingleMode().setVisible(true);
+                new Chapter1().setVisible(true);
 
             }
         }
@@ -188,7 +188,6 @@ public class SingleMode extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {

@@ -19,18 +19,78 @@ import org.json.simple.parser.JSONParser;
 public class Chapter2 extends javax.swing.JFrame {
 
     Answer a = new Answer();
-    public String button = "";
-    public int score = 7;
-    public Vocab vcb2;
+    public char button;
+    public static int score = 7;
+    public Vocab vcb1;
     public static int length_word;
+    public JLabel[] label;
+    public String word;
+    public static int total;
 
     /**
      * Creates new form SingleMode
      */
+    public static void setIMGstatic() {
+        if (getScore() == 6) {
+            getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
+        }  else if (getScore() == 5) {
+            getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
+        }  else if (getScore() == 4) {
+            getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
+        }  else if (getScore() == 3) {
+            getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
+        }  else if (getScore() == 2) {
+            getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
+        }  else if (getScore() == 1) {
+            getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
+        }  else if (getScore() == 0) {
+            getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            new Answer().setVisible(true);
+        }
+    }
+    public static void check(){
+        if (getTotal() == getLength_word()){
+            new Answer().setVisible(true);
+        }
+    }
+
+    public static int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+    
+
+    public static JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
     public Chapter2() {
 
         initComponents();
 
+    }
+
+    public static int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
     }
 
     public static JLabel getjLabel1() {
@@ -43,6 +103,14 @@ public class Chapter2 extends javax.swing.JFrame {
 
     public static JLabel getjLabel4() {
         return jLabel4;
+    }
+
+    public static int getLength_word() {
+        return length_word;
+    }
+
+    public static void setLength_word(int length_word) {
+        Chapter2.length_word = length_word;
     }
 
     public static void main(String args[]) {
@@ -120,7 +188,6 @@ public class Chapter2 extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -666,226 +733,4064 @@ public class Chapter2 extends javax.swing.JFrame {
 
     private void getAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getAMouseClicked
         // TODO add your handling code here:
-        button = "A";
-        score--;
+        int count = 0;
+        button = 'a';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getA.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("A");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore() - 1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getAMouseClicked
 
     private void getBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getBMouseClicked
         // TODO add your handling code here:
-        button = "B";
-        score--;
+        int count = 0;
+        button = 'b';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getB.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("B");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore() - 1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getBMouseClicked
 
     private void getCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getCMouseClicked
         // TODO add your handling code here:
-        button = "C";
-        score--;
+        int count = 0;
+        button = 'c';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getC.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("C");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getCMouseClicked
 
     private void getDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getDMouseClicked
         // TODO add your handling code here:
-        button = "D";
-        score--;
+        int count = 0;
+        button = 'd';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getD.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("D");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getDMouseClicked
 
     private void getEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getEMouseClicked
         // TODO add your handling code here:
-        button = "E";
-        score--;
+        int count = 0;
+        button = 'e';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getE.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("E");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getEMouseClicked
 
     private void getFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getFMouseClicked
         // TODO add your handling code here:
-        button = "F";
-        score--;
+        int count = 0;
+        button = 'f';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getF.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("F");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getFMouseClicked
 
     private void getGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getGMouseClicked
         // TODO add your handling code here:
-        button = "G";
-        score--;
+        int count = 0;
+        button = 'g';
+       
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getG.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("G");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getGMouseClicked
 
     private void getHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getHMouseClicked
         // TODO add your handling code here:
-        button = "H";
-        score--;
+        int count = 0;
+        button = 'h';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getH.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("H");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getHMouseClicked
 
     private void getIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getIMouseClicked
         // TODO add your handling code here:
-        button = "I";
-        score--;
+        int count = 0;
+        button = 'i';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getI.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("I");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getIMouseClicked
 
     private void getJMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getJMouseClicked
         // TODO add your handling code here:
-        button = "J";
-        score--;
+        int count = 0;
+        button = 'j';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getJ.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("J");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getJMouseClicked
 
     private void getKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getKMouseClicked
         // TODO add your handling code here:
-        button = "K";
-        score--;
+        int count = 0;
+        button = 'k';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getK.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("K");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getKMouseClicked
 
     private void getLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getLMouseClicked
         // TODO add your handling code here:
-        button = "L";
-        score--;
+        int count = 0;
+        button = 'l';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getL.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("L");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getLMouseClicked
 
     private void getMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getMMouseClicked
         // TODO add your handling code here:
-        button = "M";
-        score--;
+        int count = 0;
+        button = 'm';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getM.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("M");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getMMouseClicked
 
     private void getNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getNMouseClicked
         // TODO add your handling code here:
-        button = "N";
-        score--;
+        int count = 0;
+        button = 'n';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getN.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("N");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getNMouseClicked
 
     private void getOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getOMouseClicked
         // TODO add your handling code here:
-        button = "O";
-        score--;
+        int count = 0;
+        button = 'o';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getO.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("O");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getOMouseClicked
 
     private void getPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getPMouseClicked
         // TODO add your handling code here:
-        button = "P";
-        score--;
+        int count = 0;
+        button = 'p';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getP.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("P");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getPMouseClicked
 
     private void getQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getQMouseClicked
         // TODO add your handling code here:
-        button = "Q";
-        score--;
+        int count = 0;
+        button = 'q';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getQ.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("Q");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getQMouseClicked
 
     private void getRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getRMouseClicked
         // TODO add your handling code here:
-        button = "R";
-        score--;
+        int count = 0;
+        button = 'r';
+        
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getR.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("R");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getRMouseClicked
 
     private void getSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getSMouseClicked
         // TODO add your handling code here:
-        button = "S";
-        score--;
+        int count = 0;
+        button = 's';
+       
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getS.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("S");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getSMouseClicked
 
     private void getTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getTMouseClicked
         // TODO add your handling code here:
-        button = "T";
-        score--;
+        int count = 0;
+        button = 't';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getT.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("T");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getTMouseClicked
 
     private void getUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getUMouseClicked
         // TODO add your handling code here:
-        button = "U";
-        score--;
+        int count = 0;
+        button = 'u';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getU.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("U");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getUMouseClicked
 
     private void getVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getVMouseClicked
         // TODO add your handling code here:
-        button = "V";
-        score--;
+        int count = 0;
+        button = 'v';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getV.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("V");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getVMouseClicked
 
     private void getWMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getWMouseClicked
         // TODO add your handling code here:
-        button = "W";
-        score--;
+        int count = 0;
+        button = 'w';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getW.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("W");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getWMouseClicked
 
     private void getXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getXMouseClicked
         // TODO add your handling code here:
-        button = "X";
-        score--;
+        int count = 0;
+        button = 'x';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getX.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("X");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getXMouseClicked
 
     private void getYMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getYMouseClicked
         // TODO add your handling code here:
-        button = "Y";
-        score--;
+        int count = 0;
+        button = 'y';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getY.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("Y");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getYMouseClicked
 
@@ -895,10 +4800,163 @@ public class Chapter2 extends javax.swing.JFrame {
 
     private void getZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getZMouseClicked
         // TODO add your handling code here:
-        button = "Z";
-        score--;
+        int count = 0;
+        button = 'z';
+        JLabel[] label = new JLabel[getLength_word()];
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score > 0) {
             getZ.setVisible(false);
+
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = this.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("Z");
+                    setTotal(getTotal()+1);
+                    count++;
+                } else {
+                }
+            }
+            if (count == 0) {
+                setScore(getScore()-1);
+                setIMGstatic();
+            }
         }
     }//GEN-LAST:event_getZMouseClicked
 
@@ -951,14 +5009,13 @@ public class Chapter2 extends javax.swing.JFrame {
             int r_int = r.nextInt(array.size() + 1);
             obj2 = (JSONObject) array.get(r_int);
 
-            Vocab vcb2 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+            Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
 
             JSONObject obj_new = new JSONObject();
             JSONArray array_new = new JSONArray();
-            obj_new.put("chapter", vcb2.getChapter());
-            obj_new.put("set", vcb2.getSet());
-            obj_new.put("word", vcb2.getWord());
-            obj_new.put("meaning", vcb2.getMeaning());
+            obj_new.put("chapter", vcb1.getChapter());
+            obj_new.put("word", vcb1.getWord());
+            obj_new.put("meaning", vcb1.getMeaning());
             array_new.add(obj_new);
 
             FileWriter file = new FileWriter("src\\RandomJSON.txt");
@@ -977,9 +5034,11 @@ public class Chapter2 extends javax.swing.JFrame {
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
 
-            Vocab vcb2 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-            length_word = vcb2.getWord().length();
-            
+            Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+            //length_word = vcb1.getWord().length();
+            setLength_word(vcb1.getWord().length());
+            setWord(vcb1.getWord());
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -1159,7 +5218,7 @@ public class Chapter2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private static javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

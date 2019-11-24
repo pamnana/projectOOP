@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"การสอบเทียบวุฒิม.ปลาย","word":"GED"}]
+[{"chapter":"2","set":null,"meaning":"หีบสมบัติ","word":"treasurechest"}]
