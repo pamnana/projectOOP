@@ -113,7 +113,7 @@ public class Chapter4 extends javax.swing.JFrame {
     }
 
     public static void setLength_word(int length_word) {
-        Chapter2.length_word = length_word;
+        Chapter4.length_word = length_word;
     }
 
     public static void main(String args[]) {
@@ -128,7 +128,7 @@ public class Chapter4 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Chapter2().setVisible(true);
+                new Chapter4().setVisible(true);
                 
             }
         }
@@ -5047,7 +5047,7 @@ public class Chapter4 extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter2.txt"));
+            Object obj = parser.parse(new FileReader("src\\chapter4.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 

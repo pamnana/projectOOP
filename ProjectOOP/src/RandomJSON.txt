@@ -1,1 +1,1 @@
-[{"chapter":"2","meaning":"เขตร้อน","word":"tropical"}]
+[{"chapter":"2","meaning":"สัตว์ครึ่งบกครึ่งน้ำ","word":"amphibian"}]
