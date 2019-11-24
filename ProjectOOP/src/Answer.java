@@ -17,11 +17,21 @@ import org.json.simple.parser.JSONParser;
  */
 public class Answer extends javax.swing.JFrame {
 
+    public static boolean isWinner;
+
     /**
      * Creates new form Answer
      */
     public Answer() {
         initComponents();
+    }
+
+    public static boolean isIsWinner() {
+        return isWinner;
+    }
+
+    public static void setIsWinner(boolean isWinner) {
+        Answer.isWinner = isWinner;
     }
 
     /**
@@ -128,7 +138,11 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            getjLabel4().setText("DON'T GIVE UP!");
+            if (isWinner.isIsWinner() == false) {
+                getjLabel4().setText("DON'T GIVE UP!");
+            } else {
+                getjLabel4().setText("Congratulations!");
+            }
 
         } catch (Exception e) {
             System.out.println(e);
@@ -144,7 +158,7 @@ public class Answer extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        new Chapter1().setVisible(true);
+        new Category().setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
@@ -212,9 +226,8 @@ public class Answer extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Answer().setVisible(true);
-                
-                //new SingleMode().setVisible(true);
 
+                //new SingleMode().setVisible(true);
             }
         });
     }

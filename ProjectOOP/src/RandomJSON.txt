@@ -1,1 +1,1 @@
-[{"chapter":"2","meaning":"สัตว์เลื้อยคลาน","word":"reptile"}]
+[{"chapter":"1","meaning":"การสอบเทียบวุฒิม.ปลาย","word":"GED"}]

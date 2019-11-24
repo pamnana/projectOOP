@@ -57,11 +57,21 @@ public class Category extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton6.setText("Chapter 3");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton6);
         jButton6.setBounds(120, 410, 270, 60);
 
         jButton7.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton7.setText("Chapter 4");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -105,6 +115,20 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        new Chapter3().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        new Chapter4().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton7MouseClicked
 
     /**
      * @param args the command line arguments

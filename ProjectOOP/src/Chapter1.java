@@ -26,10 +26,9 @@ public class Chapter1 extends javax.swing.JFrame {
     public JLabel[] label;
     public String word;
     public static int total;
+    public static checkWinner isWinner;
 
-    /**
-     * Creates new form SingleMode
-     */
+
     public static void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
@@ -45,11 +44,16 @@ public class Chapter1 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            isWinner.setIsWinner(false);
             new Answer().setVisible(true);
+            
         }
     }
+    
     public static void check(){
         if (getTotal() == getLength_word()){
+            System.out.println("ชนะ!");
+            isWinner.setIsWinner(true);
             new Answer().setVisible(true);
         }
     }
@@ -188,7 +192,9 @@ public class Chapter1 extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
+        setSize(new java.awt.Dimension(1024, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -5164,6 +5170,7 @@ public class Chapter1 extends javax.swing.JFrame {
             default:
                 break;
         }
+        
     }//GEN-LAST:event_formComponentShown
 
     private void jPanel2ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel2ComponentShown
