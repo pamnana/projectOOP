@@ -29,33 +29,29 @@ public class Chapter2 extends javax.swing.JFrame {
     public static checkWinner isWinner;
     public boolean checkWinner;
 
-    /**
-     * Creates new form SingleMode
-     */
     public void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
-        }  else if (getScore() == 5) {
+        } else if (getScore() == 5) {
             getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
-        }  else if (getScore() == 4) {
+        } else if (getScore() == 4) {
             getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
-        }  else if (getScore() == 3) {
+        } else if (getScore() == 3) {
             getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
-        }  else if (getScore() == 2) {
+        } else if (getScore() == 2) {
             getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
-        }  else if (getScore() == 1) {
+        } else if (getScore() == 1) {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
-        }  else if (getScore() == 0) {
+        } else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
-            System.out.println("wtf");
             this.setVisible(false);
             checkWinner = false;
-            System.out.println("wtf");
             new Answer(this).setVisible(true);
         }
     }
-    public void check(){
-        if (getTotal() == getLength_word()){
+
+    public void check() {
+        if (total == getLength_word()){
             System.out.println("ชนะ!");
             isWinner.setIsWinner(true);
             checkWinner = true;
@@ -70,7 +66,6 @@ public class Chapter2 extends javax.swing.JFrame {
     public void setTotal(int total) {
         this.total = total;
     }
-    
 
     public static JLabel getjLabel9() {
         return jLabel9;
@@ -130,12 +125,12 @@ public class Chapter2 extends javax.swing.JFrame {
          */
 
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Chapter2().setVisible(true);
-
+                
             }
         }
         );
@@ -197,7 +192,6 @@ public class Chapter2 extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -892,7 +886,7 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("A");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
@@ -1055,7 +1049,7 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("B");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
@@ -1218,13 +1212,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("C");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -1381,13 +1375,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("D");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -1544,13 +1538,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("E");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -1707,13 +1701,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("F");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -1724,7 +1718,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'g';
-       
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -1871,13 +1865,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("G");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -1888,7 +1882,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'h';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2035,13 +2029,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("H");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2052,7 +2046,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'i';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2199,13 +2193,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("I");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2216,7 +2210,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'j';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2363,13 +2357,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("J");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2380,7 +2374,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'k';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2527,13 +2521,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("K");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2544,7 +2538,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'l';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2691,13 +2685,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("L");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2708,7 +2702,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'm';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2855,13 +2849,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("M");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -2872,7 +2866,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'n';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3019,13 +3013,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("N");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -3036,7 +3030,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'o';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3183,13 +3177,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("O");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -3200,7 +3194,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'p';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3347,13 +3341,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("P");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -3364,7 +3358,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'q';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3511,13 +3505,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Q");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -3528,7 +3522,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'r';
-        
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3675,13 +3669,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("R");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -3692,7 +3686,7 @@ public class Chapter2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 's';
-       
+
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3839,13 +3833,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("S");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4002,13 +3996,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("T");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4165,13 +4159,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("U");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4328,13 +4322,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("V");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4491,13 +4485,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("W");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4654,13 +4648,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("X");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4817,13 +4811,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Y");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -4984,13 +4978,13 @@ public class Chapter2 extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Z");
-                    setTotal(getTotal()+1);
+                    setTotal(getTotal() + 1);
                     count++;
                 } else {
                 }
             }
             if (count == 0) {
-                setScore(getScore()-1);
+                setScore(getScore() - 1);
                 setIMGstatic();
                 check();
             }
@@ -5201,6 +5195,7 @@ public class Chapter2 extends javax.swing.JFrame {
             default:
                 break;
         }
+
     }//GEN-LAST:event_formComponentShown
 
     private void jPanel2ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel2ComponentShown
@@ -5259,4 +5254,8 @@ public class Chapter2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    boolean isIsWinner() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
