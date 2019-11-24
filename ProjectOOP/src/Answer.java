@@ -19,7 +19,6 @@ public class Answer extends javax.swing.JFrame {
     /**
      * Creates new form Answer
      */
-    
     public Answer() {
         initComponents();
     }
@@ -46,6 +45,11 @@ public class Answer extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
@@ -99,6 +103,25 @@ public class Answer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        JSONParser parser = new JSONParser();
+        try {
+            Object obj = parser.parse(new FileReader("src\\file2.txt"));
+            JSONArray array = (JSONArray) obj;
+            JSONObject obj2;
+            obj2 = (JSONObject) array.get(0);
+
+            Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
+            getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
+            getjLabel1().setText(vcb1.getWord());
+            getjLabel4().setText("Congratulations!");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_formComponentShown
+
     public static JLabel getjLabel1() {
         return jLabel1;
     }
@@ -106,9 +129,6 @@ public class Answer extends javax.swing.JFrame {
     public static void setjLabel1(JLabel jLabel1) {
         Answer.jLabel1 = jLabel1;
     }
-
-    
-
 
     public static JLabel getjLabel4() {
         return jLabel4;
@@ -167,21 +187,6 @@ public class Answer extends javax.swing.JFrame {
                 new Answer().setVisible(true);
                 //new SingleMode().setVisible(true);
 
-                JSONParser parser = new JSONParser();
-                try {
-                    Object obj = parser.parse(new FileReader("src\\file2.txt"));
-                    JSONArray array = (JSONArray) obj;
-                    JSONObject obj2;
-                    obj2 = (JSONObject) array.get(0);
-
-                    Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-                    getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
-                    getjLabel1().setText(vcb1.getWord());
-                    getjLabel4().setText("Congratulations!");
-                    
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
             }
         });
     }
