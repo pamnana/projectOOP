@@ -26,6 +26,8 @@ public class Chapter3 extends javax.swing.JFrame {
     public JLabel[] label;
     public String word;
     public static int total;
+    public static checkWinner isWinner;
+    public boolean checkWinner; 
 
     /**
      * Creates new form SingleMode

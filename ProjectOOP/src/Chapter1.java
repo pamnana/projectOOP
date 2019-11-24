@@ -45,12 +45,9 @@ public class Chapter1 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
-            isWinner.setIsWinner(false);
-            System.out.println("ขึ้นสิไอ้หน้าสัส");
-            new Answer().setVisible(true);
-            System.out.println("ขึ้นสิไอ้หน้าสัส2");
             this.setVisible(false);
-            
+            a.setIsWinner(false);
+            new Answer().setVisible(true);
         }
     }
     

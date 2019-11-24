@@ -16,8 +16,11 @@ import org.json.simple.parser.JSONParser;
  * @author DELL
  */
 public class Answer extends javax.swing.JFrame {
-
+    
     private Chapter1 main1;
+    private Chapter2 main2;
+    private Chapter3 main3;
+    private Chapter4 main4;
     public static boolean isWinner;
 
     /**
@@ -26,11 +29,11 @@ public class Answer extends javax.swing.JFrame {
     public Answer() {
         initComponents();
     }
-    public Answer(Chapter1 a){
+
+    public Answer(Chapter1 a) {
         this.main1 = a;
         initComponents();
     }
-    
 
     public static boolean isIsWinner() {
         return isWinner;
@@ -38,6 +41,38 @@ public class Answer extends javax.swing.JFrame {
 
     public static void setIsWinner(boolean isWinner) {
         Answer.isWinner = isWinner;
+    }
+
+    public void init(Chapter1 main1) {
+        if (main1.checkWinner == false) {
+            getjLabel4().setText("DON'T GIVE UP!");
+        } else if (main1.checkWinner != false) {
+            getjLabel4().setText("Congratulations!");
+        }
+    }
+
+    public void init(Chapter2 main2) {
+        if (main2.checkWinner == false) {
+            getjLabel4().setText("DON'T GIVE UP!");
+        } else if (main2.checkWinner != false) {
+            getjLabel4().setText("Congratulations!");
+        }
+    }
+    
+    public void init(Chapter3 main3) {
+        if (main3.checkWinner == false) {
+            getjLabel4().setText("DON'T GIVE UP!");
+        } else if (main3.checkWinner != false) {
+            getjLabel4().setText("Congratulations!");
+        }
+    }
+    
+    public void init(Chapter4 main4) {
+        if (main4.checkWinner == false) {
+            getjLabel4().setText("DON'T GIVE UP!");
+        } else if (main4.checkWinner != false) {
+            getjLabel4().setText("Congratulations!");
+        }
     }
 
     /**
@@ -144,13 +179,7 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            if (main1.checkWinner == false) {
-                getjLabel4().setText("DON'T GIVE UP!");
-            } else {
-                getjLabel4().setText("Congratulations!");
-            }
-
-        } catch (Exception e){ 
+        } catch (Exception e) {
             System.out.println(e);
         }
     }//GEN-LAST:event_formComponentShown

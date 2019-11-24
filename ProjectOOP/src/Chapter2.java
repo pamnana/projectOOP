@@ -26,6 +26,8 @@ public class Chapter2 extends javax.swing.JFrame {
     public JLabel[] label;
     public String word;
     public static int total;
+    public static checkWinner isWinner;
+    public boolean checkWinner;
 
     /**
      * Creates new form SingleMode
@@ -46,6 +48,7 @@ public class Chapter2 extends javax.swing.JFrame {
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
             this.setVisible(false);
+            a.setIsWinner(false);
             new Answer().setVisible(true);
         }
     }
