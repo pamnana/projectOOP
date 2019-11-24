@@ -52,9 +52,8 @@ public class Chapter4 extends javax.swing.JFrame {
 
     public void check() {
         if (total == getLength_word()){
-            System.out.println("ชนะ!");
-            isWinner.setIsWinner(true);
             checkWinner = true;
+            this.setVisible(false);
             new Answer(this).setVisible(true);
         }
     }
@@ -114,7 +113,7 @@ public class Chapter4 extends javax.swing.JFrame {
     }
 
     public static void setLength_word(int length_word) {
-        Chapter4.length_word = length_word;
+        Chapter2.length_word = length_word;
     }
 
     public static void main(String args[]) {
@@ -129,7 +128,7 @@ public class Chapter4 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Chapter4().setVisible(true);
+                new Chapter2().setVisible(true);
                 
             }
         }
@@ -889,13 +888,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("A");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getAMouseClicked
@@ -1052,13 +1052,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("B");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getBMouseClicked
@@ -1215,13 +1216,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("C");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getCMouseClicked
@@ -1378,13 +1380,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("D");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getDMouseClicked
@@ -1541,13 +1544,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("E");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getEMouseClicked
@@ -1704,13 +1708,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("F");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getFMouseClicked
@@ -1868,13 +1873,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("G");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getGMouseClicked
@@ -2032,13 +2038,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("H");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getHMouseClicked
@@ -2196,13 +2203,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("I");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getIMouseClicked
@@ -2360,13 +2368,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("J");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getJMouseClicked
@@ -2524,13 +2533,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("K");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getKMouseClicked
@@ -2688,13 +2698,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("L");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getLMouseClicked
@@ -2852,13 +2863,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("M");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getMMouseClicked
@@ -3016,13 +3028,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("N");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getNMouseClicked
@@ -3180,13 +3193,14 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("O");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
+                
             }
         }
     }//GEN-LAST:event_getOMouseClicked
@@ -3344,13 +3358,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("P");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getPMouseClicked
@@ -3508,13 +3522,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("Q");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getQMouseClicked
@@ -3672,13 +3686,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("R");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getRMouseClicked
@@ -3836,13 +3850,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("S");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getSMouseClicked
@@ -3999,13 +4013,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("T");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getTMouseClicked
@@ -4162,13 +4176,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("U");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getUMouseClicked
@@ -4325,13 +4339,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("V");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getVMouseClicked
@@ -4488,13 +4502,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("W");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getWMouseClicked
@@ -4651,13 +4665,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("X");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getXMouseClicked
@@ -4814,13 +4828,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("Y");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getYMouseClicked
@@ -4981,13 +4995,13 @@ public class Chapter4 extends javax.swing.JFrame {
                     label[i].setText("Z");
                     setTotal(getTotal() + 1);
                     count++;
+                    check();
                 } else {
                 }
             }
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                check();
             }
         }
     }//GEN-LAST:event_getZMouseClicked
@@ -5033,7 +5047,7 @@ public class Chapter4 extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter3.txt"));
+            Object obj = parser.parse(new FileReader("src\\chapter2.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
