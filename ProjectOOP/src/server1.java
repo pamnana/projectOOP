@@ -1,41 +1,78 @@
 // A Java program for a Server 
 import java.net.*; 
 import java.io.*; 
+import java.util.ArrayList;
+import java.util.List;
 
-public class server1 extends Thread{ 
- private static ServerSocket serverSocket;
-   
-   public server1(int port) throws IOException {
-      serverSocket = new ServerSocket(port);
-      serverSocket.setSoTimeout(15000);
-   }
+public class server1 extends Thread implements Runnable{ 
+    /**
+     * Server Configuration which contains the Port.
+     */
+    private ServerConfiguration config = new ServerConfiguration();
+    
+    /**
+     * ID of the player.
+     */
+    private static long playerId = 0;
+    
+    
+    /**
+     * List of Games.
+     */
+    private final List<Game> games = new ArrayList<>();
+    
+    /**
+     * Initializes the Game Server and waits permanent for new Clients.
+     */
+    @Override
+    public void run() {
+        new Thread(() -> {
+            int port = config.getPort();
+            try (ServerSocket server = new ServerSocket(port)) {
+                List<Clientconnection> clientlist = new ArrayList<>();
+                System.out.println("Game Server waiting on Port " + port + "!");
+                while (true) {
+                    Socket client = server.accept();
 
-   public void run() {
-      while(true) {
-         try {
-            System.out.println("Waiting for client on port " + 
-               serverSocket.getLocalPort() + "...");
-               Socket server = serverSocket.accept();
-            
-            System.out.println("Just connected to " + server.getRemoteSocketAddress());
-            DataInputStream in = new DataInputStream(server.getInputStream());
-            
-            System.out.println(in.readUTF());
-            DataOutputStream out = new DataOutputStream(server.getOutputStream());
-            out.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-               + "\nGoodbye!");
-            server.close();
-            
-         } catch (SocketTimeoutException s) {
-            System.out.println("Socket timed out!");
-            break;
-         } catch (IOException e) {
-            e.printStackTrace();
-            break;
-         }
-      }
-   }
+                    synchronized (clientlist) {
+                        Clientconnection cc = new Clientconnection(client, playerId);
+                        int playerNr = (int) (playerId % 2) + 1;
+                        cc.start();
+
+                        clientlist.add(cc);
+                        System.out.println("Client " + playerNr + " (playerID: " + playerId + ") accepted!");
+
+                        playerId++; // increase playerId;
+                        if (clientlist.size() == 2) {
+                            synchronized (games) { // TODO no sync needed?
+                                Game game = new Game(clientlist);
+                                game.start();
+                                games.add(game);
+                                clientlist.clear(); // wait for two new clients
+                            }
+                        }
+                    }
+                }
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }).start();
+    } 
+    public static void main(String[] args) {
+         int port = Integer.parseInt("5555");
+                server1 hangmanServer = new server1();
+                hangmanServer.config = new ServerConfiguration(port);
+                hangmanServer.run();
+                boolean cmdStart = true;
+            }
+        }
+        
+
+    
    
+
+
    /*public static void main(String [] args) {
       final int port = 5555;
       try {
@@ -45,4 +82,3 @@ public class server1 extends Thread{
          e.printStackTrace();
       }
    }*/
-}
