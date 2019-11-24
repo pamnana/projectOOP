@@ -25,6 +25,7 @@ public class SingleMode extends javax.swing.JFrame {
     public static int length_word;
     public JLabel[] label;
     public String word;
+
     /**
      * Creates new form SingleMode
      */
@@ -685,35 +686,161 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'a';
-        
+
         System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
-        System.out.println("สวัสดี");
-        label[0] = jLabel4;
-        label[1] = jLabel6;
-        label[2] = jLabel16;
-        label[3] = jLabel17;
-        label[4] = jLabel18;
-        label[5] = jLabel19;
-        label[6] = jLabel20;
-        label[7] = jLabel21;
-        label[8] = jLabel22;
-        label[9] = jLabel23;
-        label[10] = jLabel24;
-        label[11] = jLabel25;
-        label[12] = jLabel26;
-        label[13] = jLabel27;
-        
+
+        switch (length_word) {
+            case 1:
+                label[0] = jLabel4;
+                break;
+            case 2:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                break;
+            case 3:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                break;
+            case 4:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                break;
+            case 5:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                break;
+            case 6:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                break;
+            case 7:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                break;
+            case 8:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                break;
+            case 9:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                break;
+            case 10:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                break;
+            case 11:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                break;
+            case 12:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                break;
+            case 13:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                break;
+            case 14:
+                label[0] = jLabel4;
+                label[1] = jLabel6;
+                label[2] = jLabel16;
+                label[3] = jLabel17;
+                label[4] = jLabel18;
+                label[5] = jLabel19;
+                label[6] = jLabel20;
+                label[7] = jLabel21;
+                label[8] = jLabel22;
+                label[9] = jLabel23;
+                label[10] = jLabel24;
+                label[11] = jLabel25;
+                label[12] = jLabel26;
+                label[13] = jLabel27;
+                break;
+            default:
+                break;
+        }
         if (score >= 0) {
             getA.setVisible(false);
+            
             for (int i = 0; i < getLength_word(); i++) {
-                char cha = vcb1.getWord().charAt(i);
+                char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("A");
+                    
                     count++;
-                }else{}
+                } else {
+                    System.out.println("หาย 1");
+                }
             }
-            if (count == 0){
+            if (count == 0) {
                 score--;
             }
         }
@@ -1026,7 +1153,7 @@ public class SingleMode extends javax.swing.JFrame {
             //length_word = vcb1.getWord().length();
             setLength_word(vcb1.getWord().length());
             setWord(vcb1.getWord());
-            
+
         } catch (Exception e) {
             System.out.println(e);
         }
