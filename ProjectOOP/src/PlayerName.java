@@ -42,15 +42,22 @@ public class PlayerName extends javax.swing.JFrame {
         setMinimumSize(null);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
+        setSize(new java.awt.Dimension(1024, 768));
 
         jPanel1.setLayout(null);
 
-        jTextField1.setMinimumSize(new java.awt.Dimension(6, 20));
+        jTextField1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
                 jTextField1InputMethodTextChanged(evt);
+            }
+        });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
             }
         });
         jPanel1.add(jTextField1);
@@ -131,6 +138,10 @@ public class PlayerName extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

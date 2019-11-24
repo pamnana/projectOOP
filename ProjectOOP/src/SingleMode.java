@@ -32,7 +32,8 @@ public class SingleMode extends javax.swing.JFrame {
     public static void setIMGstatic() {
         if (getScore() == 6) {
             //getjLabel9().setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2.jpg")));
-            getjLabel9().setIcon(new ImageIcon("/p2.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
+     
         }
     }
 
