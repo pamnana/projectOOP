@@ -11,7 +11,7 @@
 public class Vocab {
 
     private String chapter;
-    private String set;
+    
     private String word;
     private String meaning;
 
@@ -28,14 +28,6 @@ public class Vocab {
 
     public void setChapter(String chapter) {
         this.chapter = chapter;
-    }
-
-    public String getSet() {
-        return set;
-    }
-
-    public void setSet(String set) {
-        this.set = set;
     }
 
     public String getWord() {

@@ -9,7 +9,7 @@
  * @author dell
  */
 public class Category extends javax.swing.JFrame {
-    Chapter1 s = new Chapter1();
+    
     /**
      * Creates new form Category
      */
