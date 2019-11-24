@@ -848,7 +848,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getA.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1008,7 +1008,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getB.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1168,7 +1168,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getC.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1328,7 +1328,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getD.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1488,7 +1488,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getE.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1648,7 +1648,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getF.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1669,7 +1669,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'g';
-        System.out.println(getLength_word());
+       
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -1809,7 +1809,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getG.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1830,7 +1830,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'h';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -1970,7 +1970,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getH.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -1991,7 +1991,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'i';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2131,7 +2131,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getI.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2152,7 +2152,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'j';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2292,7 +2292,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getJ.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2313,7 +2313,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'k';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2453,7 +2453,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getK.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2474,7 +2474,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'l';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2614,7 +2614,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getL.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2635,7 +2635,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'm';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2775,7 +2775,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getM.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2796,7 +2796,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'n';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2936,7 +2936,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getN.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -2957,7 +2957,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'o';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3097,7 +3097,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getO.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3118,7 +3118,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'p';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3258,7 +3258,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getP.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3279,7 +3279,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'q';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3419,7 +3419,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getQ.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3440,7 +3440,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'r';
-        System.out.println(getLength_word());
+        
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3580,7 +3580,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getR.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3601,7 +3601,7 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 's';
-        System.out.println(getLength_word());
+       
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3741,7 +3741,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getS.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3762,7 +3762,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 't';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3902,7 +3901,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getT.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -3923,7 +3922,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'u';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4063,7 +4061,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getU.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -4084,7 +4082,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'v';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4224,7 +4221,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getV.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -4245,7 +4242,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'w';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4385,7 +4381,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getW.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -4406,7 +4402,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'x';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4546,7 +4541,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getX.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -4567,7 +4562,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'y';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4707,7 +4701,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getY.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
@@ -4732,7 +4726,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'z';
-        System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -4872,7 +4865,7 @@ public class SingleMode extends javax.swing.JFrame {
             default:
                 break;
         }
-        if (score >= 0) {
+        if (score > 0) {
             getZ.setVisible(false);
 
             for (int i = 0; i < getLength_word(); i++) {
