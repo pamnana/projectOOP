@@ -1,5 +1,5 @@
 [{"chapter": "1",  "word": "illiterate", "meaning": "อ่านไม่ออกเขียนไม่ได้"},
-{"chapter": "1", "word": "cattle keeper", "meaning": "คนต้อนฝูงวัว"},
+{"chapter": "1", "word": "cattlekeeper", "meaning": "คนต้อนฝูงวัว"},
 {"chapter": "1", "word": "wrestler", "meaning": "นักมวยปล้ำ"},
 {"chapter": "1", "word": "tribesman", "meaning": "ชาวเขา"},
 {"chapter": "1", "word": "wander", "meaning": "เร่ร่อน"},
@@ -12,6 +12,6 @@
 {"chapter": "1", "word": "prolong", "meaning": "ยืดเวลา"},
 {"chapter": "1", "word": "ankle", "meaning": "ข้อเท้า"},
 {"chapter": "1", "word": "text", "meaning": "เนื้อหา, หนังสือเรียน"},
-{"chapter": "1", "word": "magna cum laude", "meaning": "เกียรตินิยมอันดับสอง"},
+{"chapter": "1", "word": "magnacumlaude", "meaning": "เกียรตินิยมอันดับสอง"},
 {"chapter": "1", "word": "traumas", "meaning": "ความบอบช้ำทางจิตใจ"}
 ]
