@@ -22,27 +22,11 @@ public class Lobby extends javax.swing.JFrame {
     /**
      * Creates new form Lobby
      */
-    private boolean Player1Ready;
-    private boolean Player2Ready;
+    boolean Player1Ready = true;
+    boolean Player2Ready = true;
 
     public Lobby() {
         initComponents();
-    }
-
-    public boolean isPlayer1Ready() {
-        return Player1Ready;
-    }
-
-    public void setPlayer1Ready(boolean Player1Ready) {
-        this.Player1Ready = Player1Ready;
-    }
-
-    public boolean isPlayer2Ready() {
-        return Player2Ready;
-    }
-
-    public void setPlayer2Ready(boolean Player2Ready) {
-        this.Player2Ready = Player2Ready;
     }
 
     /**
@@ -161,12 +145,9 @@ public class Lobby extends javax.swing.JFrame {
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
             jLabel5.setText((String) obj2.get("name"));
-
+            
             server1 t = new server1(5555);
             t.start();
-            if (t != null) {
-                setPlayer1Ready(true);
-            }
 
         } catch (IOException ex) {
 
@@ -176,11 +157,11 @@ public class Lobby extends javax.swing.JFrame {
 
         //client1 c = new client1();
         //c.start();
-        if (isPlayer1Ready() == true) {
+        if (Player1Ready == true) {
             jLabel7.setText("Ready!");
 
         }
-        if (isPlayer2Ready() == true) {
+        if (Player2Ready == true) {
             jLabel8.setText("Ready!");
         }
     }//GEN-LAST:event_jButton1MouseClicked

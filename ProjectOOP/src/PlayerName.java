@@ -42,7 +42,6 @@ public class PlayerName extends javax.swing.JFrame {
         setMinimumSize(null);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
-        setSize(new java.awt.Dimension(1024, 768));
 
         jPanel1.setLayout(null);
 

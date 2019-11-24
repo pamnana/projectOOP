@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"เกียรตินิยมอันดับสอง","word":"magna cum laude"}]
+[{"chapter":"1","meaning":"ฝุ่น","word":"dust"}]
