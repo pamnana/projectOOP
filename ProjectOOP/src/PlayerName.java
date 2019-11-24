@@ -48,6 +48,7 @@ public class PlayerName extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.setLayout(null);
 
         jTextField1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N

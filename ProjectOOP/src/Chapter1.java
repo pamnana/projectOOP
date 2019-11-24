@@ -27,9 +27,10 @@ public class Chapter1 extends javax.swing.JFrame {
     public String word;
     public static int total;
     public static checkWinner isWinner;
+    public boolean checkWinner; 
 
 
-    public static void setIMGstatic() {
+    public void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
         }  else if (getScore() == 5) {
@@ -45,7 +46,10 @@ public class Chapter1 extends javax.swing.JFrame {
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
             isWinner.setIsWinner(false);
+            System.out.println("ขึ้นสิไอ้หน้าสัส");
             new Answer().setVisible(true);
+            System.out.println("ขึ้นสิไอ้หน้าสัส2");
+            this.setVisible(false);
             
         }
     }
@@ -5229,4 +5233,8 @@ public class Chapter1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    boolean isIsWinner() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
