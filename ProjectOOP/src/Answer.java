@@ -17,6 +17,7 @@ import org.json.simple.parser.JSONParser;
  */
 public class Answer extends javax.swing.JFrame {
 
+    private Chapter1 main1;
     public static boolean isWinner;
 
     /**
@@ -25,6 +26,11 @@ public class Answer extends javax.swing.JFrame {
     public Answer() {
         initComponents();
     }
+    public Answer (Chapter1 a){
+        this.main1 = a;
+        initComponents();
+    }
+    
 
     public static boolean isIsWinner() {
         return isWinner;
@@ -138,7 +144,7 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            if (isWinner.isIsWinner() == false) {
+            if (main1.checkWinner() == false) {
                 getjLabel4().setText("DON'T GIVE UP!");
             } else {
                 getjLabel4().setText("Congratulations!");

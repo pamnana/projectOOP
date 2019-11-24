@@ -51,7 +51,7 @@ public class Chapter1 extends javax.swing.JFrame {
     }
     
     public static void check(){
-        if (getTotal() == getLength_word()){
+        if (total == getLength_word()){
             System.out.println("ชนะ!");
             isWinner.setIsWinner(true);
             new Answer().setVisible(true);
