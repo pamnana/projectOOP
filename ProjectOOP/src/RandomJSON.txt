@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"เนื้อหา, หนังสือเรียน","word":"text"}]
+[{"chapter":"1","meaning":"ชาวเขา","word":"tribesman"}]
