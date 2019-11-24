@@ -47,14 +47,19 @@ public class Chapter2 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            System.out.println("wtf");
             this.setVisible(false);
-            a.setIsWinner(false);
-            new Answer().setVisible(true);
+            checkWinner = false;
+            System.out.println("wtf");
+            new Answer(this).setVisible(true);
         }
     }
-    public static void check(){
+    public void check(){
         if (getTotal() == getLength_word()){
-            new Answer().setVisible(true);
+            System.out.println("ชนะ!");
+            isWinner.setIsWinner(true);
+            checkWinner = true;
+            new Answer(this).setVisible(true);
         }
     }
 
@@ -895,6 +900,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getAMouseClicked
@@ -1057,6 +1063,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getBMouseClicked
@@ -1219,6 +1226,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getCMouseClicked
@@ -1381,6 +1389,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getDMouseClicked
@@ -1543,6 +1552,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getEMouseClicked
@@ -1705,6 +1715,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getFMouseClicked
@@ -1868,6 +1879,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getGMouseClicked
@@ -2031,6 +2043,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getHMouseClicked
@@ -2194,6 +2207,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getIMouseClicked
@@ -2357,6 +2371,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getJMouseClicked
@@ -2520,6 +2535,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getKMouseClicked
@@ -2683,6 +2699,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getLMouseClicked
@@ -2846,6 +2863,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getMMouseClicked
@@ -3009,6 +3027,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getNMouseClicked
@@ -3172,6 +3191,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getOMouseClicked
@@ -3335,6 +3355,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getPMouseClicked
@@ -3498,6 +3519,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getQMouseClicked
@@ -3661,6 +3683,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getRMouseClicked
@@ -3824,6 +3847,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getSMouseClicked
@@ -3986,6 +4010,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getTMouseClicked
@@ -4148,6 +4173,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getUMouseClicked
@@ -4310,6 +4336,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getVMouseClicked
@@ -4472,6 +4499,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getWMouseClicked
@@ -4634,6 +4662,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getXMouseClicked
@@ -4796,6 +4825,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getYMouseClicked
@@ -4962,6 +4992,7 @@ public class Chapter2 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore()-1);
                 setIMGstatic();
+                check();
             }
         }
     }//GEN-LAST:event_getZMouseClicked

@@ -44,7 +44,6 @@ public class Chapter1 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         } else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
-            System.out.println("test");
             this.setVisible(false);
             checkWinner = false;
             new Answer(this).setVisible(true);

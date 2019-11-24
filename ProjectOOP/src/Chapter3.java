@@ -48,12 +48,16 @@ public class Chapter3 extends javax.swing.JFrame {
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
             this.setVisible(false);
-            new Answer().setVisible(true);
+            checkWinner = false;
+            new Answer(this).setVisible(true);
         }
     }
-    public static void check(){
+    public void check(){
         if (getTotal() == getLength_word()){
-            new Answer().setVisible(true);
+            System.out.println("ชนะ!");
+            isWinner.setIsWinner(true);
+            checkWinner = true;
+            new Answer(this).setVisible(true);
         }
     }
 
