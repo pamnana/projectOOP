@@ -19,11 +19,12 @@ import org.json.simple.parser.JSONParser;
 public class SingleMode extends javax.swing.JFrame {
 
     Answer a = new Answer();
-    public String button = "";
+    public char button;
     public int score = 7;
     public Vocab vcb1;
     public static int length_word;
-
+    public JLabel[] label;
+    public String word;
     /**
      * Creates new form SingleMode
      */
@@ -31,6 +32,14 @@ public class SingleMode extends javax.swing.JFrame {
 
         initComponents();
 
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
     }
 
     public static JLabel getjLabel1() {
@@ -43,6 +52,14 @@ public class SingleMode extends javax.swing.JFrame {
 
     public static JLabel getjLabel4() {
         return jLabel4;
+    }
+
+    public static int getLength_word() {
+        return length_word;
+    }
+
+    public static void setLength_word(int length_word) {
+        SingleMode.length_word = length_word;
     }
 
     public static void main(String args[]) {
@@ -666,225 +683,254 @@ public class SingleMode extends javax.swing.JFrame {
 
     private void getAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getAMouseClicked
         // TODO add your handling code here:
-        button = "A";
-        score--;
-        if (score > 0) {
+        int count = 0;
+        button = 'a';
+        
+        System.out.println(getLength_word());
+        JLabel[] label = new JLabel[getLength_word()];
+        System.out.println("สวัสดี");
+        label[0] = jLabel4;
+        label[1] = jLabel6;
+        label[2] = jLabel16;
+        label[3] = jLabel17;
+        label[4] = jLabel18;
+        label[5] = jLabel19;
+        label[6] = jLabel20;
+        label[7] = jLabel21;
+        label[8] = jLabel22;
+        label[9] = jLabel23;
+        label[10] = jLabel24;
+        label[11] = jLabel25;
+        label[12] = jLabel26;
+        label[13] = jLabel27;
+        
+        if (score >= 0) {
             getA.setVisible(false);
+            for (int i = 0; i < getLength_word(); i++) {
+                char cha = vcb1.getWord().charAt(i);
+                if (cha == button) {
+                    label[i].setText("A");
+                    count++;
+                }else{}
+            }
+            if (count == 0){
+                score--;
+            }
         }
     }//GEN-LAST:event_getAMouseClicked
 
     private void getBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getBMouseClicked
         // TODO add your handling code here:
-        button = "B";
+        button = 'b';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getB.setVisible(false);
         }
     }//GEN-LAST:event_getBMouseClicked
 
     private void getCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getCMouseClicked
         // TODO add your handling code here:
-        button = "C";
+        button = 'c';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getC.setVisible(false);
         }
     }//GEN-LAST:event_getCMouseClicked
 
     private void getDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getDMouseClicked
         // TODO add your handling code here:
-        button = "D";
+        button = 'd';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getD.setVisible(false);
         }
     }//GEN-LAST:event_getDMouseClicked
 
     private void getEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getEMouseClicked
         // TODO add your handling code here:
-        button = "E";
+        button = 'e';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getE.setVisible(false);
         }
     }//GEN-LAST:event_getEMouseClicked
 
     private void getFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getFMouseClicked
         // TODO add your handling code here:
-        button = "F";
+        button = 'f';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getF.setVisible(false);
         }
     }//GEN-LAST:event_getFMouseClicked
 
     private void getGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getGMouseClicked
         // TODO add your handling code here:
-        button = "G";
+        button = 'g';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getG.setVisible(false);
         }
     }//GEN-LAST:event_getGMouseClicked
 
     private void getHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getHMouseClicked
         // TODO add your handling code here:
-        button = "H";
+        button = 'h';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getH.setVisible(false);
         }
     }//GEN-LAST:event_getHMouseClicked
 
     private void getIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getIMouseClicked
         // TODO add your handling code here:
-        button = "I";
+        button = 'i';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getI.setVisible(false);
         }
     }//GEN-LAST:event_getIMouseClicked
 
     private void getJMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getJMouseClicked
         // TODO add your handling code here:
-        button = "J";
+        button = 'j';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getJ.setVisible(false);
         }
     }//GEN-LAST:event_getJMouseClicked
 
     private void getKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getKMouseClicked
         // TODO add your handling code here:
-        button = "K";
+        button = 'k';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getK.setVisible(false);
         }
     }//GEN-LAST:event_getKMouseClicked
 
     private void getLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getLMouseClicked
         // TODO add your handling code here:
-        button = "L";
+        button = 'l';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getL.setVisible(false);
         }
     }//GEN-LAST:event_getLMouseClicked
 
     private void getMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getMMouseClicked
         // TODO add your handling code here:
-        button = "M";
+        button = 'm';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getM.setVisible(false);
         }
     }//GEN-LAST:event_getMMouseClicked
 
     private void getNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getNMouseClicked
         // TODO add your handling code here:
-        button = "N";
+        button = 'n';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getN.setVisible(false);
         }
     }//GEN-LAST:event_getNMouseClicked
 
     private void getOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getOMouseClicked
         // TODO add your handling code here:
-        button = "O";
+        button = 'o';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getO.setVisible(false);
         }
     }//GEN-LAST:event_getOMouseClicked
 
     private void getPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getPMouseClicked
         // TODO add your handling code here:
-        button = "P";
+        button = 'p';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getP.setVisible(false);
         }
     }//GEN-LAST:event_getPMouseClicked
 
     private void getQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getQMouseClicked
         // TODO add your handling code here:
-        button = "Q";
+        button = 'q';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getQ.setVisible(false);
         }
     }//GEN-LAST:event_getQMouseClicked
 
     private void getRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getRMouseClicked
         // TODO add your handling code here:
-        button = "R";
+        button = 'r';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getR.setVisible(false);
         }
     }//GEN-LAST:event_getRMouseClicked
 
     private void getSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getSMouseClicked
         // TODO add your handling code here:
-        button = "S";
+        button = 's';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getS.setVisible(false);
         }
     }//GEN-LAST:event_getSMouseClicked
 
     private void getTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getTMouseClicked
         // TODO add your handling code here:
-        button = "T";
+        button = 't';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getT.setVisible(false);
         }
     }//GEN-LAST:event_getTMouseClicked
 
     private void getUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getUMouseClicked
         // TODO add your handling code here:
-        button = "U";
+        button = 'u';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getU.setVisible(false);
         }
     }//GEN-LAST:event_getUMouseClicked
 
     private void getVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getVMouseClicked
         // TODO add your handling code here:
-        button = "V";
+        button = 'v';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getV.setVisible(false);
         }
     }//GEN-LAST:event_getVMouseClicked
 
     private void getWMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getWMouseClicked
         // TODO add your handling code here:
-        button = "W";
+        button = 'w';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getW.setVisible(false);
         }
     }//GEN-LAST:event_getWMouseClicked
 
     private void getXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getXMouseClicked
         // TODO add your handling code here:
-        button = "X";
+        button = 'x';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getX.setVisible(false);
         }
     }//GEN-LAST:event_getXMouseClicked
 
     private void getYMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getYMouseClicked
         // TODO add your handling code here:
-        button = "Y";
+        button = 'y';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getY.setVisible(false);
         }
     }//GEN-LAST:event_getYMouseClicked
@@ -895,9 +941,9 @@ public class SingleMode extends javax.swing.JFrame {
 
     private void getZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getZMouseClicked
         // TODO add your handling code here:
-        button = "Z";
+        button = 'z';
         score--;
-        if (score > 0) {
+        if (score >= 0) {
             getZ.setVisible(false);
         }
     }//GEN-LAST:event_getZMouseClicked
@@ -977,8 +1023,10 @@ public class SingleMode extends javax.swing.JFrame {
             obj2 = (JSONObject) array.get(0);
 
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-            length_word = vcb1.getWord().length();
-
+            //length_word = vcb1.getWord().length();
+            setLength_word(vcb1.getWord().length());
+            setWord(vcb1.getWord());
+            
         } catch (Exception e) {
             System.out.println(e);
         }
