@@ -1,26 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author dell
- */
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 public class SelectMode extends javax.swing.JFrame {
 
-    ImageIcon btnbg = new ImageIcon();
-    Category u = new Category();
+    //ImageIcon btnbg = new ImageIcon();
+    //Category u = new Category();
     
 
-    /**
-     * Creates new form Selectmode
-     */
+    
     public SelectMode() {
         initComponents();
     }
@@ -106,12 +94,12 @@ public class SelectMode extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        try {
+        /*try {
             // TODO add your handling code here:
             new server1(4000);
         } catch (IOException ex) {
             Logger.getLogger(SelectMode.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
         new Lobby().setVisible(true);
         this.setVisible(false);
         this.dispose();
