@@ -54,7 +54,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 220, 420, 70);
+        jLabel1.setBounds(90, 220, 900, 70);
 
         jLabel6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,7 +168,7 @@ public class Answer extends javax.swing.JFrame {
 
                 JSONParser parser = new JSONParser();
                 try {
-                    Object obj = parser.parse(new FileReader("src\\file2.txt"));
+                    Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
                     JSONArray array = (JSONArray) obj;
                     JSONObject obj2;
                     obj2 = (JSONObject) array.get(0);
