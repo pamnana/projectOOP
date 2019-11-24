@@ -60,7 +60,7 @@ public class server1 extends Thread implements Runnable{
         }).start();
     } 
     public static void main(String[] args) {
-         int port = Integer.parseInt(args[0]);
+         int port = Integer.parseInt("5555");
                 server1 hangmanServer = new server1();
                 hangmanServer.config = new ServerConfiguration(port);
                 hangmanServer.run();
