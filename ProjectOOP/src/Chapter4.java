@@ -30,7 +30,7 @@ public class Chapter4 extends javax.swing.JFrame {
     /**
      * Creates new form SingleMode
      */
-    public static void setIMGstatic() {
+    public void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
         }  else if (getScore() == 5) {
@@ -45,6 +45,7 @@ public class Chapter4 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            this.setVisible(false);
             new Answer().setVisible(true);
         }
     }

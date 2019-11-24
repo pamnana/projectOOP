@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"ยืดเวลา","word":"prolong"}]
+[{"chapter":"2","meaning":"เก็บเกี่ยว","word":"harvest"}]
