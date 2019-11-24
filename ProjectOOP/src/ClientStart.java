@@ -41,7 +41,7 @@ public class ClientStart implements Runnable{
     
     public ClientStart(Chapter2 chap2, ClientConfiguration config){
         String name = config.getName();
-        String ipAddr = config.getIpAddr();
+        String ipAddr = config.getIpAddr();//edit IpAddress before start
         int port = config.getPort();
         Socket socket = null;
         System.out.println(String.format("%s wants to connect to %s:%d", name, ipAddr, port));
