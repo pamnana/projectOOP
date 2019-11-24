@@ -31,9 +31,21 @@ public class SingleMode extends javax.swing.JFrame {
      */
     public static void setIMGstatic() {
         if (getScore() == 6) {
-            //getjLabel9().setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2.jpg")));
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
-     
+        }  else if (getScore() == 5) {
+            getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
+        }  else if (getScore() == 4) {
+            getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
+        }  else if (getScore() == 3) {
+            getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
+        }  else if (getScore() == 2) {
+            getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
+        }  else if (getScore() == 1) {
+            getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
+        }  else if (getScore() == 0) {
+            getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            new Answer().setVisible(true);
+            
         }
     }
 
@@ -862,6 +874,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore() - 1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getAMouseClicked
@@ -1022,6 +1035,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore() - 1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getBMouseClicked
@@ -1182,6 +1196,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getCMouseClicked
@@ -1342,6 +1357,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getDMouseClicked
@@ -1502,6 +1518,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getEMouseClicked
@@ -1662,6 +1679,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getFMouseClicked
@@ -1823,6 +1841,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getGMouseClicked
@@ -1984,6 +2003,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getHMouseClicked
@@ -2145,6 +2165,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getIMouseClicked
@@ -2306,6 +2327,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getJMouseClicked
@@ -2467,6 +2489,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getKMouseClicked
@@ -2628,6 +2651,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getLMouseClicked
@@ -2789,6 +2813,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getMMouseClicked
@@ -2950,6 +2975,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getNMouseClicked
@@ -3111,6 +3137,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getOMouseClicked
@@ -3272,6 +3299,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getPMouseClicked
@@ -3433,6 +3461,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getQMouseClicked
@@ -3594,6 +3623,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getRMouseClicked
@@ -3755,6 +3785,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getSMouseClicked
@@ -3915,6 +3946,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getTMouseClicked
@@ -4075,6 +4107,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getUMouseClicked
@@ -4235,6 +4268,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getVMouseClicked
@@ -4395,6 +4429,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getWMouseClicked
@@ -4555,6 +4590,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getXMouseClicked
@@ -4715,6 +4751,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getYMouseClicked
@@ -4879,6 +4916,7 @@ public class SingleMode extends javax.swing.JFrame {
             }
             if (count == 0) {
                 setScore(getScore()-1);
+                setIMGstatic();
             }
         }
     }//GEN-LAST:event_getZMouseClicked

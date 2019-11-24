@@ -19,6 +19,7 @@ public class Answer extends javax.swing.JFrame {
     /**
      * Creates new form Answer
      */
+    
     public Answer() {
         initComponents();
     }
@@ -109,7 +110,7 @@ public class Answer extends javax.swing.JFrame {
     
 
 
-    public JLabel getjLabel4() {
+    public static JLabel getjLabel4() {
         return jLabel4;
     }
 
@@ -176,6 +177,8 @@ public class Answer extends javax.swing.JFrame {
                     Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
                     getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
                     getjLabel1().setText(vcb1.getWord());
+                    getjLabel4().setText("Congratulations!");
+                    
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -187,7 +190,7 @@ public class Answer extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private static javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
+    private static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private static javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
