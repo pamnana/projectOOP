@@ -25,6 +25,7 @@ public class SingleMode extends javax.swing.JFrame {
     public static int length_word;
     public JLabel[] label;
     public String word;
+    public static int total;
 
     /**
      * Creates new form SingleMode
@@ -45,9 +46,22 @@ public class SingleMode extends javax.swing.JFrame {
         }  else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
             new Answer().setVisible(true);
-            
         }
     }
+    public static void check(){
+        if (getTotal() == getLength_word()){
+            new Answer().setVisible(true);
+        }
+    }
+
+    public static int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+    
 
     public static JLabel getjLabel9() {
         return jLabel9;
@@ -868,6 +882,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("A");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1029,6 +1044,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("B");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1190,6 +1206,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("C");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1351,6 +1368,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("D");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1512,6 +1530,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("E");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1673,6 +1692,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("F");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1835,6 +1855,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("G");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -1997,6 +2018,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("H");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2159,6 +2181,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("I");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2321,6 +2344,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("J");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2483,6 +2507,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("K");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2645,6 +2670,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("L");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2807,6 +2833,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("M");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -2969,6 +2996,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("N");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3131,6 +3159,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("O");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3293,6 +3322,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("P");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3455,6 +3485,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Q");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3617,6 +3648,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("R");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3779,6 +3811,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("S");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -3940,6 +3973,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("T");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4101,6 +4135,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("U");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4262,6 +4297,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("V");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4423,6 +4459,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("W");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4584,6 +4621,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("X");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4745,6 +4783,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Y");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
@@ -4910,6 +4949,7 @@ public class SingleMode extends javax.swing.JFrame {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("Z");
+                    setTotal(getTotal()+1);
                     count++;
                 } else {
                 }
