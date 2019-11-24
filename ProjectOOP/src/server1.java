@@ -8,7 +8,7 @@ public class server1 extends Thread implements Runnable{
     /**
      * Server Configuration which contains the Port.
      */
-   /* private ServerConfiguration config = new ServerConfiguration();*/
+    private ServerConfiguration config = new ServerConfiguration();
     
     /**
      * ID of the player.
@@ -27,7 +27,7 @@ public class server1 extends Thread implements Runnable{
     @Override
     public void run() {
         new Thread(() -> {
-            int port = 5555;
+            int port = config.getPort();
             try (ServerSocket server = new ServerSocket(port)) {
                 List<Clientconnection> clientlist = new ArrayList<>();
                 System.out.println("Game Server waiting on Port " + port + "!");
@@ -62,6 +62,7 @@ public class server1 extends Thread implements Runnable{
     public static void main(String[] args) {
          int port = Integer.parseInt("5555");
                 server1 hangmanServer = new server1();
+                hangmanServer.config = new ServerConfiguration(port);
                 hangmanServer.run();
                 boolean cmdStart = true;
             }

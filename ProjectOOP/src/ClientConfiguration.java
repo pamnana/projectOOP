@@ -31,7 +31,7 @@ public class ClientConfiguration {
     /**
      * Port of the Server it should connect to.
      */
-    private final int port = 5555;
+    private final int port;
     
     /**
      * Marks the Instance as valid or invalid.
@@ -48,17 +48,20 @@ public class ClientConfiguration {
             JSONObject jsonContent = new JSONObject(fileContent);
             name = jsonContent.getString("name");
             ipAddr = jsonContent.getString("server_ip");
+            port = jsonContent.getInt("server_port");
             valid = true;
         }  else  {
             valid = false;
             name = null;
             ipAddr = null;
+            port = -1;
         }
     }
     //Custom Construct
 public ClientConfiguration(String name, String ipAddr, int port)  {
         this.name = name;
         this.ipAddr = ipAddr;
+        this.port = port;
         valid = true;
         
         JSONObject config = new JSONObject();  

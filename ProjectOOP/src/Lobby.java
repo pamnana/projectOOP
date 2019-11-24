@@ -133,7 +133,7 @@ public class Lobby extends javax.swing.JFrame {
             obj2 = (JSONObject) array.get(0);
             jLabel5.setText((String) obj2.get("name"));
             
-            server1 t = new server1();
+            server1 t = new server1(5555);
             t.start();
 
         } catch (IOException ex) {
@@ -146,13 +146,10 @@ public class Lobby extends javax.swing.JFrame {
         //c.start();
         if (Player1Ready == true) {
             jLabel7.setText("Ready!");
-            ForClient fc1 = new ForClient();
 
         }
         if (Player2Ready == true) {
             jLabel8.setText("Ready!");
-            ForClient fc2 = new ForClient();
-           
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
