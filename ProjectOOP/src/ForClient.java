@@ -51,7 +51,7 @@ public class ForClient {
      * @param args Arguments
      */
     public static void main(String[] args)  {
-        Chapter2 chap2 = new Chapter2();
+        ForClient fc = new ForClient();
         /*client = new ClientStart(this, config);*/
     }
 }
