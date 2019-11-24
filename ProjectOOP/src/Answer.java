@@ -21,6 +21,7 @@ public class Answer extends javax.swing.JFrame {
     private Chapter2 main2;
     private Chapter3 main3;
     private Chapter4 main4;
+    public int page;
     public static boolean isWinner;
 
     /**
@@ -32,16 +33,21 @@ public class Answer extends javax.swing.JFrame {
 
     public Answer(Chapter1 a) {
         this.main1 = a;
+        page = 1;
         initComponents();
     }
+
     public Answer(Chapter2 a) {
         this.main2 = a;
         initComponents();
+        page = 2;
     }
+
     public Answer(Chapter3 a) {
         this.main3 = a;
         initComponents();
     }
+
     public Answer(Chapter4 a) {
         this.main4 = a;
         initComponents();
@@ -105,7 +111,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Congratulations!");
+        jLabel4.setText("aa");
         jLabel4.setToolTipText("");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel4);
@@ -159,22 +165,30 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            if (main1.checkWinner == false) {
-                getjLabel4().setText("DON'T GIVE UP!");
-            } else if (main1.checkWinner != false) {
-                getjLabel4().setText("Congratulations!");
+            System.out.println(page);
+            if (page == 1) {
+                if (main1.checkWinner == false) {
+                    getjLabel4().setText("DON'T GIVE UP!");
+                } else if (main1.checkWinner != false) {
+                    getjLabel4().setText("Congratulations!");
+                }
+            } else if (page == 2) {
+                if (main2.checkWinner == false) {
+                    getjLabel4().setText("DON'T GIVE UP!");
+                } else if (main2.checkWinner != false) {
+                    getjLabel4().setText("Congratulations!");
+                }
             }
-            else if (main2.checkWinner == false) {
+
+            if (main2.checkWinner == false) {
                 getjLabel4().setText("DON'T GIVE UP!");
             } else if (main2.checkWinner != false) {
                 getjLabel4().setText("Congratulations!");
-            }
-            else if (main3.checkWinner == false) {
+            } else if (main3.checkWinner == false) {
                 getjLabel4().setText("DON'T GIVE UP!");
             } else if (main3.checkWinner != false) {
                 getjLabel4().setText("Congratulations!");
-            }
-            else if (main4.checkWinner == false) {
+            } else if (main4.checkWinner == false) {
                 getjLabel4().setText("DON'T GIVE UP!");
             } else if (main4.checkWinner != false) {
                 getjLabel4().setText("Congratulations!");
