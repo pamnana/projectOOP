@@ -13,7 +13,7 @@ public class Check extends SingleMode {
     public int len = 0;
     
 
-    public int getScore() {
+    public static int getScore() {
         return score;
     }
 
