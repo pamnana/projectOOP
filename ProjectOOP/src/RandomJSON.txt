@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"ฝุ่น","word":"dust"}]
+[{"chapter":"1","meaning":"การสอบเทียบวุฒิม.ปลาย","word":"GED"}]

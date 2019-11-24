@@ -1,5 +1,6 @@
 
 import java.io.FileReader;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -59,7 +60,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 220, 420, 70);
+        jLabel1.setBounds(110, 220, 800, 70);
 
         jLabel6.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,14 +69,16 @@ public class Answer extends javax.swing.JFrame {
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel6.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(220, 300, 640, 50);
+        jLabel6.setBounds(0, 300, 1020, 50);
 
         jLabel4.setFont(new java.awt.Font("RSU", 0, 72)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Congratulations!");
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("a");
+        jLabel4.setToolTipText("");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(330, 50, 430, 105);
+        jLabel4.setBounds(0, 50, 1020, 105);
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
@@ -85,12 +88,12 @@ public class Answer extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(690, 570, 101, 61);
+        jButton1.setBounds(720, 570, 110, 61);
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
         getContentPane().add(jButton2);
-        jButton2.setBounds(250, 570, 85, 61);
+        jButton2.setBounds(250, 570, 110, 61);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/end.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
@@ -107,7 +110,7 @@ public class Answer extends javax.swing.JFrame {
         // TODO add your handling code here:
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\file2.txt"));
+            Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
@@ -115,7 +118,7 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            getjLabel4().setText("Congratulations!");
+            getjLabel4().setText("DON'T GIVE UP!");
 
         } catch (Exception e) {
             System.out.println(e);
@@ -185,6 +188,7 @@ public class Answer extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Answer().setVisible(true);
+                
                 //new SingleMode().setVisible(true);
 
             }
