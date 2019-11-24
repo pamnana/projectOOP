@@ -20,7 +20,7 @@ public class SingleMode extends javax.swing.JFrame {
 
     Answer a = new Answer();
     public char button;
-    public int score = 7;
+    public static int score = 7;
     public Vocab vcb1;
     public static int length_word;
     public JLabel[] label;
@@ -29,12 +29,36 @@ public class SingleMode extends javax.swing.JFrame {
     /**
      * Creates new form SingleMode
      */
+
+    public static void setIMGstatic() {
+        if (getScore() == 6){
+            //getjLabel9().setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2.jpg")));
+            getjLabel9().setIcon(new ImageIcon("/p2.jpg"));
+        }
+    }
+
+    public static JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+    
     public SingleMode() {
 
         initComponents();
 
     }
 
+    public static int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+    
     public String getWord() {
         return word;
     }
@@ -686,7 +710,6 @@ public class SingleMode extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'a';
-
         System.out.println(getLength_word());
         JLabel[] label = new JLabel[getLength_word()];
 
@@ -829,19 +852,17 @@ public class SingleMode extends javax.swing.JFrame {
         }
         if (score >= 0) {
             getA.setVisible(false);
-            
+
             for (int i = 0; i < getLength_word(); i++) {
                 char cha = this.getWord().charAt(i);
                 if (cha == button) {
                     label[i].setText("A");
-                    
                     count++;
                 } else {
-                    System.out.println("หาย 1");
                 }
             }
             if (count == 0) {
-                score--;
+                setScore(getScore()-1);
             }
         }
     }//GEN-LAST:event_getAMouseClicked
@@ -1333,7 +1354,7 @@ public class SingleMode extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private static javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
