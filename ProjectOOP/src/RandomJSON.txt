@@ -1,1 +1,1 @@
-[{"chapter":"3","meaning":"ติดตาม","word":"track"}]
+[{"chapter":"3","meaning":"คำวิจารณ์","word":"commentary"}]
