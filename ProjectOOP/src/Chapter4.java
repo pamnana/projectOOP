@@ -28,7 +28,13 @@ public class Chapter4 extends javax.swing.JFrame {
     public static int total;
     public static checkWinner isWinner;
     public boolean checkWinner;
+    
+    public Chapter4() {
 
+        initComponents();
+
+    }
+    
     public void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
@@ -72,12 +78,6 @@ public class Chapter4 extends javax.swing.JFrame {
 
     public void setjLabel9(JLabel jLabel9) {
         this.jLabel9 = jLabel9;
-    }
-
-    public Chapter4() {
-
-        initComponents();
-
     }
 
     public static int getScore() {

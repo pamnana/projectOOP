@@ -45,11 +45,13 @@ public class Answer extends javax.swing.JFrame {
 
     public Answer(Chapter3 a) {
         this.main3 = a;
+        page = 3;
         initComponents();
     }
 
     public Answer(Chapter4 a) {
         this.main4 = a;
+        page = 4;
         initComponents();
     }
 
@@ -178,20 +180,18 @@ public class Answer extends javax.swing.JFrame {
                 } else if (main2.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
                 }
-            }
-
-            if (main2.checkWinner == false) {
-                getjLabel4().setText("DON'T GIVE UP!");
-            } else if (main2.checkWinner != false) {
-                getjLabel4().setText("Congratulations!");
-            } else if (main3.checkWinner == false) {
-                getjLabel4().setText("DON'T GIVE UP!");
-            } else if (main3.checkWinner != false) {
-                getjLabel4().setText("Congratulations!");
-            } else if (main4.checkWinner == false) {
-                getjLabel4().setText("DON'T GIVE UP!");
-            } else if (main4.checkWinner != false) {
-                getjLabel4().setText("Congratulations!");
+            } else if (page == 3) {
+                if (main3.checkWinner == false) {
+                    getjLabel4().setText("DON'T GIVE UP!");
+                } else if (main3.checkWinner != false) {
+                    getjLabel4().setText("Congratulations!");
+                }
+            } else if (page == 4) {
+                if (main4.checkWinner == false) {
+                    getjLabel4().setText("DON'T GIVE UP!");
+                } else if (main4.checkWinner != false) {
+                    getjLabel4().setText("Congratulations!");
+                }
             }
         } catch (Exception e) {
             System.out.println(e);
