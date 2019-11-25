@@ -39,8 +39,8 @@ public class Answer extends javax.swing.JFrame {
 
     public Answer(Chapter2 a) {
         this.main2 = a;
-        initComponents();
         page = 2;
+        initComponents();
     }
 
     public Answer(Chapter3 a) {
@@ -210,6 +210,7 @@ public class Answer extends javax.swing.JFrame {
         new Category().setVisible(true);
         this.setVisible(false);
         this.dispose();
+        System.out.println("kuy");
     }//GEN-LAST:event_jButton1MouseClicked
 
     public static JLabel getjLabel1() {
