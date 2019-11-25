@@ -1,19 +1,52 @@
+
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.JLabel;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author DELL
  */
 public class Result extends javax.swing.JFrame {
 
+    private MultiMode multi;
+    public int page;
+
     /**
      * Creates new form Result
      */
     public Result() {
+        initComponents();
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public Result(MultiMode a) {
+        this.multi = a;
+        page = 0;
         initComponents();
     }
 
@@ -40,6 +73,11 @@ public class Result extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setSize(new java.awt.Dimension(1024, 768));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         win.setBackground(new java.awt.Color(0, 204, 102));
@@ -105,6 +143,36 @@ public class Result extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+
+        JSONParser parser = new JSONParser();
+        try {
+            // TODO add your handling code here:
+            Object obj = parser.parse(new FileReader("src\\text2.txt"));
+            JSONArray array = (JSONArray) obj;
+            JSONObject obj2;
+            obj2 = (JSONObject) array.get(0);
+            jLabel5.setText((String) obj2.get("name"));
+
+            server1 t = new server1();
+            t.start();
+
+            if (page == 0) {
+                if (multi.checkWinner == false) {
+                    getjLabel4().setText((String)obj2.get("score"));
+                } else if (multi.checkWinner != false) {
+                    getjLabel4().setText((String)obj2.get("score"));
+                }
+            }
+        } catch (IOException ex) {
+
+        } catch (ParseException ex) {
+
+        }
+
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
