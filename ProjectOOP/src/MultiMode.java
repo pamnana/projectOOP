@@ -52,15 +52,16 @@ public class MultiMode extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
             this.setVisible(false);
             checkWinner = false;
-            new Answer(this).setVisible(true);
+            new Result(this).setVisible(true);
         }
     }
 
     public void check() {
         if (total == getLength_word()){
+            
             checkWinner = true;
             this.setVisible(false);
-            new Answer(this).setVisible(true);
+            new Result(this).setVisible(true);
         }
     }
 
@@ -191,6 +192,7 @@ public class MultiMode extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MultiMode");
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));

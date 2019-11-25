@@ -21,7 +21,7 @@ public class Answer extends javax.swing.JFrame {
     private Chapter2 main2;
     private Chapter3 main3;
     private Chapter4 main4;
-    private MultiMode multi;
+
     public int page;
     public static boolean isWinner;
 
@@ -31,11 +31,7 @@ public class Answer extends javax.swing.JFrame {
     public Answer() {
         initComponents();
     }
-    public Answer(MultiMode a) {
-        this.multi = a;
-        page = 0;
-        initComponents();
-    }
+    
     public Answer(Chapter1 a) {
         this.main1 = a;
         page = 1;
@@ -173,13 +169,7 @@ public class Answer extends javax.swing.JFrame {
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
             System.out.println(page);
-            if (page == 0) {
-                if (multi.checkWinner == false) {
-                    getjLabel4().setText("DON'T GIVE UP!");
-                } else if (multi.checkWinner != false) {
-                    getjLabel4().setText("Congratulations!");
-                }
-            } else if (page == 1) {
+            if (page == 1) {
                 if (main1.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
                 } else if (main1.checkWinner != false) {
