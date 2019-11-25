@@ -12,4 +12,5 @@
 {"chapter": "3",  "word": "represent", "meaning": "เป็นตัวแทน"},
 {"chapter": "3",  "word": "available", "meaning": "ที่มีอยู่"},
 {"chapter": "3",  "word": "exaggeration", "meaning": "การกล่าวเกินจริง"},
-{"chapter": "3",  "word": "uplift", "meaning": "ยกระดับ"},]
+{"chapter": "3",  "word": "uplift", "meaning": "ยกระดับ"}]
+
