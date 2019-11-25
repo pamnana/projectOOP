@@ -23,7 +23,7 @@ public class Lobby extends javax.swing.JFrame {
      * Creates new form Lobby
      */
     boolean Player1Ready;
-    boolean Player2Ready;
+    boolean Player2Ready = true;
 
     public Lobby() {
         initComponents();
@@ -158,6 +158,11 @@ public class Lobby extends javax.swing.JFrame {
             jLabel8.setText("Ready!");
             ForClient fc2 = new ForClient();
            
+        }
+        if (Player1Ready == true & Player2Ready == true){
+            new MultiMode().setVisible(true);
+            this.setVisible(false);
+            this.dispose();
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
