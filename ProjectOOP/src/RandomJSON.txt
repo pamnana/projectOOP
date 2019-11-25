@@ -1,1 +1,1 @@
-[{"chapter":"2","meaning":"ที่อยู่อาศัย","word":"habitat"}]
+[{"chapter":"3","meaning":"มุมมอง, ทัศนคติ","word":"perspective"}]

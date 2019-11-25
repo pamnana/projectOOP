@@ -23,7 +23,7 @@ public class Lobby extends javax.swing.JFrame {
      * Creates new form Lobby
      */
     boolean Player1Ready;
-    boolean Player2Ready = true;
+    boolean Player2Ready;
 
     public Lobby() {
         initComponents();
@@ -132,10 +132,10 @@ public class Lobby extends javax.swing.JFrame {
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
             jLabel5.setText((String) obj2.get("name"));
-            
+
             server1 t = new server1();
             t.start();
-            if(t == null){
+            if (t == null) {
                 Player1Ready = false;
             } else {
                 Player1Ready = true;
@@ -157,9 +157,9 @@ public class Lobby extends javax.swing.JFrame {
         if (Player2Ready == true) {
             jLabel8.setText("Ready!");
             ForClient fc2 = new ForClient();
-           
+
         }
-        if (Player1Ready == true & Player2Ready == true){
+        if (Player1Ready == true & Player2Ready == true) {
             new MultiMode().setVisible(true);
             this.setVisible(false);
             this.dispose();
