@@ -519,7 +519,7 @@ public class MultiMode extends javax.swing.JFrame {
 
         getW.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getW.setForeground(new java.awt.Color(51, 51, 51));
-        getW.setText("W");
+        getW.setText("w");
         getW.setToolTipText("");
         getW.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

@@ -59,8 +59,8 @@ public class Result extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        win = new javax.swing.JLabel();
         lose = new javax.swing.JLabel();
+        win = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -71,6 +71,7 @@ public class Result extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Result");
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setSize(new java.awt.Dimension(1024, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -80,18 +81,18 @@ public class Result extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        lose.setBackground(new java.awt.Color(153, 0, 0));
+        lose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lose.png"))); // NOI18N
+        lose.setOpaque(true);
+        getContentPane().add(lose);
+        lose.setBounds(380, 50, 245, 110);
+
         win.setBackground(new java.awt.Color(0, 204, 102));
         win.setIcon(new javax.swing.ImageIcon(getClass().getResource("/win.png"))); // NOI18N
         win.setToolTipText("");
         win.setOpaque(true);
         getContentPane().add(win);
-        win.setBounds(380, 60, 245, 100);
-
-        lose.setBackground(new java.awt.Color(153, 0, 0));
-        lose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lose.png"))); // NOI18N
-        lose.setOpaque(true);
-        getContentPane().add(lose);
-        lose.setBounds(380, 60, 245, 100);
+        win.setBounds(380, 50, 245, 110);
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
@@ -154,7 +155,7 @@ public class Result extends javax.swing.JFrame {
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
-            jLabel5.setText((String) obj2.get("name"));
+            jLabel5.setText("1");
 
             server1 t = new server1();
             t.start();

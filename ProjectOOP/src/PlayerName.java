@@ -42,6 +42,7 @@ public class PlayerName extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Multi Player");
         setMaximumSize(null);
         setMinimumSize(null);
         setResizable(false);

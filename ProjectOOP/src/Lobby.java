@@ -23,7 +23,7 @@ public class Lobby extends javax.swing.JFrame {
      * Creates new form Lobby
      */
     boolean Player1Ready;
-    boolean Player2Ready;
+    boolean Player2Ready = true;
 
     public Lobby() {
         initComponents();
@@ -50,6 +50,7 @@ public class Lobby extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lobby");
         setMaximumSize(new java.awt.Dimension(1024, 768));
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setSize(new java.awt.Dimension(1024, 768));

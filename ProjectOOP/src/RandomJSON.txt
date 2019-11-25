@@ -1,1 +1,1 @@
-[{"chapter":"3","meaning":"มุมมอง, ทัศนคติ","word":"perspective"}]
+[{"chapter":"2","meaning":"หีบสมบัติ","word":"treasurechest"}]

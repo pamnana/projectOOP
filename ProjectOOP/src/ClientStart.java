@@ -23,7 +23,6 @@ public class ClientStart implements Runnable{
      * Amount of milliseconds to wait before a Timeout occures.
      */
     private final static int TIMEOUT = 3000;
-
     /**
      * Name of the player.
      */
