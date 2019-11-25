@@ -82,7 +82,7 @@ public class PlayerName extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(190, 290, 640, 40);
+        jTextField2.setBounds(190, 280, 640, 50);
 
         jTextField3.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -129,7 +129,7 @@ public class PlayerName extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Create Your Name :");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 240, 640, 53);
+        jLabel3.setBounds(0, 230, 640, 53);
 
         jLabel4.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,7 +170,7 @@ public class PlayerName extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         try {
-            String name = jTextField1.getText();
+            String name = jTextField2.getText();
             Profile profile = new Profile(name);
             JSONObject obj_new = new JSONObject();
             JSONArray array_new = new JSONArray();

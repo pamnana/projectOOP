@@ -22,8 +22,8 @@ public class Lobby extends javax.swing.JFrame {
     /**
      * Creates new form Lobby
      */
-    boolean Player1Ready = true;
-    boolean Player2Ready = true;
+    boolean Player1Ready;
+    boolean Player2Ready;
 
     public Lobby() {
         initComponents();
@@ -135,6 +135,11 @@ public class Lobby extends javax.swing.JFrame {
             
             server1 t = new server1();
             t.start();
+            if(t == null){
+                Player1Ready = false;
+            } else {
+                Player1Ready = true;
+            }
 
         } catch (IOException ex) {
 
