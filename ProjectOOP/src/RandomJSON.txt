@@ -1,1 +1,1 @@
-[{"chapter":"2","meaning":"หีบสมบัติ","word":"treasurechest"}]
+[{"chapter":"4","meaning":"เครื่องสูบน้ำดับเพลิง","word":"firepump"}]

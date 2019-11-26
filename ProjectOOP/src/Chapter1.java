@@ -50,6 +50,7 @@ public class Chapter1 extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
         } else if (getScore() == 0) {
             getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            setScore(7);
             this.setVisible(false);
             checkWinner = false;
             new Answer(this).setVisible(true);
@@ -58,6 +59,7 @@ public class Chapter1 extends javax.swing.JFrame {
 
     public void check() {
         if (total == getLength_word()) {
+            setScore(7);
             checkWinner = true;
             this.setVisible(false);
             new Answer(this).setVisible(true);
