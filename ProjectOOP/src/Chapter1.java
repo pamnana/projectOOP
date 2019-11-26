@@ -213,7 +213,7 @@ public class Chapter1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ลองทายคำศัพท์ดูสิ ..!");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 50, 371, 70);
+        jLabel2.setBounds(50, 50, 371, 62);
 
         getB.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getB.setForeground(new java.awt.Color(51, 51, 51));
@@ -230,7 +230,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getB);
-        getB.setBounds(500, 400, 60, 61);
+        getB.setBounds(500, 400, 60, 55);
 
         getC.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getC.setForeground(new java.awt.Color(51, 51, 51));
@@ -242,7 +242,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getC);
-        getC.setBounds(590, 400, 60, 61);
+        getC.setBounds(590, 400, 60, 55);
 
         getD.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getD.setForeground(new java.awt.Color(51, 51, 51));
@@ -254,7 +254,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getD);
-        getD.setBounds(680, 400, 60, 61);
+        getD.setBounds(680, 400, 60, 55);
 
         getE.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getE.setForeground(new java.awt.Color(51, 51, 51));
@@ -271,7 +271,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getE);
-        getE.setBounds(770, 400, 60, 61);
+        getE.setBounds(770, 400, 60, 55);
 
         getF.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getF.setForeground(new java.awt.Color(51, 51, 51));
@@ -283,7 +283,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getF);
-        getF.setBounds(860, 400, 60, 61);
+        getF.setBounds(860, 400, 60, 55);
 
         getA.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getA.setForeground(new java.awt.Color(51, 51, 51));
@@ -295,7 +295,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getA);
-        getA.setBounds(410, 400, 60, 61);
+        getA.setBounds(410, 400, 60, 55);
 
         getH.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getH.setForeground(new java.awt.Color(51, 51, 51));
@@ -307,7 +307,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getH);
-        getH.setBounds(410, 480, 60, 61);
+        getH.setBounds(410, 480, 60, 55);
 
         getG.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getG.setForeground(new java.awt.Color(51, 51, 51));
@@ -319,7 +319,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getG);
-        getG.setBounds(950, 400, 60, 61);
+        getG.setBounds(950, 400, 60, 55);
 
         getI.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getI.setForeground(new java.awt.Color(51, 51, 51));
@@ -331,7 +331,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getI);
-        getI.setBounds(500, 480, 60, 61);
+        getI.setBounds(500, 480, 60, 55);
 
         getK.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getK.setForeground(new java.awt.Color(51, 51, 51));
@@ -343,7 +343,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getK);
-        getK.setBounds(680, 480, 60, 61);
+        getK.setBounds(680, 480, 60, 55);
 
         getL.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getL.setForeground(new java.awt.Color(51, 51, 51));
@@ -355,7 +355,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getL);
-        getL.setBounds(770, 480, 60, 61);
+        getL.setBounds(770, 480, 60, 55);
 
         getM.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getM.setForeground(new java.awt.Color(51, 51, 51));
@@ -367,7 +367,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getM);
-        getM.setBounds(860, 480, 60, 61);
+        getM.setBounds(860, 480, 60, 55);
 
         getP.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getP.setForeground(new java.awt.Color(51, 51, 51));
@@ -384,7 +384,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getP);
-        getP.setBounds(500, 560, 60, 61);
+        getP.setBounds(500, 560, 60, 55);
 
         getJ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getJ.setForeground(new java.awt.Color(51, 51, 51));
@@ -401,7 +401,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getJ);
-        getJ.setBounds(590, 480, 60, 61);
+        getJ.setBounds(590, 480, 60, 55);
 
         getO.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getO.setForeground(new java.awt.Color(51, 51, 51));
@@ -413,7 +413,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getO);
-        getO.setBounds(410, 560, 60, 61);
+        getO.setBounds(410, 560, 60, 55);
 
         getQ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getQ.setForeground(new java.awt.Color(51, 51, 51));
@@ -425,7 +425,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getQ);
-        getQ.setBounds(590, 560, 60, 61);
+        getQ.setBounds(590, 560, 60, 55);
 
         getT.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getT.setForeground(new java.awt.Color(51, 51, 51));
@@ -437,7 +437,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getT);
-        getT.setBounds(860, 560, 60, 61);
+        getT.setBounds(860, 560, 60, 55);
 
         getN.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getN.setForeground(new java.awt.Color(51, 51, 51));
@@ -449,7 +449,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getN);
-        getN.setBounds(950, 480, 60, 61);
+        getN.setBounds(950, 480, 60, 55);
 
         getS.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getS.setForeground(new java.awt.Color(51, 51, 51));
@@ -461,7 +461,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getS);
-        getS.setBounds(770, 560, 60, 61);
+        getS.setBounds(770, 560, 60, 55);
 
         getR.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getR.setForeground(new java.awt.Color(51, 51, 51));
@@ -473,7 +473,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getR);
-        getR.setBounds(680, 560, 60, 61);
+        getR.setBounds(680, 560, 60, 55);
 
         getY.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getY.setForeground(new java.awt.Color(51, 51, 51));
@@ -485,7 +485,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getY);
-        getY.setBounds(680, 640, 60, 61);
+        getY.setBounds(680, 640, 60, 55);
 
         getZ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getZ.setForeground(new java.awt.Color(51, 51, 51));
@@ -502,7 +502,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getZ);
-        getZ.setBounds(770, 640, 60, 61);
+        getZ.setBounds(770, 640, 60, 55);
 
         getV.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getV.setForeground(new java.awt.Color(51, 51, 51));
@@ -514,7 +514,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getV);
-        getV.setBounds(410, 640, 60, 61);
+        getV.setBounds(410, 640, 60, 55);
 
         getW.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getW.setForeground(new java.awt.Color(51, 51, 51));
@@ -531,7 +531,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getW);
-        getW.setBounds(500, 640, 60, 61);
+        getW.setBounds(500, 640, 60, 55);
 
         getX.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getX.setForeground(new java.awt.Color(51, 51, 51));
@@ -543,7 +543,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getX);
-        getX.setBounds(590, 640, 60, 61);
+        getX.setBounds(590, 640, 60, 55);
 
         getU.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getU.setForeground(new java.awt.Color(51, 51, 51));
@@ -555,7 +555,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getU);
-        getU.setBounds(950, 560, 60, 61);
+        getU.setBounds(950, 560, 60, 55);
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

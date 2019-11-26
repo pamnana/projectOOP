@@ -1,3 +1,9 @@
+
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -108,6 +114,16 @@ public class Category extends javax.swing.JFrame {
         new Chapter1().setVisible(true);
         this.setVisible(false);
         this.dispose();
+                try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
@@ -115,6 +131,16 @@ public class Category extends javax.swing.JFrame {
         new Chapter2().setVisible(true);
         this.setVisible(false);
         this.dispose();
+                try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
@@ -122,6 +148,16 @@ public class Category extends javax.swing.JFrame {
         new Chapter3().setVisible(true);
         this.setVisible(false);
         this.dispose();
+                try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
@@ -129,6 +165,16 @@ public class Category extends javax.swing.JFrame {
         new Chapter4().setVisible(true);
         this.setVisible(false);
         this.dispose();
+                try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton7MouseClicked
 
     /**

@@ -11,8 +11,18 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-public class index extends javax.swing.JFrame{
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import javax.sound.sampled.*;
+import sun.audio.*;
+
+public class index extends javax.swing.JFrame {
+
     SelectMode u = new SelectMode();
+
     /**
      * Creates new form index
      */
@@ -79,13 +89,29 @@ public class index extends javax.swing.JFrame{
         new SelectMode().setVisible(true);
         this.setVisible(false);
         this.dispose();
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         
     }//GEN-LAST:event_formMouseClicked
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws FileNotFoundException, IOException, LineUnavailableException, UnsupportedAudioFileException {
+        File musicPath = new File("sound/bgsound.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

@@ -1,5 +1,9 @@
 
+import java.io.File;
 import java.io.FileReader;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import org.json.simple.JSONArray;
@@ -31,7 +35,7 @@ public class Answer extends javax.swing.JFrame {
     public Answer() {
         initComponents();
     }
-    
+
     public Answer(Chapter1 a) {
         this.main1 = a;
         page = 1;
@@ -119,7 +123,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel4.setToolTipText("");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 50, 1020, 105);
+        jLabel4.setBounds(0, 50, 1020, 92);
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
@@ -134,7 +138,7 @@ public class Answer extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(720, 570, 110, 61);
+        jButton1.setBounds(720, 570, 110, 55);
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
@@ -144,7 +148,7 @@ public class Answer extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(250, 570, 110, 61);
+        jButton2.setBounds(250, 570, 110, 55);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/end.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
@@ -173,26 +177,99 @@ public class Answer extends javax.swing.JFrame {
             if (page == 1) {
                 if (main1.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
+                    try {
+                        File musicPath = new File("sound/lose.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+
                 } else if (main1.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
+                    try {
+                        File musicPath = new File("sound/win.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
             } else if (page == 2) {
                 if (main2.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
+                    try {
+                        File musicPath = new File("sound/lose.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 } else if (main2.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
+                    try {
+                        File musicPath = new File("sound/win.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
             } else if (page == 3) {
                 if (main3.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
+                    try {
+                        File musicPath = new File("sound/lose.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 } else if (main3.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
+                    try {
+                        File musicPath = new File("sound/win.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
             } else if (page == 4) {
                 if (main4.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
+                    try {
+                        File musicPath = new File("sound/lose.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 } else if (main4.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
+                    try {
+                        File musicPath = new File("sound/win.wav");
+                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInput);
+                        clip.start();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
             }
         } catch (Exception e) {
@@ -205,6 +282,15 @@ public class Answer extends javax.swing.JFrame {
         new SelectMode().setVisible(true);
         this.setVisible(false);
         this.dispose();
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -213,6 +299,15 @@ public class Answer extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
         System.out.println("kuy");
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     public static JLabel getjLabel1() {
