@@ -44,6 +44,22 @@ public class Result extends javax.swing.JFrame {
         this.jLabel5 = jLabel5;
     }
 
+    public JLabel getLose() {
+        return lose;
+    }
+
+    public void setLose(JLabel lose) {
+        this.lose = lose;
+    }
+
+    public JLabel getWin() {
+        return win;
+    }
+
+    public void setWin(JLabel win) {
+        this.win = win;
+    }
+
     public Result(MultiMode a) {
         this.multi = a;
         page = 0;
@@ -73,6 +89,7 @@ public class Result extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Result");
         setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -129,18 +146,28 @@ public class Result extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(740, 490, 130, 60);
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(170, 490, 130, 60);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vs.jpg"))); // NOI18N
         jLabel6.setToolTipText("");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(-20, -20, 1024, 768);
+        jLabel6.setBounds(0, -30, 1110, 830);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,18 +180,20 @@ public class Result extends javax.swing.JFrame {
             // TODO add your handling code here:
             Object obj = parser.parse(new FileReader("src\\text2.txt"));
             JSONArray array = (JSONArray) obj;
-            JSONObject obj2;
+            JSONObject obj2, obj3;
             obj2 = (JSONObject) array.get(0);
-            jLabel5.setText("1");
-
-            server1 t = new server1();
-            t.start();
-
+            obj3 = (JSONObject) array.get(1);
+        
+            getjLabel5().setText((String) obj2.get("score"));
+            getjLabel4().setText((String) obj3.get("score"));
             if (page == 0) {
                 if (multi.checkWinner == false) {
-                    getjLabel4().setText((String)obj2.get("score"));
+                    getWin().setVisible(false);
+                    getjLabel5().setText((String) obj2.get("name"));
+
                 } else if (multi.checkWinner != false) {
-                    getjLabel4().setText((String)obj2.get("score"));
+                    getLose().setVisible(false);
+                    getjLabel4().setText((String) obj2.get("name"));
                 }
             }
         } catch (IOException ex) {
@@ -174,6 +203,20 @@ public class Result extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_formComponentShown
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        new Lobby().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        new PlayerName().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
