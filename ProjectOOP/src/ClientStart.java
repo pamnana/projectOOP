@@ -36,9 +36,9 @@ public class ClientStart implements Runnable{
     /**
      * GUI of Client.
      */
-    private Chapter2 chap2;
+    private Chapter2ForMP chap2;
     
-    public ClientStart(Chapter2 chap2, ClientConfiguration config){
+    public ClientStart(Chapter2ForMP chap2, ClientConfiguration config){
         String name = config.getName();
         String ipAddr = config.getIpAddr();//edit IpAddress before start
         int port = config.getPort();
@@ -61,7 +61,7 @@ public class ClientStart implements Runnable{
         this.chap2 = chap2;
         if (worked)  {
             new Thread(this).start();
-            new Chapter2().setVisible(true);
+            new Chapter2ForMP().setVisible(true);
 
         }
         // TODO send the name to the Server
@@ -86,7 +86,7 @@ public class ClientStart implements Runnable{
      * Returns the GUI of the Client.
      * @return the GUI of the Client
      */
-    public Chapter2 getGui()  {
+    public Chapter2ForMP getGui()  {
         return chap2;
     }
     @Override
