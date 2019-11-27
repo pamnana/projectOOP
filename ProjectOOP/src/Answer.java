@@ -298,7 +298,7 @@ public class Answer extends javax.swing.JFrame {
         new Category().setVisible(true);
         this.setVisible(false);
         this.dispose();
-        System.out.println("kuy");
+
         try {
             File musicPath = new File("sound/click.wav");
             AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
