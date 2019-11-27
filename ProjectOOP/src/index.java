@@ -22,6 +22,7 @@ import sun.audio.*;
 public class index extends javax.swing.JFrame {
 
     SelectMode u = new SelectMode();
+    public int count = 1;
 
     /**
      * Creates new form index
@@ -41,6 +42,7 @@ public class index extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,22 +61,20 @@ public class index extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bglogo.jpg"))); // NOI18N
+        jPanel2.setLayout(null);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sound.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(960, 20, 40, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bglogo.jpg"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(0, 0, 1024, 768);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +111,17 @@ public class index extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_formComponentShown
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        if(count == 1){
+            jLabel1.setIcon(new ImageIcon("src/images/icon/mute.png"));
+            count--;
+        }else if(count == 0){
+            jLabel1.setIcon(new ImageIcon("src/images/icon/sound.png"));
+            count++;
+        }
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -154,6 +165,7 @@ public class index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
