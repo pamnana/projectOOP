@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -34,9 +35,8 @@ public class Chapter3 extends javax.swing.JFrame {
     public boolean checkWinner;
     
     public Chapter3() {
-
         initComponents();
-
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
     
     public void setIMGstatic() {

@@ -1,3 +1,4 @@
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -15,6 +16,7 @@ public class SelectMode extends javax.swing.JFrame {
     
     public SelectMode() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
 
     /**

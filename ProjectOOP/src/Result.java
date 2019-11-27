@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JLabel;
@@ -26,6 +27,7 @@ public class Result extends javax.swing.JFrame {
      */
     public Result() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
 
     public JLabel getjLabel4() {

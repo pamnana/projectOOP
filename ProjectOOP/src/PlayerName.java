@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.FileWriter;
 import java.io.IOException;
 import org.json.simple.JSONArray;
@@ -20,6 +21,7 @@ public class PlayerName extends javax.swing.JFrame {
      */
     public PlayerName() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
 
     /**

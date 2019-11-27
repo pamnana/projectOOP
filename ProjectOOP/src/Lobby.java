@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -27,6 +28,7 @@ public class Lobby extends javax.swing.JFrame {
 
     public Lobby() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
 
     /**

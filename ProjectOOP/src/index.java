@@ -28,6 +28,7 @@ public class index extends javax.swing.JFrame {
      */
     public index() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
     }
 
     /**
@@ -50,6 +51,11 @@ public class index extends javax.swing.JFrame {
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
+            }
+        });
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
             }
         });
 
@@ -89,18 +95,22 @@ public class index extends javax.swing.JFrame {
         new SelectMode().setVisible(true);
         this.setVisible(false);
         this.dispose();
-        try{
-         File musicPath = new File("sound/click.wav");
-        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInput);
-        clip.start();   
-        }
-        catch (Exception ex){
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_formMouseClicked
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
