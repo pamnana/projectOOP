@@ -1,1 +1,1 @@
-[{"chapter":"1","meaning":"คนต้อนฝูงวัว","word":"cattlekeeper"}]
+[{"chapter":"4","meaning":"เครื่องสูบน้ำดับเพลิง","word":"firepump"}]

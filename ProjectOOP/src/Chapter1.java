@@ -1,7 +1,11 @@
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Random;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -742,6 +746,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'a';
         JLabel[] label = new JLabel[getLength_word()];
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
 
         switch (length_word) {
             case 1:
@@ -906,6 +920,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'b';
         JLabel[] label = new JLabel[getLength_word()];
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
 
         switch (length_word) {
             case 1:
@@ -1070,7 +1094,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'c';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1234,7 +1267,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'd';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1398,7 +1440,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'e';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1562,7 +1613,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'f';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1725,7 +1785,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'g';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -1890,7 +1959,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'h';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2055,7 +2133,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'i';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2220,7 +2307,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'j';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2385,7 +2481,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'k';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2550,7 +2655,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'l';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2715,7 +2829,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'm';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -2880,7 +3003,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'n';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3045,7 +3177,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'o';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3210,7 +3351,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'p';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3374,7 +3524,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'q';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3538,7 +3697,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 'r';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3702,7 +3870,16 @@ public class Chapter1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int count = 0;
         button = 's';
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         JLabel[] label = new JLabel[getLength_word()];
 
         switch (length_word) {
@@ -3867,7 +4044,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 't';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4030,7 +4216,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'u';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4193,7 +4388,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'v';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4356,7 +4560,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'w';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4519,7 +4732,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'x';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4682,7 +4904,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'y';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4849,7 +5080,16 @@ public class Chapter1 extends javax.swing.JFrame {
         int count = 0;
         button = 'z';
         JLabel[] label = new JLabel[getLength_word()];
-
+try{
+         File musicPath = new File("sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;

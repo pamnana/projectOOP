@@ -1,7 +1,11 @@
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Random;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -28,13 +32,13 @@ public class Chapter4 extends javax.swing.JFrame {
     public static int total;
     public static checkWinner isWinner;
     public boolean checkWinner;
-    
+
     public Chapter4() {
 
         initComponents();
 
     }
-    
+
     public void setIMGstatic() {
         if (getScore() == 6) {
             getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
@@ -58,7 +62,7 @@ public class Chapter4 extends javax.swing.JFrame {
     }
 
     public void check() {
-        if (total == getLength_word()){
+        if (total == getLength_word()) {
             setScore(7);
             checkWinner = true;
             this.setVisible(false);
@@ -126,12 +130,11 @@ public class Chapter4 extends javax.swing.JFrame {
          */
 
         //</editor-fold>
-        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Chapter4().setVisible(true);
-                
+
             }
         }
         );
@@ -215,7 +218,7 @@ public class Chapter4 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ลองทายคำศัพท์ดูสิ ..!");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 50, 371, 70);
+        jLabel2.setBounds(50, 50, 371, 62);
 
         getB.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getB.setForeground(new java.awt.Color(51, 51, 51));
@@ -232,7 +235,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getB);
-        getB.setBounds(500, 400, 60, 61);
+        getB.setBounds(500, 400, 60, 55);
 
         getC.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getC.setForeground(new java.awt.Color(51, 51, 51));
@@ -244,7 +247,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getC);
-        getC.setBounds(590, 400, 60, 61);
+        getC.setBounds(590, 400, 60, 55);
 
         getD.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getD.setForeground(new java.awt.Color(51, 51, 51));
@@ -256,7 +259,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getD);
-        getD.setBounds(680, 400, 60, 61);
+        getD.setBounds(680, 400, 60, 55);
 
         getE.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getE.setForeground(new java.awt.Color(51, 51, 51));
@@ -273,7 +276,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getE);
-        getE.setBounds(770, 400, 60, 61);
+        getE.setBounds(770, 400, 60, 55);
 
         getF.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getF.setForeground(new java.awt.Color(51, 51, 51));
@@ -285,7 +288,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getF);
-        getF.setBounds(860, 400, 60, 61);
+        getF.setBounds(860, 400, 60, 55);
 
         getA.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getA.setForeground(new java.awt.Color(51, 51, 51));
@@ -297,7 +300,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getA);
-        getA.setBounds(410, 400, 60, 61);
+        getA.setBounds(410, 400, 60, 55);
 
         getH.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getH.setForeground(new java.awt.Color(51, 51, 51));
@@ -309,7 +312,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getH);
-        getH.setBounds(410, 480, 60, 61);
+        getH.setBounds(410, 480, 60, 55);
 
         getG.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getG.setForeground(new java.awt.Color(51, 51, 51));
@@ -321,7 +324,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getG);
-        getG.setBounds(950, 400, 60, 61);
+        getG.setBounds(950, 400, 60, 55);
 
         getI.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getI.setForeground(new java.awt.Color(51, 51, 51));
@@ -333,7 +336,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getI);
-        getI.setBounds(500, 480, 60, 61);
+        getI.setBounds(500, 480, 60, 55);
 
         getK.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getK.setForeground(new java.awt.Color(51, 51, 51));
@@ -345,7 +348,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getK);
-        getK.setBounds(680, 480, 60, 61);
+        getK.setBounds(680, 480, 60, 55);
 
         getL.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getL.setForeground(new java.awt.Color(51, 51, 51));
@@ -357,7 +360,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getL);
-        getL.setBounds(770, 480, 60, 61);
+        getL.setBounds(770, 480, 60, 55);
 
         getM.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getM.setForeground(new java.awt.Color(51, 51, 51));
@@ -369,7 +372,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getM);
-        getM.setBounds(860, 480, 60, 61);
+        getM.setBounds(860, 480, 60, 55);
 
         getP.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getP.setForeground(new java.awt.Color(51, 51, 51));
@@ -386,7 +389,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getP);
-        getP.setBounds(500, 560, 60, 61);
+        getP.setBounds(500, 560, 60, 55);
 
         getJ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getJ.setForeground(new java.awt.Color(51, 51, 51));
@@ -403,7 +406,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getJ);
-        getJ.setBounds(590, 480, 60, 61);
+        getJ.setBounds(590, 480, 60, 55);
 
         getO.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getO.setForeground(new java.awt.Color(51, 51, 51));
@@ -415,7 +418,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getO);
-        getO.setBounds(410, 560, 60, 61);
+        getO.setBounds(410, 560, 60, 55);
 
         getQ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getQ.setForeground(new java.awt.Color(51, 51, 51));
@@ -427,7 +430,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getQ);
-        getQ.setBounds(590, 560, 60, 61);
+        getQ.setBounds(590, 560, 60, 55);
 
         getT.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getT.setForeground(new java.awt.Color(51, 51, 51));
@@ -439,7 +442,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getT);
-        getT.setBounds(860, 560, 60, 61);
+        getT.setBounds(860, 560, 60, 55);
 
         getN.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getN.setForeground(new java.awt.Color(51, 51, 51));
@@ -451,7 +454,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getN);
-        getN.setBounds(950, 480, 60, 61);
+        getN.setBounds(950, 480, 60, 55);
 
         getS.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getS.setForeground(new java.awt.Color(51, 51, 51));
@@ -463,7 +466,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getS);
-        getS.setBounds(770, 560, 60, 61);
+        getS.setBounds(770, 560, 60, 55);
 
         getR.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getR.setForeground(new java.awt.Color(51, 51, 51));
@@ -475,7 +478,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getR);
-        getR.setBounds(680, 560, 60, 61);
+        getR.setBounds(680, 560, 60, 55);
 
         getY.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getY.setForeground(new java.awt.Color(51, 51, 51));
@@ -487,7 +490,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getY);
-        getY.setBounds(680, 640, 60, 61);
+        getY.setBounds(680, 640, 60, 55);
 
         getZ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getZ.setForeground(new java.awt.Color(51, 51, 51));
@@ -504,7 +507,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getZ);
-        getZ.setBounds(770, 640, 60, 61);
+        getZ.setBounds(770, 640, 60, 55);
 
         getV.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getV.setForeground(new java.awt.Color(51, 51, 51));
@@ -516,7 +519,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getV);
-        getV.setBounds(410, 640, 60, 61);
+        getV.setBounds(410, 640, 60, 55);
 
         getW.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getW.setForeground(new java.awt.Color(51, 51, 51));
@@ -545,7 +548,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getX);
-        getX.setBounds(590, 640, 60, 61);
+        getX.setBounds(590, 640, 60, 55);
 
         getU.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getU.setForeground(new java.awt.Color(51, 51, 51));
@@ -557,7 +560,7 @@ public class Chapter4 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getU);
-        getU.setBounds(950, 560, 60, 61);
+        getU.setBounds(950, 560, 60, 55);
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -744,7 +747,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'a';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -898,7 +909,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getAMouseClicked
@@ -908,7 +919,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'b';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1062,7 +1081,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getBMouseClicked
@@ -1072,7 +1091,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'c';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1226,7 +1253,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getCMouseClicked
@@ -1236,7 +1263,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'd';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1390,7 +1425,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getDMouseClicked
@@ -1400,7 +1435,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'e';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1554,7 +1597,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getEMouseClicked
@@ -1564,7 +1607,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'f';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1718,7 +1769,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getFMouseClicked
@@ -1729,7 +1780,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'g';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -1883,7 +1942,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getGMouseClicked
@@ -1894,7 +1953,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'h';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2048,7 +2115,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getHMouseClicked
@@ -2059,7 +2126,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'i';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2213,7 +2288,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getIMouseClicked
@@ -2224,7 +2299,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'j';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2378,7 +2461,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getJMouseClicked
@@ -2389,7 +2472,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'k';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2543,7 +2634,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getKMouseClicked
@@ -2554,7 +2645,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'l';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2708,7 +2807,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getLMouseClicked
@@ -2719,7 +2818,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'm';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -2873,7 +2980,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getMMouseClicked
@@ -2884,7 +2991,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'n';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3038,7 +3153,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getNMouseClicked
@@ -3049,7 +3164,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'o';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3203,7 +3326,7 @@ public class Chapter4 extends javax.swing.JFrame {
             if (count == 0) {
                 setScore(getScore() - 1);
                 setIMGstatic();
-                
+
             }
         }
     }//GEN-LAST:event_getOMouseClicked
@@ -3214,7 +3337,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'p';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3378,7 +3509,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'q';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3542,7 +3681,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 'r';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3706,7 +3853,15 @@ public class Chapter4 extends javax.swing.JFrame {
         button = 's';
 
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -3869,7 +4024,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 't';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4032,7 +4195,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'u';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4195,7 +4366,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'v';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4358,7 +4537,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'w';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4521,7 +4708,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'x';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4684,7 +4879,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'y';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
@@ -4851,7 +5054,15 @@ public class Chapter4 extends javax.swing.JFrame {
         int count = 0;
         button = 'z';
         JLabel[] label = new JLabel[getLength_word()];
-
+        try {
+            File musicPath = new File("sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         switch (length_word) {
             case 1:
                 label[0] = jLabel4;
