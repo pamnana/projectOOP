@@ -26,6 +26,7 @@ public class Answer extends javax.swing.JFrame {
     private Chapter2 main2;
     private Chapter3 main3;
     private Chapter4 main4;
+    private Chapter2ForMP main5;
 
     public int page;
     public static boolean isWinner;
@@ -59,6 +60,11 @@ public class Answer extends javax.swing.JFrame {
     public Answer(Chapter4 a) {
         this.main4 = a;
         page = 4;
+        initComponents();
+    }
+    public Answer(Chapter2ForMP a) {
+        this.main5 = a;
+        page = 2;
         initComponents();
     }
 
