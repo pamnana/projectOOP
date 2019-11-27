@@ -36,6 +36,7 @@ public class SelectMode extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Select Mode");
         setResizable(false);
+        setSize(new java.awt.Dimension(1024, 768));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
         jPanel1.setLayout(null);
