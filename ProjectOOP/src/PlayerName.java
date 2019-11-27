@@ -21,7 +21,7 @@ public class PlayerName extends javax.swing.JFrame {
      */
     public PlayerName() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     /**
@@ -182,7 +182,7 @@ public class PlayerName extends javax.swing.JFrame {
 
             array_new.add(obj_new);
 
-            FileWriter file = new FileWriter("src\\text2.txt");
+            FileWriter file = new FileWriter("src/json/player.json");
             file.write(array_new.toJSONString());
             file.flush();
             file.close();

@@ -36,24 +36,24 @@ public class Chapter1 extends javax.swing.JFrame {
 
     public Chapter1() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     public void setIMGstatic() {
         if (getScore() == 6) {
-            getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p2.jpg"));
         } else if (getScore() == 5) {
-            getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p3.jpg"));
         } else if (getScore() == 4) {
-            getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p4.jpg"));
         } else if (getScore() == 3) {
-            getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p5.jpg"));
         } else if (getScore() == 2) {
-            getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p6.jpg"));
         } else if (getScore() == 1) {
-            getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p7.jpg"));
         } else if (getScore() == 0) {
-            getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p8.jpg"));
             setScore(7);
             this.setVisible(false);
             checkWinner = false;
@@ -217,7 +217,7 @@ public class Chapter1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ลองทายคำศัพท์ดูสิ ..!");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 50, 371, 62);
+        jLabel2.setBounds(50, 50, 371, 70);
 
         getB.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getB.setForeground(new java.awt.Color(51, 51, 51));
@@ -234,7 +234,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getB);
-        getB.setBounds(500, 400, 60, 55);
+        getB.setBounds(500, 400, 60, 61);
 
         getC.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getC.setForeground(new java.awt.Color(51, 51, 51));
@@ -246,7 +246,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getC);
-        getC.setBounds(590, 400, 60, 55);
+        getC.setBounds(590, 400, 60, 61);
 
         getD.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getD.setForeground(new java.awt.Color(51, 51, 51));
@@ -258,7 +258,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getD);
-        getD.setBounds(680, 400, 60, 55);
+        getD.setBounds(680, 400, 60, 61);
 
         getE.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getE.setForeground(new java.awt.Color(51, 51, 51));
@@ -275,7 +275,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getE);
-        getE.setBounds(770, 400, 60, 55);
+        getE.setBounds(770, 400, 60, 61);
 
         getF.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getF.setForeground(new java.awt.Color(51, 51, 51));
@@ -287,7 +287,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getF);
-        getF.setBounds(860, 400, 60, 55);
+        getF.setBounds(860, 400, 60, 61);
 
         getA.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getA.setForeground(new java.awt.Color(51, 51, 51));
@@ -299,7 +299,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getA);
-        getA.setBounds(410, 400, 60, 55);
+        getA.setBounds(410, 400, 60, 61);
 
         getH.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getH.setForeground(new java.awt.Color(51, 51, 51));
@@ -311,7 +311,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getH);
-        getH.setBounds(410, 480, 60, 55);
+        getH.setBounds(410, 480, 60, 61);
 
         getG.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getG.setForeground(new java.awt.Color(51, 51, 51));
@@ -323,7 +323,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getG);
-        getG.setBounds(950, 400, 60, 55);
+        getG.setBounds(950, 400, 60, 61);
 
         getI.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getI.setForeground(new java.awt.Color(51, 51, 51));
@@ -335,7 +335,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getI);
-        getI.setBounds(500, 480, 60, 55);
+        getI.setBounds(500, 480, 60, 61);
 
         getK.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getK.setForeground(new java.awt.Color(51, 51, 51));
@@ -347,7 +347,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getK);
-        getK.setBounds(680, 480, 60, 55);
+        getK.setBounds(680, 480, 60, 61);
 
         getL.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getL.setForeground(new java.awt.Color(51, 51, 51));
@@ -359,7 +359,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getL);
-        getL.setBounds(770, 480, 60, 55);
+        getL.setBounds(770, 480, 60, 61);
 
         getM.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getM.setForeground(new java.awt.Color(51, 51, 51));
@@ -371,7 +371,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getM);
-        getM.setBounds(860, 480, 60, 55);
+        getM.setBounds(860, 480, 60, 61);
 
         getP.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getP.setForeground(new java.awt.Color(51, 51, 51));
@@ -388,7 +388,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getP);
-        getP.setBounds(500, 560, 60, 55);
+        getP.setBounds(500, 560, 60, 61);
 
         getJ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getJ.setForeground(new java.awt.Color(51, 51, 51));
@@ -405,7 +405,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getJ);
-        getJ.setBounds(590, 480, 60, 55);
+        getJ.setBounds(590, 480, 60, 61);
 
         getO.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getO.setForeground(new java.awt.Color(51, 51, 51));
@@ -417,7 +417,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getO);
-        getO.setBounds(410, 560, 60, 55);
+        getO.setBounds(410, 560, 60, 61);
 
         getQ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getQ.setForeground(new java.awt.Color(51, 51, 51));
@@ -429,7 +429,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getQ);
-        getQ.setBounds(590, 560, 60, 55);
+        getQ.setBounds(590, 560, 60, 61);
 
         getT.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getT.setForeground(new java.awt.Color(51, 51, 51));
@@ -441,7 +441,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getT);
-        getT.setBounds(860, 560, 60, 55);
+        getT.setBounds(860, 560, 60, 61);
 
         getN.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getN.setForeground(new java.awt.Color(51, 51, 51));
@@ -453,7 +453,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getN);
-        getN.setBounds(950, 480, 60, 55);
+        getN.setBounds(950, 480, 60, 61);
 
         getS.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getS.setForeground(new java.awt.Color(51, 51, 51));
@@ -465,7 +465,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getS);
-        getS.setBounds(770, 560, 60, 55);
+        getS.setBounds(770, 560, 60, 61);
 
         getR.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getR.setForeground(new java.awt.Color(51, 51, 51));
@@ -477,7 +477,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getR);
-        getR.setBounds(680, 560, 60, 55);
+        getR.setBounds(680, 560, 60, 61);
 
         getY.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getY.setForeground(new java.awt.Color(51, 51, 51));
@@ -489,7 +489,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getY);
-        getY.setBounds(680, 640, 60, 55);
+        getY.setBounds(680, 640, 60, 61);
 
         getZ.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getZ.setForeground(new java.awt.Color(51, 51, 51));
@@ -506,7 +506,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getZ);
-        getZ.setBounds(770, 640, 60, 55);
+        getZ.setBounds(770, 640, 60, 61);
 
         getV.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getV.setForeground(new java.awt.Color(51, 51, 51));
@@ -518,7 +518,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getV);
-        getV.setBounds(410, 640, 60, 55);
+        getV.setBounds(410, 640, 60, 61);
 
         getW.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getW.setForeground(new java.awt.Color(51, 51, 51));
@@ -535,7 +535,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getW);
-        getW.setBounds(500, 640, 60, 55);
+        getW.setBounds(500, 640, 60, 61);
 
         getX.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getX.setForeground(new java.awt.Color(51, 51, 51));
@@ -547,7 +547,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getX);
-        getX.setBounds(590, 640, 60, 55);
+        getX.setBounds(590, 640, 60, 61);
 
         getU.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         getU.setForeground(new java.awt.Color(51, 51, 51));
@@ -559,7 +559,7 @@ public class Chapter1 extends javax.swing.JFrame {
             }
         });
         jPanel2.add(getU);
-        getU.setBounds(950, 560, 60, 55);
+        getU.setBounds(950, 560, 60, 61);
 
         jLabel1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -747,7 +747,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'a';
         JLabel[] label = new JLabel[getLength_word()];
         try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -921,7 +921,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'b';
         JLabel[] label = new JLabel[getLength_word()];
         try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1095,7 +1095,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'c';
         JLabel[] label = new JLabel[getLength_word()];
         try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1268,7 +1268,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'd';
         JLabel[] label = new JLabel[getLength_word()];
         try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1441,7 +1441,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'e';
         JLabel[] label = new JLabel[getLength_word()];
         try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1614,7 +1614,7 @@ public class Chapter1 extends javax.swing.JFrame {
         button = 'f';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1786,7 +1786,7 @@ try{
         int count = 0;
         button = 'g';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1960,7 +1960,7 @@ try{
         int count = 0;
         button = 'h';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2134,7 +2134,7 @@ try{
         int count = 0;
         button = 'i';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2308,7 +2308,7 @@ try{
         int count = 0;
         button = 'j';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2482,7 +2482,7 @@ try{
         int count = 0;
         button = 'k';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2656,7 +2656,7 @@ try{
         int count = 0;
         button = 'l';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2830,7 +2830,7 @@ try{
         int count = 0;
         button = 'm';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3004,7 +3004,7 @@ try{
         int count = 0;
         button = 'n';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3178,7 +3178,7 @@ try{
         int count = 0;
         button = 'o';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3352,7 +3352,7 @@ try{
         int count = 0;
         button = 'p';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3525,7 +3525,7 @@ try{
         int count = 0;
         button = 'q';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3698,7 +3698,7 @@ try{
         int count = 0;
         button = 'r';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3871,7 +3871,7 @@ try{
         int count = 0;
         button = 's';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4045,7 +4045,7 @@ try{
         button = 't';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4217,7 +4217,7 @@ try{
         button = 'u';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4389,7 +4389,7 @@ try{
         button = 'v';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4561,7 +4561,7 @@ try{
         button = 'w';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4733,7 +4733,7 @@ try{
         button = 'x';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4905,7 +4905,7 @@ try{
         button = 'y';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -5081,7 +5081,7 @@ try{
         button = 'z';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -5288,7 +5288,7 @@ try{
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter1.txt"));
+            Object obj = parser.parse(new FileReader("src/json/chapter1.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
@@ -5305,7 +5305,7 @@ try{
             obj_new.put("meaning", vcb1.getMeaning());
             array_new.add(obj_new);
 
-            FileWriter file = new FileWriter("src\\RandomJSON.txt");
+            FileWriter file = new FileWriter("src/json/RandomJSON.json");
             file.write(array_new.toJSONString());
             file.flush();
             file.close();
@@ -5316,13 +5316,12 @@ try{
 
         try {
 
-            Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
+            Object obj = parser.parse(new FileReader("src/json/RandomJSON.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
 
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
-            //length_word = vcb1.getWord().length();
             setLength_word(vcb1.getWord().length());
             setWord(vcb1.getWord());
 
@@ -5511,7 +5510,5 @@ try{
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    boolean isIsWinner() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 }

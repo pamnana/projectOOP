@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Random;
@@ -30,26 +31,25 @@ public class MultiMode extends javax.swing.JFrame {
     public boolean checkWinner;
     
     public MultiMode() {
-
         initComponents();
-
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
     
     public void setIMGstatic() {
         if (getScore() == 6) {
-            getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p2.jpg"));
         } else if (getScore() == 5) {
-            getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p3.jpg"));
         } else if (getScore() == 4) {
-            getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p4.jpg"));
         } else if (getScore() == 3) {
-            getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p5.jpg"));
         } else if (getScore() == 2) {
-            getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p6.jpg"));
         } else if (getScore() == 1) {
-            getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p7.jpg"));
         } else if (getScore() == 0) {
-            getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p8.jpg"));
             this.setVisible(false);
             checkWinner = false;
             new Result(this).setVisible(true);
@@ -5049,7 +5049,7 @@ public class MultiMode extends javax.swing.JFrame {
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\multi.txt"));
+            Object obj = parser.parse(new FileReader("src/json/allchapter.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
@@ -5066,7 +5066,7 @@ public class MultiMode extends javax.swing.JFrame {
             obj_new.put("meaning", vcb1.getMeaning());
             array_new.add(obj_new);
 
-            FileWriter file = new FileWriter("src\\RandomJSON.txt");
+            FileWriter file = new FileWriter("src/json/RandomJSON.json");
             file.write(array_new.toJSONString());
             file.flush();
             file.close();
@@ -5077,7 +5077,7 @@ public class MultiMode extends javax.swing.JFrame {
 
         try {
 
-            Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
+            Object obj = parser.parse(new FileReader("src/json/RandomJSON.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);

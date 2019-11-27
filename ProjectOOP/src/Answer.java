@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileReader;
 import javax.sound.sampled.AudioInputStream;
@@ -34,6 +35,7 @@ public class Answer extends javax.swing.JFrame {
      */
     public Answer() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     public Answer(Chapter1 a) {
@@ -165,7 +167,7 @@ public class Answer extends javax.swing.JFrame {
         // TODO add your handling code here:
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
+            Object obj = parser.parse(new FileReader("src/json/RandomJSON.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
@@ -173,12 +175,11 @@ public class Answer extends javax.swing.JFrame {
             Vocab vcb1 = new Vocab((String) obj2.get("chapter"), (String) obj2.get("word"), (String) obj2.get("meaning"));
             getjLabel6().setText("แปลว่า " + vcb1.getMeaning());
             getjLabel1().setText(vcb1.getWord());
-            System.out.println(page);
             if (page == 1) {
                 if (main1.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
                     try {
-                        File musicPath = new File("sound/lose.wav");
+                        File musicPath = new File("src/sound/lose.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -190,7 +191,7 @@ public class Answer extends javax.swing.JFrame {
                 } else if (main1.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
                     try {
-                        File musicPath = new File("sound/win.wav");
+                        File musicPath = new File("src/sound/win.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -203,7 +204,7 @@ public class Answer extends javax.swing.JFrame {
                 if (main2.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
                     try {
-                        File musicPath = new File("sound/lose.wav");
+                        File musicPath = new File("src/sound/lose.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -214,7 +215,7 @@ public class Answer extends javax.swing.JFrame {
                 } else if (main2.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
                     try {
-                        File musicPath = new File("sound/win.wav");
+                        File musicPath = new File("src/sound/win.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -227,7 +228,7 @@ public class Answer extends javax.swing.JFrame {
                 if (main3.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
                     try {
-                        File musicPath = new File("sound/lose.wav");
+                        File musicPath = new File("src/sound/lose.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -238,7 +239,7 @@ public class Answer extends javax.swing.JFrame {
                 } else if (main3.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
                     try {
-                        File musicPath = new File("sound/win.wav");
+                        File musicPath = new File("src/sound/win.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -251,7 +252,7 @@ public class Answer extends javax.swing.JFrame {
                 if (main4.checkWinner == false) {
                     getjLabel4().setText("DON'T GIVE UP!");
                     try {
-                        File musicPath = new File("sound/lose.wav");
+                        File musicPath = new File("src/sound/lose.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -262,7 +263,7 @@ public class Answer extends javax.swing.JFrame {
                 } else if (main4.checkWinner != false) {
                     getjLabel4().setText("Congratulations!");
                     try {
-                        File musicPath = new File("sound/win.wav");
+                        File musicPath = new File("src/sound/win.wav");
                         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                         Clip clip = AudioSystem.getClip();
                         clip.open(audioInput);
@@ -283,7 +284,7 @@ public class Answer extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
         try {
-            File musicPath = new File("sound/click.wav");
+            File musicPath = new File("src/sound/click.wav");
             AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
             Clip clip = AudioSystem.getClip();
             clip.open(audioInput);
@@ -300,7 +301,7 @@ public class Answer extends javax.swing.JFrame {
         this.dispose();
 
         try {
-            File musicPath = new File("sound/click.wav");
+            File musicPath = new File("src/sound/click.wav");
             AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
             Clip clip = AudioSystem.getClip();
             clip.open(audioInput);

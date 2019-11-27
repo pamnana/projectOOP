@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -21,6 +22,7 @@ public class Category extends javax.swing.JFrame {
      */
     public Category() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     /**
@@ -115,7 +117,7 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
                 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -132,7 +134,7 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
                 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -149,7 +151,7 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
                 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -166,7 +168,7 @@ public class Category extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
                 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);

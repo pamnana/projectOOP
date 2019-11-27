@@ -28,7 +28,7 @@ public class index extends javax.swing.JFrame {
      */
     public index() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     /**
@@ -96,7 +96,7 @@ public class index extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
         try {
-            File musicPath = new File("sound/click.wav");
+            File musicPath = new File("src/sound/click.wav");
             AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
             Clip clip = AudioSystem.getClip();
             clip.open(audioInput);
@@ -116,7 +116,7 @@ public class index extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) throws FileNotFoundException, IOException, LineUnavailableException, UnsupportedAudioFileException {
-        File musicPath = new File("sound/bgsound.wav");
+        File musicPath = new File("src/sound/bgsound.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);

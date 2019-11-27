@@ -1,3 +1,4 @@
+
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
@@ -7,16 +8,14 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
+
 public class SelectMode extends javax.swing.JFrame {
 
     //ImageIcon btnbg = new ImageIcon();
     //Category u = new Category();
-    
-
-    
     public SelectMode() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));
     }
 
     /**
@@ -110,8 +109,8 @@ public class SelectMode extends javax.swing.JFrame {
         new Lobby().setVisible(true);
         this.setVisible(false);
         this.dispose();
-        
-        
+
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -119,14 +118,13 @@ public class SelectMode extends javax.swing.JFrame {
         new PlayerName().setVisible(true);
         this.setVisible(false);
         this.dispose();
-                try{
-         File musicPath = new File("sound/click.wav");
-        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInput);
-        clip.start();   
-        }
-        catch (Exception ex){
+        try {
+            File musicPath = new File("src/sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -136,14 +134,13 @@ public class SelectMode extends javax.swing.JFrame {
         new Category().setVisible(true);
         this.setVisible(false);
         this.dispose();
-                try{
-         File musicPath = new File("sound/click.wav");
-        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioInput);
-        clip.start();   
-        }
-        catch (Exception ex){
+        try {
+            File musicPath = new File("src/sound/click.wav");
+            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInput);
+            clip.start();
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton3MouseClicked

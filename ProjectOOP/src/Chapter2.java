@@ -41,19 +41,19 @@ public class Chapter2 extends javax.swing.JFrame {
     
     public void setIMGstatic() {
         if (getScore() == 6) {
-            getjLabel9().setIcon(new ImageIcon("src\\p2.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p2.jpg"));
         } else if (getScore() == 5) {
-            getjLabel9().setIcon(new ImageIcon("src\\p3.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p3.jpg"));
         } else if (getScore() == 4) {
-            getjLabel9().setIcon(new ImageIcon("src\\p4.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p4.jpg"));
         } else if (getScore() == 3) {
-            getjLabel9().setIcon(new ImageIcon("src\\p5.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p5.jpg"));
         } else if (getScore() == 2) {
-            getjLabel9().setIcon(new ImageIcon("src\\p6.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p6.jpg"));
         } else if (getScore() == 1) {
-            getjLabel9().setIcon(new ImageIcon("src\\p7.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p7.jpg"));
         } else if (getScore() == 0) {
-            getjLabel9().setIcon(new ImageIcon("src\\p8.jpg"));
+            getjLabel9().setIcon(new ImageIcon("src/images/p8.jpg"));
             setScore(7);
             this.setVisible(false);
             checkWinner = false;
@@ -749,7 +749,7 @@ public class Chapter2 extends javax.swing.JFrame {
         button = 'a';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -922,7 +922,7 @@ try{
         button = 'b';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1095,7 +1095,7 @@ try{
         button = 'c';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1268,7 +1268,7 @@ try{
         button = 'd';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1441,7 +1441,7 @@ try{
         button = 'e';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1614,7 +1614,7 @@ try{
         button = 'f';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1787,7 +1787,7 @@ try{
         button = 'g';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -1961,7 +1961,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2135,7 +2135,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2309,7 +2309,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2483,7 +2483,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2657,7 +2657,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -2829,7 +2829,7 @@ try{
         int count = 0;
         button = 'm';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3003,7 +3003,7 @@ try{
         int count = 0;
         button = 'n';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3177,7 +3177,7 @@ try{
         int count = 0;
         button = 'o';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3353,7 +3353,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3526,7 +3526,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3699,7 +3699,7 @@ try{
 
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -3870,7 +3870,7 @@ try{
         int count = 0;
         button = 's';
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4044,7 +4044,7 @@ try{
         button = 't';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4216,7 +4216,7 @@ try{
         button = 'u';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4388,7 +4388,7 @@ try{
         button = 'v';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4560,7 +4560,7 @@ try{
         button = 'w';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4732,7 +4732,7 @@ try{
         button = 'x';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -4904,7 +4904,7 @@ try{
         button = 'y';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -5080,7 +5080,7 @@ try{
         button = 'z';
         JLabel[] label = new JLabel[getLength_word()];
 try{
-         File musicPath = new File("sound/click.wav");
+         File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
         clip.open(audioInput);
@@ -5287,7 +5287,7 @@ try{
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("src\\chapter2.txt"));
+            Object obj = parser.parse(new FileReader("src/json/chapter2.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
 
@@ -5304,7 +5304,7 @@ try{
             obj_new.put("meaning", vcb1.getMeaning());
             array_new.add(obj_new);
 
-            FileWriter file = new FileWriter("src\\RandomJSON.txt");
+            FileWriter file = new FileWriter("src/json/RandomJSON.json");
             file.write(array_new.toJSONString());
             file.flush();
             file.close();
@@ -5315,7 +5315,7 @@ try{
 
         try {
 
-            Object obj = parser.parse(new FileReader("src\\RandomJSON.txt"));
+            Object obj = parser.parse(new FileReader("src/json/RandomJSON.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
@@ -5510,7 +5510,4 @@ try{
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    boolean isIsWinner() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

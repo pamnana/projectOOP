@@ -28,7 +28,7 @@ public class Lobby extends javax.swing.JFrame {
 
     public Lobby() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bg/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
     }
 
     /**
@@ -130,7 +130,7 @@ public class Lobby extends javax.swing.JFrame {
         JSONParser parser = new JSONParser();
         try {
             // TODO add your handling code here:
-            Object obj = parser.parse(new FileReader("src\\text2.txt"));
+            Object obj = parser.parse(new FileReader("src/json/player.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
