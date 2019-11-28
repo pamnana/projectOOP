@@ -137,7 +137,6 @@ public class Lobby extends javax.swing.JFrame {
             jLabel5.setText((String) obj2.get("name"));
 
             server1 t = new server1();
-            t.start();
             if (t == null) {
                 Player1Ready = false;
             } else {

@@ -30,9 +30,11 @@ public class MultiMode extends javax.swing.JFrame {
     public static checkWinner isWinner;
     public boolean checkWinner;
     
+    
     public MultiMode() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png")); 
+        RealClient r = new RealClient();
     }
     
     public void setIMGstatic() {
@@ -52,6 +54,7 @@ public class MultiMode extends javax.swing.JFrame {
             getjLabel9().setIcon(new ImageIcon("src/images/p8.jpg"));
             this.setVisible(false);
             checkWinner = false;
+            new RealClient(checkWinner);
             new Result(this).setVisible(true);
         }
     }
@@ -61,6 +64,7 @@ public class MultiMode extends javax.swing.JFrame {
             
             checkWinner = true;
             this.setVisible(false);
+            new RealClient(checkWinner);
             new Result(this).setVisible(true);
         }
     }

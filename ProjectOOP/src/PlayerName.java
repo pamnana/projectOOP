@@ -19,6 +19,16 @@ public class PlayerName extends javax.swing.JFrame {
     /**
      * Creates new form PlayerName
      */
+    private String Pname;
+
+    public void setPname(String Pname) {
+        this.Pname = jTextField2.getText();
+    }
+    
+    public String getPname() {
+        return Pname;
+    }
+    
     public PlayerName() {
         initComponents();
         setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
