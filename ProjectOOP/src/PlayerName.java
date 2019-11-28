@@ -192,6 +192,7 @@ public class PlayerName extends javax.swing.JFrame {
         Pip = jTextField3.getText();
         port = Integer.parseInt(jTextField1.getText());
         System.out.println(port);
+
         try {
             String name = jTextField2.getText();
             Profile profile = new Profile(name);

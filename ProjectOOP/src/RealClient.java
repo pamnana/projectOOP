@@ -42,8 +42,8 @@ public class RealClient extends MultiMode implements Runnable{
 try{
             String sentence;
             String modifiedSentence;
-            Socket clientSocket = new Socket(player.getPip(),5945);//player.getPip(), player.getPort());
-            System.out.println("connected");
+            Socket clientSocket = new Socket("localhost",5945);//player.getPip(), player.getPort());
+            
             DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
             BufferedReader inFromServer = new BufferedReader(
             new InputStreamReader(clientSocket.getInputStream()));
@@ -56,6 +56,7 @@ try{
             String send = "sss";
             outToServer.writeBytes(send);
             modifiedSentence = inFromServer.readLine();
+            System.out.println("connected");
             System.out.println("FROM SERVER: " + modifiedSentence);
             clientSocket.close();
         }catch(Exception e){

@@ -1,9 +1,9 @@
 import java.io.*;
 import java.net.*;
-class server1 {
+public class server1 {
     private static PlayerName player;
     
-public static void main(String argv[]) throws Exception {
+public static void main(String args[]) throws Exception {
 String clientSentence, capitalizedSentence;
     System.out.println("Waiting...");
 ServerSocket welcomeSocket = new ServerSocket(5945);//player.getPort());
