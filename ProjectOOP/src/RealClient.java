@@ -17,7 +17,7 @@ public class RealClient extends MultiMode implements Runnable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     private static Boolean alphabet;
-    private static PlayerName player;
+    private static Profile player;
     private String Pname;
 
     public String getPname() {
@@ -25,7 +25,7 @@ public class RealClient extends MultiMode implements Runnable{
     }
 
     public void setPname(String Pname) {
-        this.Pname = player.getPname();
+        this.Pname = player.getName();
     }
     
     
