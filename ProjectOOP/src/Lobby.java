@@ -137,11 +137,12 @@ public class Lobby extends javax.swing.JFrame {
             jLabel5.setText((String) obj2.get("name"));
 
             server1 t = new server1();
-            RealClient rc = new RealClient();
-            if (rc == null) {
+            MultiMode m = new MultiMode();
+            if (t == null) {
                 Player1Ready = false;
             } else {
                 Player1Ready = true;
+                m.setVisible(Player1Ready);
             }
 
         } catch (IOException ex) {
