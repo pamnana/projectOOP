@@ -1,6 +1,7 @@
 
 import java.awt.Toolkit;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JLabel;
 import org.json.simple.JSONArray;
@@ -21,7 +22,7 @@ public class Result extends javax.swing.JFrame {
 
     private MultiMode multi;
     public int page;
-
+    public long score;
     /**
      * Creates new form Result
      */
@@ -66,6 +67,14 @@ public class Result extends javax.swing.JFrame {
         this.multi = a;
         page = 0;
         initComponents();
+    }
+
+    public long getScore() {
+        return score;
+    }
+
+    public void setScore(long score) {
+        this.score = score;
     }
 
     /**
@@ -180,24 +189,34 @@ public class Result extends javax.swing.JFrame {
         JSONParser parser = new JSONParser();
         try {
             // TODO add your handling code here:
-            Object obj = parser.parse(new FileReader("src\\text2.txt"));
+            Object obj = parser.parse(new FileReader("src/json/player.json"));
             JSONArray array = (JSONArray) obj;
-            JSONObject obj2, obj3;
+            JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
-            obj3 = (JSONObject) array.get(1);
-        
-            getjLabel5().setText((String) obj2.get("score"));
-            getjLabel4().setText((String) obj3.get("score"));
+            long score = (long) obj2.get("score");
+            getjLabel5().setText(score+""); // ลองเฉยๆค้าบ
             if (page == 0) {
                 if (multi.checkWinner == false) {
                     getWin().setVisible(false);
-                    getjLabel5().setText((String) obj2.get("name"));
+                    getjLabel5().setText(score+"");
+                    setScore(score+1);
 
                 } else if (multi.checkWinner != false) {
                     getLose().setVisible(false);
-                    getjLabel4().setText((String) obj2.get("name"));
+                    getjLabel4().setText(score+"");
                 }
             }
+//            JSONObject obj_new = new JSONObject();
+//            JSONArray array_new = new JSONArray();
+//            obj_new.put("name", obj2.get("name"));
+//            obj_new.put("score", getScore());
+//
+//            array_new.add(obj_new);
+//
+//            FileWriter file = new FileWriter("src/json/player.json");
+//            file.write(array_new.toJSONString());
+//            file.flush();
+//            file.close();
         } catch (IOException ex) {
 
         } catch (ParseException ex) {
