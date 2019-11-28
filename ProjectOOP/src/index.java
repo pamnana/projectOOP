@@ -161,6 +161,8 @@ public class index extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
+                File file = new File("src/json/player.json");
+                file.delete();
                 new index().setVisible(true);
             }
         });
