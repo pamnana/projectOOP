@@ -10,13 +10,13 @@
  */
 import java.io.*;
 import java.net.*;
-public class RealClient extends MultiMode implements Runnable{
+public class RealClient extends MultiMode {
 
 
     public RealClient() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    private static Boolean alphabet;
+    private static Boolean alphabet = false;
     private static Profile player;
     private String Pname;
 
@@ -43,18 +43,18 @@ try{
             String sentence;
             String modifiedSentence;
             Socket clientSocket = new Socket("localhost",5945);//player.getPip(), player.getPort());
-            
-            DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
-            BufferedReader inFromServer = new BufferedReader(
-            new InputStreamReader(clientSocket.getInputStream()));
+            PrintWriter outToServer = new PrintWriter(clientSocket.getOutputStream(), true);
+//            DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
+            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             if(getAlphabet()){
                 sentence = "Won";
             }else{
                 sentence = "Lose";
+                
             }
-
-            String send = "sss";
-            outToServer.writeBytes(send);
+            System.out.println(getAlphabet());
+            String send = "sss nng";
+            outToServer.println(send);
             modifiedSentence = inFromServer.readLine();
             System.out.println("connected");
             System.out.println("FROM SERVER: " + modifiedSentence);
@@ -63,7 +63,7 @@ try{
         }
     }
 
-    @Override
+//    @Override
     public void run() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

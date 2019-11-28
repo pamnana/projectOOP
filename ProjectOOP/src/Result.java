@@ -86,6 +86,7 @@ public class Result extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lose1 = new javax.swing.JLabel();
         lose = new javax.swing.JLabel();
         win = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -108,6 +109,12 @@ public class Result extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(null);
+
+        lose1.setBackground(new java.awt.Color(51, 51, 51));
+        lose1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/draw.png"))); // NOI18N
+        lose1.setOpaque(true);
+        getContentPane().add(lose1);
+        lose1.setBounds(380, 50, 245, 110);
 
         lose.setBackground(new java.awt.Color(153, 0, 0));
         lose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lose.png"))); // NOI18N
@@ -284,6 +291,7 @@ public class Result extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lose;
+    private javax.swing.JLabel lose1;
     private javax.swing.JLabel win;
     // End of variables declaration//GEN-END:variables
 }
