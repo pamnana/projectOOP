@@ -166,10 +166,10 @@ public class Category extends javax.swing.JFrame {
 
     private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         // TODO add your handling code here:
-        new Chapter3().setVisible(true);
+        new SelectMode().setVisible(true);
         this.setVisible(false);
         this.dispose();
-                try{
+        try{
          File musicPath = new File("src/sound/click.wav");
         AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
         Clip clip = AudioSystem.getClip();
@@ -200,13 +200,23 @@ public class Category extends javax.swing.JFrame {
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         // TODO add your handling code here:
+        new Chapter3().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+                try{
+         File musicPath = new File("src/sound/click.wav");
+        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInput);
+        clip.start();   
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
-        new SelectMode().setVisible(true);
-        this.setVisible(false);
-        this.dispose();
     }//GEN-LAST:event_BackActionPerformed
 
     /**
