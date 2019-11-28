@@ -29,8 +29,8 @@ public class SelectMode extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,21 +47,6 @@ public class SelectMode extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(360, 160, 310, 240);
 
-        jButton1.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
-        jButton1.setText("Multi Player");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(300, 470, 420, 60);
-
         jButton3.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton3.setText("Single Mode");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,6 +61,21 @@ public class SelectMode extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3);
         jButton3.setBounds(300, 360, 420, 60);
+
+        jButton2.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
+        jButton2.setText("Multi Player");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(300, 470, 420, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -99,37 +99,6 @@ public class SelectMode extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        /*try {
-            // TODO add your handling code here:
-            new server1(4000);
-        } catch (IOException ex) {
-            Logger.getLogger(SelectMode.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-
-        new Lobby().setVisible(true);
-        this.setVisible(false);
-        this.dispose();
-
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        new PlayerName().setVisible(true);
-        this.setVisible(false);
-        this.dispose();
-        try {
-            File musicPath = new File("src/sound/click.wav");
-            AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInput);
-            clip.start();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
         new Category().setVisible(true);
@@ -145,6 +114,14 @@ public class SelectMode extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,7 +160,7 @@ public class SelectMode extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

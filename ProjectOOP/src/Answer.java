@@ -36,7 +36,7 @@ public class Answer extends javax.swing.JFrame {
      */
     public Answer() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));
     }
 
     public Answer(Chapter1 a) {
@@ -62,6 +62,7 @@ public class Answer extends javax.swing.JFrame {
         page = 4;
         initComponents();
     }
+
     public Answer(Chapter2ForMP a) {
         this.main5 = a;
         page = 2;
@@ -94,9 +95,7 @@ public class Answer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Answer");
-        setMaximumSize(new java.awt.Dimension(1024, 768));
         setMinimumSize(new java.awt.Dimension(1024, 768));
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -131,7 +130,7 @@ public class Answer extends javax.swing.JFrame {
         jLabel4.setToolTipText("");
         jLabel4.setMaximumSize(new java.awt.Dimension(1064, 728));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 50, 1020, 92);
+        jLabel4.setBounds(0, 50, 1020, 105);
 
         jButton1.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton1.setText("Retry");
@@ -146,7 +145,7 @@ public class Answer extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(720, 570, 110, 55);
+        jButton1.setBounds(780, 580, 110, 61);
 
         jButton2.setFont(new java.awt.Font("RSU", 0, 36)); // NOI18N
         jButton2.setText("Quit");
@@ -156,7 +155,7 @@ public class Answer extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(250, 570, 110, 55);
+        jButton2.setBounds(180, 580, 110, 61);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/end.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
@@ -302,9 +301,23 @@ public class Answer extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        new Category().setVisible(true);
-        this.setVisible(false);
-        this.dispose();
+        if (page == 1) {
+            new Chapter1().setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        }else if (page == 2) {
+            new Chapter2().setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        }else if (page == 3) {
+            new Chapter3().setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        }else if (page == 4) {
+            new Chapter4().setVisible(true);
+            this.setVisible(false);
+            this.dispose();
+        }
 
         try {
             File musicPath = new File("src/sound/click.wav");

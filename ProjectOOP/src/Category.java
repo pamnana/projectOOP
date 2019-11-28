@@ -17,6 +17,7 @@ import javax.sound.sampled.Clip;
  */
 public class Category extends javax.swing.JFrame {
     
+    
     /**
      * Creates new form Category
      */
@@ -36,15 +37,17 @@ public class Category extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Category");
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
+        setSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(null);
 
         jLabel4.setFont(new java.awt.Font("RSU", 0, 48)); // NOI18N
@@ -64,15 +67,21 @@ public class Category extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(640, 260, 270, 60);
 
-        jButton6.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
-        jButton6.setText("Chapter 3");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Back.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
+        Back.setText("BACK");
+        Back.setToolTipText("");
+        Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+                BackMouseClicked(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(120, 410, 270, 60);
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Back);
+        Back.setBounds(40, 670, 110, 50);
 
         jButton7.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
         jButton7.setText("Chapter 4");
@@ -98,6 +107,16 @@ public class Category extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8);
         jButton8.setBounds(120, 260, 270, 60);
+
+        jButton9.setFont(new java.awt.Font("RSU", 0, 24)); // NOI18N
+        jButton9.setText("Chapter 3");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(120, 410, 270, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.jpg"))); // NOI18N
         jLabel1.setToolTipText("");
@@ -145,7 +164,7 @@ public class Category extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton5MouseClicked
 
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         // TODO add your handling code here:
         new Chapter3().setVisible(true);
         this.setVisible(false);
@@ -160,7 +179,7 @@ public class Category extends javax.swing.JFrame {
         catch (Exception ex){
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_jButton6MouseClicked
+    }//GEN-LAST:event_BackMouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
         // TODO add your handling code here:
@@ -178,6 +197,17 @@ public class Category extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+        // TODO add your handling code here:
+        new SelectMode().setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_BackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,10 +245,11 @@ public class Category extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
