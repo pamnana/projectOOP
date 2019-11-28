@@ -20,9 +20,15 @@ public class PlayerName extends javax.swing.JFrame {
      * Creates new form PlayerName
      */
     private String Pname;
+    private String Pip;
+    private int port;
 
-    public void setPname(String Pname) {
-        this.Pname = jTextField2.getText();
+    public String getPip() {
+        return Pip;
+    }
+    
+    public int getPort() {
+        return port;
     }
     
     public String getPname() {
@@ -182,6 +188,9 @@ public class PlayerName extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
+        Pname = jTextField2.getText();
+        Pip = jTextField3.getText();
+        port = Integer.getInteger(jTextField1.getText());
         try {
             String name = jTextField2.getText();
             Profile profile = new Profile(name);
