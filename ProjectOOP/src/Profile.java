@@ -6,7 +6,8 @@ import org.json.simple.parser.JSONParser;
 public class Profile {
     private String name;
     private int score;
-
+    private String ip;
+    private int port;
     public Profile() {
     }
 
@@ -28,6 +29,22 @@ public class Profile {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
     
 }

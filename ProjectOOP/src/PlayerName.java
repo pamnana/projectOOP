@@ -19,25 +19,9 @@ public class PlayerName extends javax.swing.JFrame {
     /**
      * Creates new form PlayerName
      */
-    private String Pname;
-    private String Pip;
-    private int port;
-
-    public String getPip() {
-        return Pip;
-    }
-    
-    public int getPort() {
-        return port;
-    }
-    
-    public String getPname() {
-        return Pname;
-    }
-    
     public PlayerName() {
         initComponents();
-        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));   
+        setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));
     }
 
     /**
@@ -181,21 +165,20 @@ public class PlayerName extends javax.swing.JFrame {
 
     private void jTextField1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField1InputMethodTextChanged
         // TODO add your handling code here:
-        
-        
-        
+
+
     }//GEN-LAST:event_jTextField1InputMethodTextChanged
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        Pname = jTextField2.getText();
-        Pip = jTextField3.getText();
-        port = Integer.parseInt(jTextField1.getText());
-        System.out.println(port);
 
         try {
             String name = jTextField2.getText();
             Profile profile = new Profile(name);
+            profile.setName(name);
+            profile.setIp(jTextField3.getText());
+            profile.setPort(Integer.parseInt(jTextField1.getText()));
+
             JSONObject obj_new = new JSONObject();
             JSONArray array_new = new JSONArray();
             obj_new.put("name", profile.getName());
