@@ -42,7 +42,7 @@ public class RealClient extends MultiMode {
 try{
             String sentence;
             String modifiedSentence;
-            Socket clientSocket = new Socket("localhost",5945);//player.getPip(), player.getPort());
+            Socket clientSocket = new Socket("localhost",6789);//player.getPip(), player.getPort());
             PrintWriter outToServer = new PrintWriter(clientSocket.getOutputStream(), true);
 //            DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));

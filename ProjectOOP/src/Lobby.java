@@ -24,7 +24,7 @@ public class Lobby extends javax.swing.JFrame {
      * Creates new form Lobby
      */
     boolean Player1Ready;
-    boolean Player2Ready = true;
+    boolean Player2Ready;
 
     public Lobby() {
         initComponents();
@@ -154,13 +154,14 @@ public class Lobby extends javax.swing.JFrame {
         //client1 c = new client1();
         //c.start();
         if (Player1Ready == true) {
+            RealClient rc1 = new RealClient();
             jLabel7.setText("Ready!");
-            ForClient fc1 = new ForClient();
+            
 
         }
         if (Player2Ready == true) {
             jLabel8.setText("Ready!");
-            ForClient fc2 = new ForClient();
+            RealClient rc2 = new RealClient();
 
         }
         if (Player1Ready == true & Player2Ready == true) {
