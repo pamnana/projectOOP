@@ -19,6 +19,8 @@ public class PlayerName extends javax.swing.JFrame {
     /**
      * Creates new form PlayerName
      */
+    public int player = 1;
+
     public PlayerName() {
         initComponents();
         setIconImage(Toolkit.getDefaultToolkit().getImage("src/images/icon/as.png"));
@@ -183,9 +185,10 @@ public class PlayerName extends javax.swing.JFrame {
             JSONArray array_new = new JSONArray();
             obj_new.put("name", profile.getName());
             obj_new.put("score", profile.getScore());
-
+            obj_new.put("ip", profile.getIp());
+            obj_new.put("port", profile.getPort());
+            
             array_new.add(obj_new);
-
             FileWriter file = new FileWriter("src/json/player.json");
             file.write(array_new.toJSONString());
             file.flush();

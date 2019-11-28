@@ -130,7 +130,7 @@ public class Lobby extends javax.swing.JFrame {
         JSONParser parser = new JSONParser();
         try {
             // TODO add your handling code here:
-            Object obj = parser.parse(new FileReader("src/json/player.json"));
+            Object obj = parser.parse(new FileReader("src/json/player1.json"));
             JSONArray array = (JSONArray) obj;
             JSONObject obj2;
             obj2 = (JSONObject) array.get(0);
