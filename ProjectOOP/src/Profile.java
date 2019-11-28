@@ -1,13 +1,10 @@
-import java.io.*;
-import java.util.Random;
-import org.json.simple.*;
-import org.json.simple.parser.JSONParser;
+
 
 public class Profile {
     private String name;
     private int score;
     private String ip;
-    private int port;
+    private int port = 6789;
     public Profile() {
     }
 
@@ -40,7 +37,7 @@ public class Profile {
     }
 
     public int getPort() {
-        return port;
+        return 6789;
     }
 
     public void setPort(int port) {
