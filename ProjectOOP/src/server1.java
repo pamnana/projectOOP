@@ -1,22 +1,25 @@
 
 import java.io.*;
 import java.net.*;
+import java.util.List;
 
 public class server1 {
+    public List<RealClient> rc;//list of client
     public static Profile player;
     public static void main(String args[]) throws Exception {
-        String clientSentence, capitalizedSentence;
+        String clientSentence;
         System.out.println("Waiting...");
         //System.out.println(player.getPort());
-        ServerSocket welcomeSocket = new ServerSocket(6789);//player.getPort());
+        ServerSocket welcomeSocket = new ServerSocket(player.getPort());//player.getPort());
         while (true) {
             Socket connectionSocket = welcomeSocket.accept();
             BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
             DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
+            ObjectInputStream coin = new ObjectInputStream(in);
+            ObjectOutputStream sout = new ObjectOutputStream(outToClient);
             System.out.println("Server wait on port ");
             clientSentence = inFromClient.readLine();
-            capitalizedSentence = clientSentence.toUpperCase() + '\n';
-            outToClient.writeBytes(capitalizedSentence);
+            outToClient.writeBytes("You win");
         }
     }
 }

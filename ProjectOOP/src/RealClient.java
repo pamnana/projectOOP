@@ -10,16 +10,19 @@
  */
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 public class RealClient extends MultiMode {
+    
 
-
-    public RealClient() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public RealClient() {}
     private static Boolean alphabet = false;
     private static Profile player;
     private String Pname;
-
+    private ArrayList<Profile> pnumber; //Array of Player
     public String getPname() {
         return Pname;
     }
@@ -40,16 +43,21 @@ public class RealClient extends MultiMode {
     }
     public static void main(String[] args) {
 try{
+           /* Object obj = parser.parse(new FileReader("src/json/player.json"));
+            FileInputStream fin = new FileInputStream(file);
+            ObjectInputStream oin = new ObjectInputStream(oin);
+            ObjectOutputStream oout = new ObjectOutputStream(out);*/
             String sentence;
             String modifiedSentence;
-            Socket clientSocket = new Socket("localhost",6789);//player.getPip(), player.getPort());
+            System.out.println("");
+            Socket clientSocket = new Socket(player.getIp(), player.getPort());//player.getPip(), player.getPort();
             PrintWriter outToServer = new PrintWriter(clientSocket.getOutputStream(), true);
 //            DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             if(getAlphabet()){
                 sentence = "Won";
             }else{
-                sentence = "Lose";
+                sentence = "Lost";
                 
             }
             System.out.println(getAlphabet());
@@ -65,7 +73,7 @@ try{
 
 //    @Override
     public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     }
 

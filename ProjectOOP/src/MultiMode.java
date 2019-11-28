@@ -18,7 +18,7 @@ import org.json.simple.parser.JSONParser;
  * @author dell
  */
 public class MultiMode extends javax.swing.JFrame {
-
+    
     Answer a = new Answer();
     public char button;
     public static int score = 7;
@@ -133,6 +133,7 @@ public class MultiMode extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new MultiMode().setVisible(true);
                 
             }

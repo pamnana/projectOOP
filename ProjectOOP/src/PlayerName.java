@@ -194,7 +194,7 @@ public class PlayerName extends javax.swing.JFrame {
             profile.setIp(jTextField3.getText());
             profile.setPort(Integer.parseInt(jTextField1.getText()));
 
-            if (array.size() == 0) {
+            if (array.isEmpty()) {
                 JSONObject obj_new = new JSONObject();
                 obj_new.put("name", profile.getName());
                 obj_new.put("score", profile.getScore());
@@ -212,6 +212,7 @@ public class PlayerName extends javax.swing.JFrame {
                 array.add(obj_new);
                 
             }
+            
             FileWriter file = new FileWriter("src/json/player.json");
             file.write(array.toJSONString());
             file.flush();
@@ -221,6 +222,7 @@ public class PlayerName extends javax.swing.JFrame {
         } catch (ParseException ex) {
             Logger.getLogger(PlayerName.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         new Lobby().setVisible(true);
         this.setVisible(false);
         this.dispose();
