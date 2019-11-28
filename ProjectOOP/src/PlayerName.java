@@ -1,9 +1,15 @@
 
 import java.awt.Toolkit;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -173,28 +179,47 @@ public class PlayerName extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-
+        JSONParser parser = new JSONParser();
         try {
+            Object obj = parser.parse(new FileReader("src/json/player.json"));
+            JSONArray array = (JSONArray) obj;
+            System.out.println(array.size() + "");
+            System.out.println(array);
+            JSONObject player1 = new JSONObject();
+            //JSONObject obj2 = ;
+
             String name = jTextField2.getText();
             Profile profile = new Profile(name);
             profile.setName(name);
             profile.setIp(jTextField3.getText());
             profile.setPort(Integer.parseInt(jTextField1.getText()));
 
-            JSONObject obj_new = new JSONObject();
-            JSONArray array_new = new JSONArray();
-            obj_new.put("name", profile.getName());
-            obj_new.put("score", profile.getScore());
-            obj_new.put("ip", profile.getIp());
-            obj_new.put("port", profile.getPort());
-            
-            array_new.add(obj_new);
+            if (array.size() == 0) {
+                JSONObject obj_new = new JSONObject();
+                obj_new.put("name", profile.getName());
+                obj_new.put("score", profile.getScore());
+                obj_new.put("ip", profile.getIp());
+                obj_new.put("port", profile.getPort());
+                array.add(obj_new);
+                
+
+            } else {
+                JSONObject obj_new = new JSONObject();
+                obj_new.put("name", profile.getName());
+                obj_new.put("score", profile.getScore());
+                obj_new.put("ip", profile.getIp());
+                obj_new.put("port", profile.getPort());
+                array.add(obj_new);
+                
+            }
             FileWriter file = new FileWriter("src/json/player.json");
-            file.write(array_new.toJSONString());
+            file.write(array.toJSONString());
             file.flush();
             file.close();
         } catch (IOException e) {
 
+        } catch (ParseException ex) {
+            Logger.getLogger(PlayerName.class.getName()).log(Level.SEVERE, null, ex);
         }
         new Lobby().setVisible(true);
         this.setVisible(false);
