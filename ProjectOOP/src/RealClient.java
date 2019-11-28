@@ -17,7 +17,7 @@ public class RealClient extends MultiMode implements Runnable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     private static Boolean alphabet;
-    private PlayerName player;
+    private static PlayerName player;
     private String Pname;
 
     public String getPname() {
@@ -42,7 +42,7 @@ public class RealClient extends MultiMode implements Runnable{
 try{
             String sentence;
             String modifiedSentence;
-            Socket clientSocket = new Socket("localhost",5945);//player.getPip(), player.getPort());
+            Socket clientSocket = new Socket(player.getPip(),5945);//player.getPip(), player.getPort());
             System.out.println("connected");
             DataOutputStream outToServer = new DataOutputStream( clientSocket.getOutputStream() );
             BufferedReader inFromServer = new BufferedReader(
