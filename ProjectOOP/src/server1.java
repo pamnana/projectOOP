@@ -15,7 +15,6 @@ public class server1 {
             Socket connectionSocket = welcomeSocket.accept();
             BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
             DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
-            ObjectInputStream coin = new ObjectInputStream(in);
             ObjectOutputStream sout = new ObjectOutputStream(outToClient);
             System.out.println("Server wait on port ");
             clientSentence = inFromClient.readLine();
